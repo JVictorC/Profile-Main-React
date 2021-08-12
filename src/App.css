@@ -494,13 +494,17 @@ footer .gif {
 @media screen and (max-width: 900px) {
 
   /*Header SmartPhone Medias*/
+  header {
+    height: 50px;
+    border-bottom: 5px solid #198754;
+  }
 
   header a {
     font-size: 15px;
   }
 
   header .img-trybe {
-    width: 60px;
+    width: 40px;
   }
 
   /*Hero-Page SmartPhone Medias*/
