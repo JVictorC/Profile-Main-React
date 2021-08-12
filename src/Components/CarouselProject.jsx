@@ -15,7 +15,7 @@ class CarouselProject extends Component {
               alt="First slide"
             />
             <Carousel.Caption>
-              <h2 className="text-white">
+              <h2 className="header-carousel text-white">
                 Neste Carausel você verá meu Projetos Favoritos
               </h2>
               <p className="text-white fs-5">OBS: Amo Broklyn 99 💙</p>
@@ -29,7 +29,7 @@ class CarouselProject extends Component {
             />
 
             <Carousel.Caption>
-              <h2 className="text-dark text-end">Shop Cart</h2>
+              <h2 className="header-carousel text-dark text-end">Shop Cart</h2>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={ 5000 }>
@@ -40,7 +40,7 @@ class CarouselProject extends Component {
             />
 
             <Carousel.Caption>
-              <h2 className="text-dark text-end">Pixel Art</h2>
+              <h2 className="header-carousel text-dark text-end">Pixel Art</h2>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={ 5000 }>
@@ -51,7 +51,7 @@ class CarouselProject extends Component {
             />
 
             <Carousel.Caption>
-              <h2 className="text-dark text-end">To Do List</h2>
+              <h2 className="header-carousel text-dark text-end">To Do List</h2>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={ 5000 }>
@@ -62,7 +62,7 @@ class CarouselProject extends Component {
             />
 
             <Carousel.Caption>
-              <h2 className="text-dark text-end">TrybeWart</h2>
+              <h2 className="header-carousel text-dark text-end">TrybeWart</h2>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={ 5000 }>
@@ -72,7 +72,7 @@ class CarouselProject extends Component {
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h2 className="text-white text-end">Zoo Fuctions</h2>
+              <h2 className="header-carousel text-white text-end">Zoo Fuctions</h2>
             </Carousel.Caption>
           </Carousel.Item>
 

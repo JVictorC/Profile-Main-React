@@ -314,13 +314,16 @@ header .img-trybe {
   margin: 25px auto;
 }
 
-.Contatos {
-  margin: 25px 0;
-}
 
 /* Contatos General Medias */
+.Contatos {
+  margin: 25px 0;
+  display: flex;
+}
+
 #contacts {
   height: 700px;
+  
 }
 
 .text-animation {
@@ -568,10 +571,19 @@ footer .gif {
 }
 
 .Carousel {
-  width: 70%;
+  width: 98%;
 }
 
+.header-carousel {
+  font-size: 20px;
+}
 
+/*Contatos SmartPhone Medias*/
+
+.buttons-contatcs {
+  flex-direction: column;
+  align-items: center;
+}
 
 /*Footer SmartPhone Medias*/
 
