@@ -514,7 +514,7 @@ footer .gif {
   }
 
   .hero-page p {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .hero-page img {
@@ -526,11 +526,11 @@ footer .gif {
       width: 0;
     }
     50% {
-      width: 415px;
+      width: 350px;
     }
   
     75% {
-      width: 415px;
+      width: 350px;
     }
     
     100% {
