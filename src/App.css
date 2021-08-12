@@ -493,6 +493,8 @@ footer .gif {
 
 @media screen and (max-width: 900px) {
 
+  *{font-size: 1em;}
+
   /*Header SmartPhone Medias*/
   header {
     height: 50px;
@@ -542,7 +544,7 @@ footer .gif {
 
   .about {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     text-align: center;
   }
   
@@ -570,6 +572,8 @@ footer .gif {
 
 .div-projects {
   justify-content: space-evenly;
+
+  font-size: 10px;
 }
 
 .linksProject {
