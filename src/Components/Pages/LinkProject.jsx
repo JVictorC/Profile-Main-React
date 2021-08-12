@@ -5,7 +5,12 @@ class LinkProject extends Component {
   render() {
     const { project } = this.props;
     let component = (
-      <a href={project.link} className="linksProject" target="_blank">
+      <a
+        href={ project.link }
+        className="linksProject"
+        target="_blank"
+        rel="noreferrer"
+      >
         {project.name}
       </a>
     );
@@ -27,5 +32,6 @@ export default LinkProject;
 LinkProject.propTypes = {
   project: PropTypes.shape({
     name: PropTypes.string,
+    link: PropTypes.string,
   }).isRequired,
 };
