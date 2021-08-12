@@ -319,11 +319,18 @@ header .img-trybe {
 .Contatos {
   margin: 25px 0;
   display: flex;
+  align-items: baseline;
 }
 
 #contacts {
   height: 700px;
-  
+  display: flex;
+}
+
+.text-disaber {
+  width: 50%;
+  display: flex;
+  align-items: center;
 }
 
 .text-animation {
@@ -356,8 +363,8 @@ header .img-trybe {
 
 .buttons-contatcs {
   display: flex;
-  justify-content: space-between;
-  height: 500px;
+  width: 50%;
+  justify-content: center;
 }
 
 .buttons-contatcs .lead {
@@ -580,9 +587,31 @@ footer .gif {
 
 /*Contatos SmartPhone Medias*/
 
-.buttons-contatcs {
-  flex-direction: column;
+#contacts {
+  flex-flow: column wrap;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+
+
+@keyframes  disaberFraseContat {
+  0% {
+    width: 0;
+  }
+  15% {
+    width: 600px;
+  }
+  85% {
+    width: 600px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.buttons {
+  flex-grow: 1;
 }
 
 /*Footer SmartPhone Medias*/

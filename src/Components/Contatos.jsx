@@ -31,13 +31,16 @@ class Contatos extends Component {
   render() {
     const { textField } = this.state;
     return (
-      <section id="contacts">
+      <>
         <img src="ArquivosPort/Images/FitaTrybe.jpg" alt="" className="fita-trybe" />
         <h1 className="text-white text-center m-4">Contatos</h1>
-        <nav className="buttons-contatcs">
+      <section id="contacts">
+        <div className="text-disaber"> 
           <p className="text-white lead fs-2 text-center text-animation">
             {`" ${textField} "`}
           </p>
+          </div>
+        <nav className="buttons-contatcs">
           <span className="line-animation" />
           <div className="buttons">
             <a
@@ -63,6 +66,7 @@ class Contatos extends Component {
           </div>
         </nav>
       </section>
+      </>
 
     );
   }
