@@ -327,11 +327,6 @@ header .img-trybe {
   display: flex;
 }
 
-.text-disaber {
-  width: 50%;
-  display: flex;
-  align-items: center;
-}
 
 .text-animation {
   margin: 0 25px;
@@ -344,13 +339,13 @@ header .img-trybe {
   animation: disaberFraseContat 10s infinite linear;
 }
 
-
 @keyframes  disaberFraseContat {
   0% {
     width: 0;
   }
   15% {
     width: 760px;
+    
   }
   85% {
     width: 760px;
@@ -360,6 +355,11 @@ header .img-trybe {
   }
 }
 
+.text-disaber {
+      width: 50%;
+      display: flex;
+      align-items: center;
+    }
 
 .buttons-contatcs {
   display: flex;
@@ -593,7 +593,16 @@ footer .gif {
   align-items: center;
 }
 
+.text-disaber {
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+}
 
+.buttons-contatcs {
+width: 100%;
+height: 50%;
+}
 
 @keyframes  disaberFraseContat {
   0% {
