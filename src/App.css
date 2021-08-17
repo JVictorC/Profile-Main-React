@@ -47,16 +47,11 @@ header {
   background-color: #343a40;
   position: fixed;
   width: 100%;
-  opacity: 0.5;
   transition: 0.5s;
   z-index: 1;
   height: 80px;
   border-bottom: 10px solid #198754;
 
-}
-
-header:hover {
-  opacity: 1;
 }
 
 header nav {
@@ -333,11 +328,8 @@ header .img-trybe {
   overflow: hidden;
   width: 0;
   max-height: 350px;
-} 
-
-.text-animation {
   animation: disaberFraseContat 10s infinite linear;
-}
+} 
 
 @keyframes  disaberFraseContat {
   0% {

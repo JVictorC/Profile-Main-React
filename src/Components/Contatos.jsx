@@ -34,38 +34,38 @@ class Contatos extends Component {
       <>
         <img src="ArquivosPort/Images/FitaTrybe.jpg" alt="" className="fita-trybe" />
         <h1 className="text-white text-center m-4">Contatos</h1>
-      <section id="contacts">
-        <div className="text-disaber"> 
-          <p className="text-white lead fs-2 text-center text-animation">
-            {`" ${textField} "`}
-          </p>
+        <section id="contacts">
+          <div className="text-disaber">
+            <p className="text-white lead fs-3 text-center text-animation">
+              {`" ${textField} "`}
+            </p>
           </div>
-        <nav className="buttons-contatcs">
-          <span className="line-animation" />
-          <div className="buttons">
-            <a
-              href="https://github.com/JVictorC"
-              className="btn-github"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
+          <nav className="buttons-contatcs">
+            <span className="line-animation" />
+            <div className="buttons">
+              <a
+                href="https://github.com/JVictorC"
+                className="btn-github"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
 
-            </a
-            >
-            <a
-              href="https://www.linkedin.com/in/joao-victor-02227a180/"
-              className="btn-linkedin"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Linkedin
+              </a
+              >
+              <a
+                href="https://www.linkedin.com/in/joao-victor-02227a180/"
+                className="btn-linkedin"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Linkedin
 
-            </a
-            >
-          </div>
-        </nav>
-      </section>
+              </a
+              >
+            </div>
+          </nav>
+        </section>
       </>
 
     );
