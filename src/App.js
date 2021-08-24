@@ -1,11 +1,10 @@
 import React from 'react';
-import RenderApp from './Components/Render';
-import './App.css';
+import Home from './Components/Home';
 
 function App() {
   return (
     <main>
-      <RenderApp />
+      <Home />
     </main>
   );
 }
