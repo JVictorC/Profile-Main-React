@@ -23,47 +23,28 @@
     padding: 2rem
     overflow: hidden
 
+@for $i from 1 through 6
+  .skills-container-list:nth-child(3n + #{$i})
+    height: 200px
+    padding: 0 !important
+    animation: teste 500ms
+    border-color: nth($colors-skills, $i)
+    animation-delay: #{$i}s
+    animation-fill-mode: backwards
+    h3
+      font-size: 2rem
+      color: nth($colors-skills, $i)
+    .icons
+      font-size: 4rem
+      color: nth($colors-skills, $i)
     li
-      width: 30%
-      height: 200px
-      margin: 1%
-      padding: 2rem
-      border: 2px solid #CCC
       text-align: center
       transition: .3s
+      margin: auto
+      padding: 2rem
 
-      .icons
-        font-size: 4rem
-        margin-bottom: 2rem
-
-        h3
-          font-size: 2rem
-          padding: 1rem
-          color: $primary-color
-
-        p
-          font-size: .9rem
-          color: $text-color
-
-      &:hover
-        border: transparent
-        box-shadow: 0 1px 10px #CCC
-        transform: scale(1.1)
-
-      @for $i from 1 through 6
-        &:nth-child(3n + #{$i})
-          animation: teste 500ms
-          border-color: nth($colors-skills, $i)
-          animation-delay: #{$i}s
-          animation-fill-mode: backwards
-
-          @keyframes teste
-            from
-              transform: translate3d(50px, -500px, 0)
-            to
-              transform: translate3d(0, 0, 0)
-
-          h3
-            color: nth($colors-skills, $i)
-          .icons
-            color: nth($colors-skills, $i)
+    @keyframes teste
+      from
+        transform: translate3d(50px, -500px, 0)
+      to
+        transform: translate3d(0, 0, 0)

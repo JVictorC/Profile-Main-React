@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { DiSass, DiCss3, DiJavascript1 } from 'react-icons/di';
 import { FaReact, FaHtml5, FaBootstrap } from 'react-icons/fa';
 import List from './Component/List';
+import LottieAnimation from '../Animation/Lottie';
+import animation from '../Animation/Skilss.json';
 
 export default class Skills extends Component {
   render() {
@@ -36,6 +38,7 @@ export default class Skills extends Component {
             title="BootStrap"
           />
         </ul>
+        <LottieAnimation lotti={ animation } height={ 500 } width={ 600 } />
       </div>
     );
   }
