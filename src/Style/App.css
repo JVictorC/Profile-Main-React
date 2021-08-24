@@ -7,7 +7,7 @@ header .nav-item ul li:hover {
   cursor: pointer;
 }
 
-.header-contant-student, .header-contant-name {
+.skills-container-title, .header-contant-student, .header-contant-name {
   color: #181920;
   font-size: 3rem;
   text-align: center;
@@ -51,7 +51,7 @@ header .nav-item .menu {
   justify-content: space-around;
   align-items: center;
   padding: 2rem;
-  background: linear-gradient(#8b8e94, #e5eaff);
+  background: linear-gradient(#8b8e94, #FFF);
   height: 85vh;
 }
 .header-contant-apresentation {
@@ -86,6 +86,183 @@ header .nav-item .menu {
   100% {
     border-right-color: transparent;
   }
+}
+
+.skills-container {
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  animation: DisaberDiv 4s;
+}
+@keyframes DisaberDiv {
+  from {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
+  }
+}
+.skills-container-title {
+  color: #ff5200;
+}
+.skills-container-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  overflow: hidden;
+}
+.skills-container-ul li {
+  width: 30%;
+  height: 200px;
+  margin: 1%;
+  padding: 2rem;
+  border: 2px solid #CCC;
+  text-align: center;
+  transition: 0.3s;
+}
+.skills-container-ul li .icons {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.skills-container-ul li .icons h3 {
+  font-size: 2rem;
+  padding: 1rem;
+  color: #ff5200;
+}
+.skills-container-ul li .icons p {
+  font-size: 0.9rem;
+  color: #8b8e94;
+}
+.skills-container-ul li:hover {
+  border: transparent;
+  box-shadow: 0 1px 10px #CCC;
+  transform: scale(1.1);
+}
+.skills-container-ul li:nth-child(3n+1) {
+  animation: teste 500ms;
+  border-color: #e91e63;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+@keyframes teste {
+  from {
+    transform: translate3d(50px, -500px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.skills-container-ul li:nth-child(3n+1) h3 {
+  color: #e91e63;
+}
+.skills-container-ul li:nth-child(3n+1) .icons {
+  color: #e91e63;
+}
+.skills-container-ul li:nth-child(3n+2) {
+  animation: teste 500ms;
+  border-color: #004dcf;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+@keyframes teste {
+  from {
+    transform: translate3d(50px, -500px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.skills-container-ul li:nth-child(3n+2) h3 {
+  color: #004dcf;
+}
+.skills-container-ul li:nth-child(3n+2) .icons {
+  color: #004dcf;
+}
+.skills-container-ul li:nth-child(3n+3) {
+  animation: teste 500ms;
+  border-color: #fccb00;
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+}
+@keyframes teste {
+  from {
+    transform: translate3d(50px, -500px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.skills-container-ul li:nth-child(3n+3) h3 {
+  color: #fccb00;
+}
+.skills-container-ul li:nth-child(3n+3) .icons {
+  color: #fccb00;
+}
+.skills-container-ul li:nth-child(3n+4) {
+  animation: teste 500ms;
+  border-color: #03a9f4;
+  animation-delay: 4s;
+  animation-fill-mode: backwards;
+}
+@keyframes teste {
+  from {
+    transform: translate3d(50px, -500px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.skills-container-ul li:nth-child(3n+4) h3 {
+  color: #03a9f4;
+}
+.skills-container-ul li:nth-child(3n+4) .icons {
+  color: #03a9f4;
+}
+.skills-container-ul li:nth-child(3n+5) {
+  animation: teste 500ms;
+  border-color: orange;
+  animation-delay: 5s;
+  animation-fill-mode: backwards;
+}
+@keyframes teste {
+  from {
+    transform: translate3d(50px, -500px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.skills-container-ul li:nth-child(3n+5) h3 {
+  color: orange;
+}
+.skills-container-ul li:nth-child(3n+5) .icons {
+  color: orange;
+}
+.skills-container-ul li:nth-child(3n+6) {
+  animation: teste 500ms;
+  border-color: purple;
+  animation-delay: 6s;
+  animation-fill-mode: backwards;
+}
+@keyframes teste {
+  from {
+    transform: translate3d(50px, -500px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.skills-container-ul li:nth-child(3n+6) h3 {
+  color: purple;
+}
+.skills-container-ul li:nth-child(3n+6) .icons {
+  color: purple;
 }
 
 * {
