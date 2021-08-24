@@ -1,0 +1,27 @@
+//Mixins
+@mixin reset()
+  *
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'lato'
+
+  a
+    text-decoration: none
+
+  li
+    list-style: non
+
+@mixin display-flex
+  display: flex
+  justify-content: space-between
+  align-content: center
+
+
+//PlaceHolder
+%links
+  color: $light-color
+
+  &:hover
+    color: $primary-color
+  

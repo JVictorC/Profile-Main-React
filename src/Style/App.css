@@ -1,0 +1,36 @@
+header ul {
+  color: #FFF;
+}
+header ul:hover {
+  color: #ff5200;
+}
+
+header {
+  background: #1d1d1d;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "lato";
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: non;
+}
+
+/*# sourceMappingURL=App.css.map */
