@@ -1,8 +1,60 @@
 header
   background: $menus-bg
-  height: 90px
-  @include display-flex
+  border-bottom: 10px solid $primary-color
 
-  ul
-    @extend %links
-    @include display-flex
+  .nav-item
+    max-height: 100px
+    @include display-flex-between
+    width: 80%
+    margin: auto
+
+    ul
+      @include display-flex-between
+
+      li
+        font-size: 1.3rem
+        @include display-flex-between
+        @extend %links
+
+    .menu
+      color: $light-color
+      font-size: 2rem
+      display: none
+
+.header-contant
+  @include display-flex-around
+  background: linear-gradient(#8b8e94, $secondary-bg)
+  height: 85vh
+
+  &-apresentation
+    width: 60%
+    @include display-flex-column
+
+  &-name
+    @extend %text-header
+
+  &-student
+    @extend %text-header
+    font-weight: 300
+    border-right: white 5px solid
+    animation: myAnimationLine .5s infinite normal, disaberName 8s infinite normal steps(26)
+    overflow: hidden
+    white-space: nowrap
+
+    @keyframes disaberName
+      0%
+        width: 0
+
+      50%
+        width: 36rem
+
+      75%
+        width: 36rem
+
+      100%
+        width: 0
+
+    @keyframes myAnimationLine
+      100%
+        border-right-color: transparent
+
