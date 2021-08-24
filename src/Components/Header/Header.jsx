@@ -7,8 +7,9 @@ import Person from '../Animation/Header.json';
 export default class Header extends Component {
   constructor(props) {
     super(props);
+    const header = 'Web Development Student';
     this.state = {
-      header: 'Web Development Student',
+      header,
     };
     this.changeHeader = this.changeHeader.bind(this);
   }
@@ -24,14 +25,15 @@ export default class Header extends Component {
   }
 
   changeHeader() {
+    const webDevelopment = 'Web Development Student';
     const { header } = this.state;
-    if (header === 'Web Development Student') {
+    if (header === webDevelopment) {
       this.setState({
         header: 'Welcome a My Profile😁🚀',
       });
     } else {
       this.setState({
-        header: 'Web Development Student',
+        header: webDevelopment,
       });
     }
   }
