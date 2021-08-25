@@ -9,7 +9,7 @@ header .nav-item ul li:hover {
 
 .skills-container-title, .header-contant-student, .header-contant-name {
   color: #181920;
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
   padding: 0.3rem;
 }
@@ -53,7 +53,7 @@ header .nav-item .menu {
   flex-wrap: wrap;
   padding: 2rem;
   background: linear-gradient(#8b8e94, #FFF);
-  height: 100vh;
+  height: 75vh;
 }
 .header-contant-apresentation {
   width: 60%;
@@ -63,6 +63,7 @@ header .nav-item .menu {
   justify-content: center;
 }
 .header-contant-student {
+  color: #ff5200;
   font-weight: 300;
   border-right: white 5px solid;
   animation: myAnimationLine 0.5s infinite normal, disaberName 8s infinite normal steps(26);
@@ -74,10 +75,10 @@ header .nav-item .menu {
     width: 0;
   }
   50% {
-    width: 36rem;
+    width: 48rem;
   }
   75% {
-    width: 36rem;
+    width: 48rem;
   }
   100% {
     width: 0;
