@@ -44,7 +44,7 @@ export default class Header extends Component {
       <>
         <header>
           <nav className="nav-item">
-            <LottieAnimation lotti={ Rocket } height={ 80 } width={ 80 } />
+            <LottieAnimation lotti={ Rocket } height={ 100 } width={ 100 } />
             <ul>
               <li>Home</li>
               <li>Contatos</li>

@@ -6,27 +6,28 @@
   background: $light-color
   @include display-flex-column
   width: 100%
+  overflow: hidden
 
   &-main
     display: flex
     justify-content: center
     align-items: baseline
 
+
   &-title
     @extend %text-header
+    @include animation
     color: $primary-color
     cursor: alias
     width: 100%
     padding: 0 2rem
-    @include animation
+
   &-ul
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-around
-    padding: 2rem
+    @include display-flex-around
+    @include animation
     position: absolute
     z-index: 1
-    @include animation
+    width: 1200px
 
 
 @for $i from 1 through 6
@@ -50,6 +51,5 @@
 
     li
       text-align: center
-      transition: .3s
       margin: auto
       padding: 2rem

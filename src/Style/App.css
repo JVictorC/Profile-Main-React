@@ -50,6 +50,7 @@ header .nav-item .menu {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   padding: 2rem;
   background: linear-gradient(#8b8e94, #FFF);
   height: 100vh;
@@ -100,6 +101,7 @@ header .nav-item .menu {
   align-items: center;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
 }
 .skills-container-main {
   display: flex;
@@ -107,24 +109,26 @@ header .nav-item .menu {
   align-items: baseline;
 }
 .skills-container-title {
+  transform: translate3d(-700px, 50px, 0);
+  opacity: 0;
+  transition: 1s;
   color: #ff5200;
   cursor: alias;
   width: 100%;
   padding: 0 2rem;
-  transform: translate3d(-500px, 0, 0);
-  opacity: 0;
-  transition: 1s;
 }
 .skills-container-ul {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 2rem;
-  position: absolute;
-  z-index: 1;
-  transform: translate3d(-500px, 0, 0);
+  transform: translate3d(-700px, 50px, 0);
   opacity: 0;
   transition: 1s;
+  position: absolute;
+  z-index: 1;
+  width: 1200px;
 }
 
 .skills-container-list:nth-child(n+1) {
@@ -146,7 +150,6 @@ header .nav-item .menu {
 }
 .skills-container-list:nth-child(n+1) li {
   text-align: center;
-  transition: 0.3s;
   margin: auto;
   padding: 2rem;
 }
@@ -170,7 +173,6 @@ header .nav-item .menu {
 }
 .skills-container-list:nth-child(n+2) li {
   text-align: center;
-  transition: 0.3s;
   margin: auto;
   padding: 2rem;
 }
@@ -194,7 +196,6 @@ header .nav-item .menu {
 }
 .skills-container-list:nth-child(n+3) li {
   text-align: center;
-  transition: 0.3s;
   margin: auto;
   padding: 2rem;
 }
@@ -218,7 +219,6 @@ header .nav-item .menu {
 }
 .skills-container-list:nth-child(n+4) li {
   text-align: center;
-  transition: 0.3s;
   margin: auto;
   padding: 2rem;
 }
@@ -242,7 +242,6 @@ header .nav-item .menu {
 }
 .skills-container-list:nth-child(n+5) li {
   text-align: center;
-  transition: 0.3s;
   margin: auto;
   padding: 2rem;
 }
@@ -266,7 +265,6 @@ header .nav-item .menu {
 }
 .skills-container-list:nth-child(n+6) li {
   text-align: center;
-  transition: 0.3s;
   margin: auto;
   padding: 2rem;
 }
