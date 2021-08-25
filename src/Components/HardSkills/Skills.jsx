@@ -9,7 +9,7 @@ import animation from '../Animation/Skilss.json';
 export default function Skills() {
   return (
     <div className="skills-container">
-      <Tilt options={ { max: 25 } }>
+      <Tilt options={ { max: 50 } }>
         <h1 className="skills-container-title">Skills</h1>
       </Tilt>
       <div className="skills-container-main">

@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import Tilt from 'react-tilt';
-import PropsTypes from 'prop-types';
 
 export default class List extends Component {
   render() {
@@ -18,8 +18,3 @@ export default class List extends Component {
     );
   }
 }
-
-List.propTypes = {
-  icon: PropsTypes.element.isRequired,
-  title: PropsTypes.string.isRequired,
-};

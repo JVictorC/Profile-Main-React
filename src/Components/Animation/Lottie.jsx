@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import Lottie from 'react-lottie';
-import PropTypes, { shape, string } from 'prop-types';
 
 export default function LottieAnimation({ lotti, width, height }) {
   const defaultOptions = {
@@ -18,9 +18,3 @@ export default function LottieAnimation({ lotti, width, height }) {
     </div>
   );
 }
-
-LottieAnimation.propTypes = {
-  lotti: PropTypes.objectOf(shape(string)).isRequired,
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
-};
