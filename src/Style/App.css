@@ -88,6 +88,11 @@ header .nav-item .menu {
   }
 }
 
+.animate {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
 .skills-container {
   background: #FFF;
   display: flex;
@@ -95,17 +100,6 @@ header .nav-item .menu {
   align-items: center;
   justify-content: center;
   width: 100%;
-  animation: DisaberDiv 4s;
-}
-@keyframes DisaberDiv {
-  from {
-    opacity: 0;
-    transform: translate3d(-100px, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0px, 0, 0);
-  }
 }
 .skills-container-main {
   display: flex;
@@ -117,226 +111,164 @@ header .nav-item .menu {
   cursor: alias;
   width: 100%;
   padding: 0 2rem;
-  border-bottom: 5px solid #181920;
+  transform: translate3d(-500px, 0, 0);
+  opacity: 0;
+  transition: 1s;
 }
 .skills-container-ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 2rem;
-  overflow: hidden;
   position: absolute;
   z-index: 1;
+  transform: translate3d(-500px, 0, 0);
+  opacity: 0;
+  transition: 1s;
 }
 
-.skills-container-list:nth-child(3n+1) {
-  animation: cardSkills 500ms;
-  animation-delay: 1s;
-  animation-fill-mode: backwards;
+.skills-container-list:nth-child(n+1) {
   border: 5px solid #e91e63;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
   height: 250px;
   width: 250px;
   cursor: alias;
   background: linear-gradient(-30deg, #e91e6294, white);
 }
-.skills-container-list:nth-child(3n+1) h3 {
+.skills-container-list:nth-child(n+1) h3 {
   font-size: 2rem;
   color: #e91e63;
 }
-.skills-container-list:nth-child(3n+1) .icons {
+.skills-container-list:nth-child(n+1) .icons {
   font-size: 4rem;
   color: #e91e63;
 }
-.skills-container-list:nth-child(3n+1) li {
+.skills-container-list:nth-child(n+1) li {
   text-align: center;
   transition: 0.3s;
   margin: auto;
   padding: 2rem;
 }
-@keyframes cardSkills {
-  from {
-    transform: translate3d(50px, -1000px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
 
-.skills-container-list:nth-child(3n+2) {
-  animation: cardSkills 500ms;
-  animation-delay: 2s;
-  animation-fill-mode: backwards;
+.skills-container-list:nth-child(n+2) {
   border: 5px solid #004dcf;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
   height: 250px;
   width: 250px;
   cursor: alias;
   background: linear-gradient(-30deg, #004ccf94, white);
 }
-.skills-container-list:nth-child(3n+2) h3 {
+.skills-container-list:nth-child(n+2) h3 {
   font-size: 2rem;
   color: #004dcf;
 }
-.skills-container-list:nth-child(3n+2) .icons {
+.skills-container-list:nth-child(n+2) .icons {
   font-size: 4rem;
   color: #004dcf;
 }
-.skills-container-list:nth-child(3n+2) li {
+.skills-container-list:nth-child(n+2) li {
   text-align: center;
   transition: 0.3s;
   margin: auto;
   padding: 2rem;
 }
-@keyframes cardSkills {
-  from {
-    transform: translate3d(50px, -1000px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
 
-.skills-container-list:nth-child(3n+3) {
-  animation: cardSkills 500ms;
-  animation-delay: 3s;
-  animation-fill-mode: backwards;
+.skills-container-list:nth-child(n+3) {
   border: 5px solid #fccb00;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
   height: 250px;
   width: 250px;
   cursor: alias;
   background: linear-gradient(-30deg, #fcca0094, white);
 }
-.skills-container-list:nth-child(3n+3) h3 {
+.skills-container-list:nth-child(n+3) h3 {
   font-size: 2rem;
   color: #fccb00;
 }
-.skills-container-list:nth-child(3n+3) .icons {
+.skills-container-list:nth-child(n+3) .icons {
   font-size: 4rem;
   color: #fccb00;
 }
-.skills-container-list:nth-child(3n+3) li {
+.skills-container-list:nth-child(n+3) li {
   text-align: center;
   transition: 0.3s;
   margin: auto;
   padding: 2rem;
 }
-@keyframes cardSkills {
-  from {
-    transform: translate3d(50px, -1000px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
 
-.skills-container-list:nth-child(3n+4) {
-  animation: cardSkills 500ms;
-  animation-delay: 4s;
-  animation-fill-mode: backwards;
+.skills-container-list:nth-child(n+4) {
   border: 5px solid #03a9f4;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
   height: 250px;
   width: 250px;
   cursor: alias;
   background: linear-gradient(-30deg, #03a8f494, white);
 }
-.skills-container-list:nth-child(3n+4) h3 {
+.skills-container-list:nth-child(n+4) h3 {
   font-size: 2rem;
   color: #03a9f4;
 }
-.skills-container-list:nth-child(3n+4) .icons {
+.skills-container-list:nth-child(n+4) .icons {
   font-size: 4rem;
   color: #03a9f4;
 }
-.skills-container-list:nth-child(3n+4) li {
+.skills-container-list:nth-child(n+4) li {
   text-align: center;
   transition: 0.3s;
   margin: auto;
   padding: 2rem;
 }
-@keyframes cardSkills {
-  from {
-    transform: translate3d(50px, -1000px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
 
-.skills-container-list:nth-child(3n+5) {
-  animation: cardSkills 500ms;
-  animation-delay: 5s;
-  animation-fill-mode: backwards;
+.skills-container-list:nth-child(n+5) {
   border: 5px solid orange;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
   height: 250px;
   width: 250px;
   cursor: alias;
   background: linear-gradient(-30deg, #f4940394, white);
 }
-.skills-container-list:nth-child(3n+5) h3 {
+.skills-container-list:nth-child(n+5) h3 {
   font-size: 2rem;
   color: orange;
 }
-.skills-container-list:nth-child(3n+5) .icons {
+.skills-container-list:nth-child(n+5) .icons {
   font-size: 4rem;
   color: orange;
 }
-.skills-container-list:nth-child(3n+5) li {
+.skills-container-list:nth-child(n+5) li {
   text-align: center;
   transition: 0.3s;
   margin: auto;
   padding: 2rem;
 }
-@keyframes cardSkills {
-  from {
-    transform: translate3d(50px, -1000px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
 
-.skills-container-list:nth-child(3n+6) {
-  animation: cardSkills 500ms;
-  animation-delay: 6s;
-  animation-fill-mode: backwards;
+.skills-container-list:nth-child(n+6) {
   border: 5px solid purple;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
   height: 250px;
   width: 250px;
   cursor: alias;
   background: linear-gradient(-30deg, #981ee994, white);
 }
-.skills-container-list:nth-child(3n+6) h3 {
+.skills-container-list:nth-child(n+6) h3 {
   font-size: 2rem;
   color: purple;
 }
-.skills-container-list:nth-child(3n+6) .icons {
+.skills-container-list:nth-child(n+6) .icons {
   font-size: 4rem;
   color: purple;
 }
-.skills-container-list:nth-child(3n+6) li {
+.skills-container-list:nth-child(n+6) li {
   text-align: center;
   transition: 0.3s;
   margin: auto;
   padding: 2rem;
-}
-@keyframes cardSkills {
-  from {
-    transform: translate3d(50px, -1000px, 0);
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-  }
 }
 
 * {
