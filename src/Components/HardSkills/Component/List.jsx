@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
-import Title from 'react-vanilla-tilt';
+import Tilt from 'react-tilt';
+import PropsTypes from 'prop-types';
 
 export default class List extends Component {
   render() {
     const { icon, title } = this.props;
     return (
-      <Title
+      <Tilt
         className="skills-container-list"
+        options={ { max: 40 } }
       >
         <li>
           {icon}
           <h3>{title}</h3>
         </li>
-      </Title>
+      </Tilt>
     );
   }
 }
+
+List.propTypes = {
+  icon: PropsTypes.element.isRequired,
+  title: PropsTypes.string.isRequired,
+};

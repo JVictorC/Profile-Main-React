@@ -12,9 +12,18 @@
       opacity: 1
       transform: translate3d(0px, 0, 0 )
 
+  &-main
+    display: flex
+    justify-content: center
+    align-items: baseline
+      
   &-title
     @extend %text-header
     color: $primary-color
+    cursor: alias
+    width: 100%
+    padding: 0 2rem
+    border-bottom: 5px solid $dark-color
 
   &-ul
     display: flex
@@ -22,28 +31,39 @@
     justify-content: space-around
     padding: 2rem
     overflow: hidden
+    position: absolute
+    z-index: 1
+
 
 @for $i from 1 through 6
   .skills-container-list:nth-child(3n + #{$i})
-    height: 200px
-    padding: 0 !important
-    animation: teste 500ms
+    animation: cardSkills 500ms
     animation-delay: #{$i}s
     animation-fill-mode: backwards
+    border: 5px solid nth($colors-skills, $i)
+    box-shadow: 0 0 10px rgba(0, 0, 0, .6)
+    margin: 2rem
+    height: 250px
+    width: 250px
+    cursor: alias
+    background: linear-gradient(-30deg, nth($colors-skills-background, $i), white)
+
     h3
       font-size: 2rem
       color: nth($colors-skills, $i)
+
     .icons
       font-size: 4rem
       color: nth($colors-skills, $i)
+
     li
       text-align: center
       transition: .3s
       margin: auto
       padding: 2rem
 
-    @keyframes teste
+    @keyframes cardSkills
       from
-        transform: translate3d(50px, -500px, 0)
+        transform: translate3d(50px, -1000px, 0)
       to
         transform: translate3d(0, 0, 0)

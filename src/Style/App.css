@@ -52,7 +52,7 @@ header .nav-item .menu {
   align-items: center;
   padding: 2rem;
   background: linear-gradient(#8b8e94, #FFF);
-  height: 85vh;
+  height: 100vh;
 }
 .header-contant-apresentation {
   width: 60%;
@@ -107,8 +107,17 @@ header .nav-item .menu {
     transform: translate3d(0px, 0, 0);
   }
 }
+.skills-container-main {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
 .skills-container-title {
   color: #ff5200;
+  cursor: alias;
+  width: 100%;
+  padding: 0 2rem;
+  border-bottom: 5px solid #181920;
 }
 .skills-container-ul {
   display: flex;
@@ -116,15 +125,21 @@ header .nav-item .menu {
   justify-content: space-around;
   padding: 2rem;
   overflow: hidden;
+  position: absolute;
+  z-index: 1;
 }
 
 .skills-container-list:nth-child(3n+1) {
-  height: 200px;
-  padding: 0 !important;
-  animation: teste 500ms;
-  border-color: #e91e63;
+  animation: cardSkills 500ms;
   animation-delay: 1s;
   animation-fill-mode: backwards;
+  border: 5px solid #e91e63;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  margin: 2rem;
+  height: 250px;
+  width: 250px;
+  cursor: alias;
+  background: linear-gradient(-30deg, #e91e6294, white);
 }
 .skills-container-list:nth-child(3n+1) h3 {
   font-size: 2rem;
@@ -140,9 +155,9 @@ header .nav-item .menu {
   margin: auto;
   padding: 2rem;
 }
-@keyframes teste {
+@keyframes cardSkills {
   from {
-    transform: translate3d(50px, -500px, 0);
+    transform: translate3d(50px, -1000px, 0);
   }
   to {
     transform: translate3d(0, 0, 0);
@@ -150,12 +165,16 @@ header .nav-item .menu {
 }
 
 .skills-container-list:nth-child(3n+2) {
-  height: 200px;
-  padding: 0 !important;
-  animation: teste 500ms;
-  border-color: #004dcf;
+  animation: cardSkills 500ms;
   animation-delay: 2s;
   animation-fill-mode: backwards;
+  border: 5px solid #004dcf;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  margin: 2rem;
+  height: 250px;
+  width: 250px;
+  cursor: alias;
+  background: linear-gradient(-30deg, #004ccf94, white);
 }
 .skills-container-list:nth-child(3n+2) h3 {
   font-size: 2rem;
@@ -171,9 +190,9 @@ header .nav-item .menu {
   margin: auto;
   padding: 2rem;
 }
-@keyframes teste {
+@keyframes cardSkills {
   from {
-    transform: translate3d(50px, -500px, 0);
+    transform: translate3d(50px, -1000px, 0);
   }
   to {
     transform: translate3d(0, 0, 0);
@@ -181,12 +200,16 @@ header .nav-item .menu {
 }
 
 .skills-container-list:nth-child(3n+3) {
-  height: 200px;
-  padding: 0 !important;
-  animation: teste 500ms;
-  border-color: #fccb00;
+  animation: cardSkills 500ms;
   animation-delay: 3s;
   animation-fill-mode: backwards;
+  border: 5px solid #fccb00;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  margin: 2rem;
+  height: 250px;
+  width: 250px;
+  cursor: alias;
+  background: linear-gradient(-30deg, #fcca0094, white);
 }
 .skills-container-list:nth-child(3n+3) h3 {
   font-size: 2rem;
@@ -202,9 +225,9 @@ header .nav-item .menu {
   margin: auto;
   padding: 2rem;
 }
-@keyframes teste {
+@keyframes cardSkills {
   from {
-    transform: translate3d(50px, -500px, 0);
+    transform: translate3d(50px, -1000px, 0);
   }
   to {
     transform: translate3d(0, 0, 0);
@@ -212,12 +235,16 @@ header .nav-item .menu {
 }
 
 .skills-container-list:nth-child(3n+4) {
-  height: 200px;
-  padding: 0 !important;
-  animation: teste 500ms;
-  border-color: #03a9f4;
+  animation: cardSkills 500ms;
   animation-delay: 4s;
   animation-fill-mode: backwards;
+  border: 5px solid #03a9f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  margin: 2rem;
+  height: 250px;
+  width: 250px;
+  cursor: alias;
+  background: linear-gradient(-30deg, #03a8f494, white);
 }
 .skills-container-list:nth-child(3n+4) h3 {
   font-size: 2rem;
@@ -233,9 +260,9 @@ header .nav-item .menu {
   margin: auto;
   padding: 2rem;
 }
-@keyframes teste {
+@keyframes cardSkills {
   from {
-    transform: translate3d(50px, -500px, 0);
+    transform: translate3d(50px, -1000px, 0);
   }
   to {
     transform: translate3d(0, 0, 0);
@@ -243,12 +270,16 @@ header .nav-item .menu {
 }
 
 .skills-container-list:nth-child(3n+5) {
-  height: 200px;
-  padding: 0 !important;
-  animation: teste 500ms;
-  border-color: orange;
+  animation: cardSkills 500ms;
   animation-delay: 5s;
   animation-fill-mode: backwards;
+  border: 5px solid orange;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  margin: 2rem;
+  height: 250px;
+  width: 250px;
+  cursor: alias;
+  background: linear-gradient(-30deg, #f4940394, white);
 }
 .skills-container-list:nth-child(3n+5) h3 {
   font-size: 2rem;
@@ -264,9 +295,9 @@ header .nav-item .menu {
   margin: auto;
   padding: 2rem;
 }
-@keyframes teste {
+@keyframes cardSkills {
   from {
-    transform: translate3d(50px, -500px, 0);
+    transform: translate3d(50px, -1000px, 0);
   }
   to {
     transform: translate3d(0, 0, 0);
@@ -274,12 +305,16 @@ header .nav-item .menu {
 }
 
 .skills-container-list:nth-child(3n+6) {
-  height: 200px;
-  padding: 0 !important;
-  animation: teste 500ms;
-  border-color: purple;
+  animation: cardSkills 500ms;
   animation-delay: 6s;
   animation-fill-mode: backwards;
+  border: 5px solid purple;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  margin: 2rem;
+  height: 250px;
+  width: 250px;
+  cursor: alias;
+  background: linear-gradient(-30deg, #981ee994, white);
 }
 .skills-container-list:nth-child(3n+6) h3 {
   font-size: 2rem;
@@ -295,9 +330,9 @@ header .nav-item .menu {
   margin: auto;
   padding: 2rem;
 }
-@keyframes teste {
+@keyframes cardSkills {
   from {
-    transform: translate3d(50px, -500px, 0);
+    transform: translate3d(50px, -1000px, 0);
   }
   to {
     transform: translate3d(0, 0, 0);
