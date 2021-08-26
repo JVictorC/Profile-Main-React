@@ -8,7 +8,7 @@ export default class List extends Component {
     return (
       <Tilt
         className="skills-container-list"
-        options={ { max: 40 } }
+        options={ { max: 50, reverse: false, scale: 1.2 } }
       >
         <li>
           {icon}

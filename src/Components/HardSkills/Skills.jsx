@@ -10,12 +10,10 @@ export default function Skills() {
     const theree = 3;
     const four = 4;
     const target = document.querySelectorAll('[data-anime]');
-    console.log(target);
     const windowTop = window.pageYOffset + ((window.innerHeight * theree) / four);
     target.forEach((element) => {
       if ((windowTop) > element.offsetTop) {
         element.classList.add('animate');
-        console.log(element);
       } else {
         element.classList.remove('animate');
       }

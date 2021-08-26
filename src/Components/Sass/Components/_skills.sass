@@ -15,7 +15,7 @@
 
 
   &-title
-    @extend %text-header
+    @include text-header($wight: 300, $font-size: 5rem)
     @include animation
     color: $primary-color
     cursor: alias
@@ -23,7 +23,7 @@
     padding: 0 2rem
 
   &-ul
-    @include display-flex-around
+    @include display-flex-row($justify: space-around, $wrap: wrap)
     @include animation
     position: absolute
     z-index: 1

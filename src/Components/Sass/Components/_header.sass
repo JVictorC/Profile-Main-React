@@ -4,16 +4,16 @@ header
 
   .nav-item
     max-height: 100px
-    @include display-flex-between
+    @include display-flex-row
     width: 80%
     margin: auto
 
     ul
-      @include display-flex-between
+      @include display-flex-row
 
       li
         font-size: 1.3rem
-        @include display-flex-between
+        @include display-flex-row
         @extend %links
 
     .menu
@@ -22,7 +22,7 @@ header
       display: none
 
 .header-contant
-  @include display-flex-around
+  @include display-flex-row($justify: space-around)
   background: linear-gradient(#8b8e94, $light-color)
   height: 75vh
 
@@ -31,11 +31,12 @@ header
     @include display-flex-column
 
   &-name
-    @extend %text-header
+    @include text-header(500)
+    font-weight: 500
 
 
   &-student
-    @extend %text-header
+    @include text-header(300)
     color: $primary-color
     font-weight: 300
     border-right: white 5px solid
@@ -48,10 +49,10 @@ header
         width: 0
 
       50%
-        width: 48rem
+        width: 41.5rem
 
       75%
-        width: 48rem
+        width: 41.5rem
 
       100%
         width: 0

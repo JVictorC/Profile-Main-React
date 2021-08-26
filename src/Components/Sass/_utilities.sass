@@ -4,7 +4,7 @@
     padding: 0
     margin: 0
     box-sizing: border-box
-    font-family: 'lato'
+    font-family: 'Montserrat'
 
   a
     text-decoration: none
@@ -12,19 +12,19 @@
   li
     list-style: none
 
-@mixin display-flex-between
+@mixin display-flex-row($justify: space-between, $wrap: nowrap)
   display: flex
-  justify-content: space-between
+  justify-content: $justify
+  flex-wrap: $wrap
   align-items: center
   padding: 2rem
 
-@mixin display-flex-around
-  display: flex
-  justify-content: space-around
-  align-items: center
-  flex-wrap: wrap
-  padding: 2rem
-
+// @mixin display-flex-around
+//   display: flex
+//   flex-wrap: wrap
+//   justify-content: space-around
+//   align-items: center
+//   padding: 2rem
 
 @mixin display-flex-column
   display: flex
@@ -32,6 +32,12 @@
   align-items: center
   justify-content: center
 
+@mixin text-header($wight: 500, $font-size: 3rem)
+  color: $dark-color
+  font-size: $font-size
+  text-align: center
+  padding: .3rem
+  font-weight: $wight
 
 
 @mixin animation
@@ -47,9 +53,3 @@
   &:hover
     color: $primary-color
     cursor: pointer
-
-%text-header
-  color: $dark-color
-  font-size: 4rem
-  text-align: center
-  padding: .3rem
