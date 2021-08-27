@@ -45,7 +45,7 @@ header .nav-item .menu {
 
 .header-contant {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
   padding: 2rem;
@@ -57,7 +57,7 @@ header .nav-item .menu {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .header-contant-name {
   color: #181920;
@@ -110,9 +110,12 @@ header .nav-item .menu {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   overflow: hidden;
+  background: linear-gradient(white, #e5eaff);
+  height: 85vh;
+  padding-bottom: 6rem;
 }
 .skills-container-main {
   display: flex;
@@ -283,6 +286,64 @@ header .nav-item .menu {
   text-align: center;
   margin: auto;
   padding: 2rem;
+}
+
+.about-container-bg {
+  background: linear-gradient(#e5eaff, #8b8e94);
+  min-height: 85vh;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transform: translate3d(700px, 50px, 0);
+  opacity: 0;
+  transition: 1s;
+}
+.about-container-title {
+  color: #181920;
+  font-size: 3rem;
+  text-align: center;
+  padding: 0.3rem;
+  font-weight: 300;
+  color: #ff5200;
+}
+.about-container-subtitle {
+  color: #181920;
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.3rem;
+  font-weight: 200;
+  color: #181920;
+  padding-bottom: 2rem;
+}
+.about-container-main {
+  padding: 2rem;
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+}
+.about-container-main-image {
+  width: 20%;
+  max-width: 400px;
+  height: 15%;
+  max-width: 400px;
+  border: 5px solid #FFF;
+  border-radius: 90px;
+  border-radius: 55% 20%;
+}
+.about-container-main-about {
+  @indclude display-flex-column;
+}
+.about-container-main-presentation {
+  font-size: 2rem;
+  padding: 2rem;
+  color: #181920;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
 }
 
 * {

@@ -22,8 +22,8 @@ header
       display: none
 
 .header-contant
-  @include display-flex-row($justify: space-around)
-  background: linear-gradient(#8b8e94, $light-color)
+  @include display-flex-row($justify: space-between)
+  background: linear-gradient($secondary-color, $light-color)
   height: 75vh
 
   &-apresentation
@@ -33,7 +33,6 @@ header
   &-name
     @include text-header(500)
     font-weight: 500
-
 
   &-student
     @include text-header(300)
@@ -60,4 +59,3 @@ header
     @keyframes myAnimationLine
       100%
         border-right-color: transparent
-

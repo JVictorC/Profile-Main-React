@@ -12,25 +12,18 @@
   li
     list-style: none
 
-@mixin display-flex-row($justify: space-between, $wrap: nowrap)
+@mixin display-flex-row($justify: space-between, $wrap: nowrap,)
   display: flex
   justify-content: $justify
   flex-wrap: $wrap
   align-items: center
   padding: 2rem
 
-// @mixin display-flex-around
-//   display: flex
-//   flex-wrap: wrap
-//   justify-content: space-around
-//   align-items: center
-//   padding: 2rem
-
 @mixin display-flex-column
   display: flex
   flex-direction: column
   align-items: center
-  justify-content: center
+  justify-content: space-around
 
 @mixin text-header($wight: 500, $font-size: 3rem)
   color: $dark-color
@@ -39,9 +32,8 @@
   padding: .3rem
   font-weight: $wight
 
-
-@mixin animation
-  transform: translate3d(-700px, 50px, 0)
+@mixin animation($diretion: -700px)
+  transform: translate3d($diretion, 50px, 0)
   opacity: 0
   transition: 1s
 
