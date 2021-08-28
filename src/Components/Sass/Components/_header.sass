@@ -1,20 +1,29 @@
 header
-  background: $menus-bg
-  border-bottom: 10px solid $primary-color
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  height: 100vh
 
   .nav-item
-    max-height: 100px
-    @include display-flex-row
-    width: 80%
-    margin: auto
+    width: 100px
+    opacity: .9
+    background: linear-gradient(#00545d, #000729)
+    border-left: 5px solid #00545d
+    position: absolute
+    right: 0
+    top: 0
+    height: 100%
+    @include display-flex-column
 
     ul
-      @include display-flex-row
+      height: 30%
+      display: flex
+      @include display-flex-column
 
       li
         font-size: 1.3rem
-        @include display-flex-row
-        @extend %links
+        @include display-flex-column
+        @include links
 
     .menu
       color: $light-color
@@ -22,40 +31,87 @@ header
       display: none
 
 .header-contant
-  @include display-flex-row($justify: space-between)
-  background: linear-gradient($secondary-color, $light-color)
-  height: 75vh
+  background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../Images/BackGround.jpg')
+  width: 100%
+  background-position: center
+  background-size: cover
+  @include display-flex-column($justify: space-between)
 
-  &-apresentation
-    width: 60%
-    @include display-flex-column
+  &-main
+    @include display-flex-column($justify: space-between)
+    margin: 5rem
+    width: 80%
 
-  &-name
-    @include text-header(500)
-    font-weight: 500
+    &-apresentation
+      width: 60%
+      @include display-flex-column
 
-  &-student
-    @include text-header(300)
-    color: $primary-color
-    font-weight: 300
-    border-right: white 5px solid
-    animation: myAnimationLine .5s infinite normal, disaberName 8s infinite normal steps(26)
+    &-name
+      @include text-header(500)
+      color: $light-color
+      font-weight: 500
+
+    &-student
+      @include text-header(300)
+      color: $primary-color
+      font-weight: 300
+      border-right: white 5px solid
+      animation: myAnimationLine .5s infinite normal, disaberName 8s infinite normal steps(26)
+      overflow: hidden
+      white-space: nowrap
+
+      @keyframes disaberName
+        0%
+          width: 0
+
+        50%
+          width: 41.5rem
+
+        75%
+          width: 41.5rem
+
+        100%
+          width: 0
+
+      @keyframes myAnimationLine
+        100%
+          border-right-color: transparent
+
+  section
+    position: relative
+    width: 100%
+    height: 100px
     overflow: hidden
-    white-space: nowrap
 
-    @keyframes disaberName
-      0%
-        width: 0
+    .wave
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: url('../Images/wave.png')
+      background-size: 1000px 100px
 
-      50%
-        width: 41.5rem
+  @for $i from 1 through 4
+    .wave#{$i}
+      animation: animate#{i} #{$i}0s linear infinite
+      animation-delay: #{$i}s
+      bottom: 0
+      opacity: #{'.' + $i + 6}
+      @keyframes animate#{i}
+        0%
+          background-position-x: 0
+        100%
+          background-position-x: 1000px
 
-      75%
-        width: 41.5rem
+    .wave1
+      z-index: 1000
+      opacity: 1
 
-      100%
-        width: 0
-
-    @keyframes myAnimationLine
-      100%
-        border-right-color: transparent
+  // .wave
+  //   position: absolute
+  //   bottom: 0
+  //   left: 0
+  //   width: 100%
+  //   height: 100%
+  //   background: url('../Images/wave.png')

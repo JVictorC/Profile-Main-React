@@ -15,13 +15,13 @@ export default class Header extends Component {
   }
 
   componentDidMount() {
-    const FIVE_SECONDS = 8000;
-    setTimeout(this.changeHeader, FIVE_SECONDS);
+    const SEVEN_SECONDS = 7500;
+    setTimeout(this.changeHeader, SEVEN_SECONDS);
   }
 
   componentDidUpdate() {
-    const FIVE_SECONDS = 8000;
-    setTimeout(this.changeHeader, FIVE_SECONDS);
+    const SEVEN_SECONDS = 7500;
+    setTimeout(this.changeHeader, SEVEN_SECONDS);
   }
 
   changeHeader() {
@@ -41,26 +41,32 @@ export default class Header extends Component {
   render() {
     const { header } = this.state;
     return (
-      <>
-        <header>
-          <nav className="nav-item">
-            <LottieAnimation lotti={ Rocket } height={ 100 } width={ 100 } />
-            <ul>
-              <li>Home</li>
-              <li>Contatos</li>
-              <li>Projetos</li>
-            </ul>
-            <GiHamburgerMenu className="menu" />
-          </nav>
-        </header>
+      <header>
         <div className="header-contant">
-          <div className="header-contant-apresentation">
-            <h1 className="header-contant-name line">João Victor C da Silva</h1>
-            <h2 className="header-contant-student">{header}</h2>
+          <div className="header-contant-main">
+            <div className="header-contant-main-apresentation">
+              <h1 className="header-contant-main-name line">João Victor C da Silva</h1>
+              <h2 className="header-contant-main-student">{header}</h2>
+            </div>
+            <LottieAnimation lotti={ Person } height={ 600 } width={ 600 } />
           </div>
-          <LottieAnimation lotti={ Person } height={ 500 } width={ 500 } />
+          <section>
+            <div className="wave wave1" />
+            <div className="wave wave2" />
+            <div className="wave wave3" />
+            <div className="wave wave4" />
+          </section>
         </div>
-      </>
+        <nav className="nav-item">
+          <LottieAnimation lotti={ Rocket } height={ 70 } width={ 70 } />
+          <ul>
+            <li>Home</li>
+            <li>Contatos</li>
+            <li>Projetos</li>
+          </ul>
+          <GiHamburgerMenu className="menu" />
+        </nav>
+      </header>
     );
   }
 }

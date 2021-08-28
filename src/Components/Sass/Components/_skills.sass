@@ -30,12 +30,11 @@
     @include animation
     position: absolute
     z-index: 1
-    width: 1200px
+    width: 1200px 
 
-
+ 
 @for $i from 1 through 6
-
-  .skills-container-list:nth-child(n + #{$i})
+  .skills-container-list:nth-child(#{$i})
     border: 5px solid nth($colors-skills, $i)
     box-shadow: 10px 10px 10px rgba(0, 0, 0, .6)
     margin: 2rem

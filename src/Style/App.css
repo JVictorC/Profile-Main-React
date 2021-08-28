@@ -1,41 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
-header .nav-item ul li {
-  color: #FFF;
-  transition: 0.3s;
-}
-header .nav-item ul li:hover {
-  color: #ff5200;
-  cursor: pointer;
-}
-
 header {
-  background: #1d1d1d;
-  border-bottom: 10px solid #ff5200;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100vh;
 }
 header .nav-item {
-  max-height: 100px;
+  width: 100px;
+  opacity: 0.9;
+  background: linear-gradient(#00545d, #000729);
+  border-left: 5px solid #00545d;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  flex-direction: column;
   align-items: center;
-  padding: 2rem;
-  width: 80%;
-  margin: auto;
+  justify-content: space-around;
 }
 header .nav-item ul {
+  height: 30%;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  justify-content: space-around;
 }
 header .nav-item ul li {
   font-size: 1.3rem;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  justify-content: space-around;
+  color: #FFF;
+  transition: 0.5s;
+  font-size: 1rem;
+  padding: 1rem auto;
+}
+header .nav-item ul li:hover {
+  color: #ff5200;
+  cursor: pointer;
+  border-bottom: 2px solid #ff5200;
 }
 header .nav-item .menu {
   color: #FFF;
@@ -44,30 +50,40 @@ header .nav-item .menu {
 }
 
 .header-contant {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Images/BackGround.jpg");
+  width: 100%;
+  background-position: center;
+  background-size: cover;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  flex-direction: column;
   align-items: center;
-  padding: 2rem;
-  background: linear-gradient(#8b8e94, #FFF);
-  height: 75vh;
+  justify-content: space-between;
 }
-.header-contant-apresentation {
+.header-contant-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5rem;
+  width: 80%;
+}
+.header-contant-main-apresentation {
   width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-.header-contant-name {
+.header-contant-main-name {
   color: #181920;
   font-size: 3rem;
   text-align: center;
   padding: 0.3rem;
   font-weight: 500;
+  color: #FFF;
   font-weight: 500;
 }
-.header-contant-student {
+.header-contant-main-student {
   color: #181920;
   font-size: 3rem;
   text-align: center;
@@ -98,6 +114,93 @@ header .nav-item .menu {
   100% {
     border-right-color: transparent;
   }
+}
+.header-contant section {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+.header-contant section .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../Images/wave.png");
+  background-size: 1000px 100px;
+}
+.header-contant .wave1 {
+  animation: animatei 10s linear infinite;
+  animation-delay: 1s;
+  bottom: 0;
+  opacity: .16;
+}
+@keyframes animatei {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+.header-contant .wave1 {
+  z-index: 1000;
+  opacity: 1;
+}
+.header-contant .wave2 {
+  animation: animatei 20s linear infinite;
+  animation-delay: 2s;
+  bottom: 0;
+  opacity: .26;
+}
+@keyframes animatei {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+.header-contant .wave1 {
+  z-index: 1000;
+  opacity: 1;
+}
+.header-contant .wave3 {
+  animation: animatei 30s linear infinite;
+  animation-delay: 3s;
+  bottom: 0;
+  opacity: .36;
+}
+@keyframes animatei {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+.header-contant .wave1 {
+  z-index: 1000;
+  opacity: 1;
+}
+.header-contant .wave4 {
+  animation: animatei 40s linear infinite;
+  animation-delay: 4s;
+  bottom: 0;
+  opacity: .46;
+}
+@keyframes animatei {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+.header-contant .wave1 {
+  z-index: 1000;
+  opacity: 1;
 }
 
 .animate {
@@ -150,7 +253,7 @@ header .nav-item .menu {
   width: 1200px;
 }
 
-.skills-container-list:nth-child(n+1) {
+.skills-container-list:nth-child(1) {
   border: 5px solid #e91e63;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
@@ -159,21 +262,21 @@ header .nav-item .menu {
   cursor: alias;
   background: linear-gradient(-30deg, #e91e6294, white);
 }
-.skills-container-list:nth-child(n+1) h3 {
+.skills-container-list:nth-child(1) h3 {
   font-size: 2rem;
   color: #e91e63;
 }
-.skills-container-list:nth-child(n+1) .icons {
+.skills-container-list:nth-child(1) .icons {
   font-size: 4rem;
   color: #e91e63;
 }
-.skills-container-list:nth-child(n+1) li {
+.skills-container-list:nth-child(1) li {
   text-align: center;
   margin: auto;
   padding: 2rem;
 }
 
-.skills-container-list:nth-child(n+2) {
+.skills-container-list:nth-child(2) {
   border: 5px solid #004dcf;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
@@ -182,21 +285,21 @@ header .nav-item .menu {
   cursor: alias;
   background: linear-gradient(-30deg, #004ccf94, white);
 }
-.skills-container-list:nth-child(n+2) h3 {
+.skills-container-list:nth-child(2) h3 {
   font-size: 2rem;
   color: #004dcf;
 }
-.skills-container-list:nth-child(n+2) .icons {
+.skills-container-list:nth-child(2) .icons {
   font-size: 4rem;
   color: #004dcf;
 }
-.skills-container-list:nth-child(n+2) li {
+.skills-container-list:nth-child(2) li {
   text-align: center;
   margin: auto;
   padding: 2rem;
 }
 
-.skills-container-list:nth-child(n+3) {
+.skills-container-list:nth-child(3) {
   border: 5px solid #fccb00;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
@@ -205,21 +308,21 @@ header .nav-item .menu {
   cursor: alias;
   background: linear-gradient(-30deg, #fcca0094, white);
 }
-.skills-container-list:nth-child(n+3) h3 {
+.skills-container-list:nth-child(3) h3 {
   font-size: 2rem;
   color: #fccb00;
 }
-.skills-container-list:nth-child(n+3) .icons {
+.skills-container-list:nth-child(3) .icons {
   font-size: 4rem;
   color: #fccb00;
 }
-.skills-container-list:nth-child(n+3) li {
+.skills-container-list:nth-child(3) li {
   text-align: center;
   margin: auto;
   padding: 2rem;
 }
 
-.skills-container-list:nth-child(n+4) {
+.skills-container-list:nth-child(4) {
   border: 5px solid #03a9f4;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
@@ -228,21 +331,21 @@ header .nav-item .menu {
   cursor: alias;
   background: linear-gradient(-30deg, #03a8f494, white);
 }
-.skills-container-list:nth-child(n+4) h3 {
+.skills-container-list:nth-child(4) h3 {
   font-size: 2rem;
   color: #03a9f4;
 }
-.skills-container-list:nth-child(n+4) .icons {
+.skills-container-list:nth-child(4) .icons {
   font-size: 4rem;
   color: #03a9f4;
 }
-.skills-container-list:nth-child(n+4) li {
+.skills-container-list:nth-child(4) li {
   text-align: center;
   margin: auto;
   padding: 2rem;
 }
 
-.skills-container-list:nth-child(n+5) {
+.skills-container-list:nth-child(5) {
   border: 5px solid orange;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
@@ -251,21 +354,21 @@ header .nav-item .menu {
   cursor: alias;
   background: linear-gradient(-30deg, #f4940394, white);
 }
-.skills-container-list:nth-child(n+5) h3 {
+.skills-container-list:nth-child(5) h3 {
   font-size: 2rem;
   color: orange;
 }
-.skills-container-list:nth-child(n+5) .icons {
+.skills-container-list:nth-child(5) .icons {
   font-size: 4rem;
   color: orange;
 }
-.skills-container-list:nth-child(n+5) li {
+.skills-container-list:nth-child(5) li {
   text-align: center;
   margin: auto;
   padding: 2rem;
 }
 
-.skills-container-list:nth-child(n+6) {
+.skills-container-list:nth-child(6) {
   border: 5px solid purple;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
@@ -274,15 +377,15 @@ header .nav-item .menu {
   cursor: alias;
   background: linear-gradient(-30deg, #981ee994, white);
 }
-.skills-container-list:nth-child(n+6) h3 {
+.skills-container-list:nth-child(6) h3 {
   font-size: 2rem;
   color: purple;
 }
-.skills-container-list:nth-child(n+6) .icons {
+.skills-container-list:nth-child(6) .icons {
   font-size: 4rem;
   color: purple;
 }
-.skills-container-list:nth-child(n+6) li {
+.skills-container-list:nth-child(6) li {
   text-align: center;
   margin: auto;
   padding: 2rem;
