@@ -1,20 +1,18 @@
 header
   display: flex
-  justify-content: space-between
-  align-items: stretch
   height: 100vh
 
   .nav-item
     width: 100px
     opacity: .9
-    background: linear-gradient(#00545d, #000729)
+    background: linear-gradient($header-primary, $header-secondary)
     border-left: 5px solid #00545d
     position: fixed
     z-index: 10000
     right: 0
     top: 0
     height: 100%
-    @include display-flex-column
+    @include display-flex-column($justify: space-around)
 
     ul
       height: 30%

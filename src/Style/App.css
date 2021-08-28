@@ -1,8 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+.btn {
+  border: none;
+  border-radius: 50px;
+  font-size: 2rem;
+  padding: 2rem 5rem;
+  transition: 0.5s;
+}
+.btn-header {
+  background: linear-gradient(90deg, #00545d, #000729);
+  color: #FFF;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.btn-header:hover {
+  opacity: 1;
+}
+
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
   height: 100vh;
 }
 header .nav-item {
