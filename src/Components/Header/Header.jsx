@@ -15,13 +15,13 @@ export default class Header extends Component {
   }
 
   componentDidMount() {
-    const SEVEN_SECONDS = 7500;
-    setTimeout(this.changeHeader, SEVEN_SECONDS);
+    const EITHY_SECONDS = 8200;
+    setTimeout(this.changeHeader, EITHY_SECONDS);
   }
 
   componentDidUpdate() {
-    const SEVEN_SECONDS = 7500;
-    setTimeout(this.changeHeader, SEVEN_SECONDS);
+    const EITHY_SECONDS = 8200;
+    setTimeout(this.changeHeader, EITHY_SECONDS);
   }
 
   changeHeader() {

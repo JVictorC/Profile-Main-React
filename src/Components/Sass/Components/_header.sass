@@ -9,7 +9,8 @@ header
     opacity: .9
     background: linear-gradient(#00545d, #000729)
     border-left: 5px solid #00545d
-    position: absolute
+    position: fixed
+    z-index: 10000
     right: 0
     top: 0
     height: 100%
@@ -31,7 +32,7 @@ header
       display: none
 
 .header-contant
-  background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('../Images/BackGround.jpg')
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('../Images/BackGround.jpg')
   width: 100%
   background-position: center
   background-size: cover
@@ -97,16 +98,20 @@ header
       animation: animate#{i} #{$i}0s linear infinite
       animation-delay: #{$i}s
       bottom: 0
+      @i
       opacity: #{'.' + $i + 6}
       @keyframes animate#{i}
         0%
           background-position-x: 0
         100%
           background-position-x: 1000px
-
+   
     .wave1
       z-index: 1000
       opacity: 1
+    .wave2
+      z-index: 999
+      opacity: .9
 
   // .wave
   //   position: absolute

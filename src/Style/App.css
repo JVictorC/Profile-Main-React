@@ -10,7 +10,8 @@ header .nav-item {
   opacity: 0.9;
   background: linear-gradient(#00545d, #000729);
   border-left: 5px solid #00545d;
-  position: absolute;
+  position: fixed;
+  z-index: 10000;
   right: 0;
   top: 0;
   height: 100%;
@@ -50,7 +51,7 @@ header .nav-item .menu {
 }
 
 .header-contant {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../Images/BackGround.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../Images/BackGround.jpg");
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -134,6 +135,7 @@ header .nav-item .menu {
   animation: animatei 10s linear infinite;
   animation-delay: 1s;
   bottom: 0;
+  @i;
   opacity: .16;
 }
 @keyframes animatei {
@@ -149,9 +151,14 @@ header .nav-item .menu {
   opacity: 1;
 }
 .header-contant .wave2 {
+  z-index: 999;
+  opacity: 0.9;
+}
+.header-contant .wave2 {
   animation: animatei 20s linear infinite;
   animation-delay: 2s;
   bottom: 0;
+  @i;
   opacity: .26;
 }
 @keyframes animatei {
@@ -166,10 +173,15 @@ header .nav-item .menu {
   z-index: 1000;
   opacity: 1;
 }
+.header-contant .wave2 {
+  z-index: 999;
+  opacity: 0.9;
+}
 .header-contant .wave3 {
   animation: animatei 30s linear infinite;
   animation-delay: 3s;
   bottom: 0;
+  @i;
   opacity: .36;
 }
 @keyframes animatei {
@@ -184,10 +196,15 @@ header .nav-item .menu {
   z-index: 1000;
   opacity: 1;
 }
+.header-contant .wave2 {
+  z-index: 999;
+  opacity: 0.9;
+}
 .header-contant .wave4 {
   animation: animatei 40s linear infinite;
   animation-delay: 4s;
   bottom: 0;
+  @i;
   opacity: .46;
 }
 @keyframes animatei {
@@ -201,6 +218,10 @@ header .nav-item .menu {
 .header-contant .wave1 {
   z-index: 1000;
   opacity: 1;
+}
+.header-contant .wave2 {
+  z-index: 999;
+  opacity: 0.9;
 }
 
 .animate {
