@@ -4,6 +4,7 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import LottieAnimation from '../Animation/Lottie';
 import Rocket from '../Animation/rocket.json';
 import Person from '../Animation/Header.json';
+import Wave from '../wave/index';
 
 export default class Header extends Component {
   constructor(props) {
@@ -51,12 +52,7 @@ export default class Header extends Component {
             </div>
             <LottieAnimation lotti={ Person } height={ 600 } width={ 600 } />
           </div>
-          <section>
-            <div className="wave wave1" />
-            <div className="wave wave2" />
-            <div className="wave wave3" />
-            <div className="wave wave4" />
-          </section>
+          <Wave component="header" />
         </div>
         <nav className="nav-item">
           <LottieAnimation lotti={ Rocket } height={ 70 } width={ 70 } />

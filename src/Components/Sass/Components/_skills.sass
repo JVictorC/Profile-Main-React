@@ -1,21 +1,19 @@
 .animate
   opacity: 1 !important
   transform: translate3d(0, 0, 0) !important
-  
+
 .skills-container
-  background: $light-color
-  @include display-flex-column
+  @include display-flex-column($justify: space-between)
+  padding-top: 2rem
   width: 100%
   overflow: hidden
   background: linear-gradient(white, $secondary-bg)
-  height: 85vh
-  padding-bottom: 6rem
+  height: 100vh
 
   &-main
     display: flex
     justify-content: center
     align-items: baseline
-
 
   &-title
     @include text-header($wight: 300, $font-size: 5rem)
@@ -30,9 +28,9 @@
     @include animation
     position: absolute
     z-index: 1
-    width: 1200px 
+    width: 1200px
 
- 
+
 @for $i from 1 through 6
   .skills-container-list:nth-child(#{$i})
     border: 5px solid nth($colors-skills, $i)

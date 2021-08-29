@@ -4,6 +4,7 @@ import { FaReact, FaHtml5, FaBootstrap } from 'react-icons/fa';
 import List from './Component/List';
 import LottieAnimation from '../Animation/Lottie';
 import animation from '../Animation/Skilss.json';
+import Wave from '../wave/index';
 
 export default function Skills() {
   return (
@@ -40,6 +41,7 @@ export default function Skills() {
         </ul>
         <LottieAnimation lotti={ animation } height={ 600 } width={ 1000 } />
       </div>
+      <Wave component="skills" />
     </div>
   );
 }
