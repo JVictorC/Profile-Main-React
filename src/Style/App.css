@@ -20,7 +20,6 @@ section {
   position: relative;
   width: 100%;
   height: 100px;
-  overflow: hidden;
 }
 section .wave {
   position: absolute;
@@ -34,103 +33,35 @@ section .wave-header {
   background: url("../Images/wave.png");
 }
 section .wave-skills {
-  background: url("../Images/waveSkills.png");
+  background: url("../Images/WaveBlue.png");
 }
-
-.wave1 {
-  animation: animatei 10s linear infinite;
-  bottom: 0;
-  opacity: .16;
+section .wave1 {
+  animation: animete 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0;
 }
-@keyframes animatei {
+@keyframes animete {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 1000px;
+  }
+}
+section .wave2 {
+  animation: animete2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+}
+@keyframes animete2 {
   0% {
     background-position-x: 0;
   }
   100% {
-    background-position-x: 1000px;
+    background-position-x: -1000px;
   }
-}
-
-.wave1 {
-  z-index: 1000;
-  opacity: 1;
-}
-
-.wave2 {
-  z-index: 999;
-  opacity: 0.9;
-}
-
-.wave2 {
-  animation: animatei 20s linear infinite;
-  bottom: 0;
-  opacity: .26;
-}
-@keyframes animatei {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 1000px;
-  }
-}
-
-.wave1 {
-  z-index: 1000;
-  opacity: 1;
-}
-
-.wave2 {
-  z-index: 999;
-  opacity: 0.9;
-}
-
-.wave3 {
-  animation: animatei 30s linear infinite;
-  bottom: 0;
-  opacity: .36;
-}
-@keyframes animatei {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 1000px;
-  }
-}
-
-.wave1 {
-  z-index: 1000;
-  opacity: 1;
-}
-
-.wave2 {
-  z-index: 999;
-  opacity: 0.9;
-}
-
-.wave4 {
-  animation: animatei 40s linear infinite;
-  bottom: 0;
-  opacity: .46;
-}
-@keyframes animatei {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 1000px;
-  }
-}
-
-.wave1 {
-  z-index: 1000;
-  opacity: 1;
-}
-
-.wave2 {
-  z-index: 999;
-  opacity: 0.9;
 }
 
 header {
@@ -138,10 +69,10 @@ header {
   height: 100vh;
 }
 header .nav-item {
-  width: 100px;
+  width: 120px;
   opacity: 0.9;
   background: linear-gradient(#00545d, #000729);
-  border-left: 5px solid #00545d;
+  border-left: 10px solid #00545d;
   position: fixed;
   z-index: 10000;
   right: 0;
@@ -152,15 +83,15 @@ header .nav-item {
   align-items: center;
   justify-content: space-around;
 }
-header .nav-item ul {
-  height: 30%;
+header .nav-item-menu {
+  height: 50%;
   display: flex;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-header .nav-item ul li {
+header .nav-item-menu li {
   font-size: 1.3rem;
   display: flex;
   flex-direction: column;
@@ -171,10 +102,26 @@ header .nav-item ul li {
   font-size: 1rem;
   padding: 1rem auto;
 }
-header .nav-item ul li:hover {
-  color: #ff5200;
+header .nav-item-menu li:hover {
+  font-size: 20px;
   cursor: pointer;
-  border-bottom: 2px solid #ff5200;
+}
+header .nav-item-social {
+  color: #FFF;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+header .nav-item-social li {
+  margin: 1rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+header .nav-item-social li:hover {
+  color: #00545d;
+  font-size: 3rem;
 }
 header .nav-item .menu {
   color: #FFF;
@@ -262,7 +209,7 @@ header .nav-item .menu {
   padding-top: 2rem;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(white, #e5eaff);
+  background: #FFF;
   height: 100vh;
 }
 .skills-container-main {
@@ -437,7 +384,7 @@ header .nav-item .menu {
 }
 
 .about-container-bg {
-  background: linear-gradient(#e5eaff, #8b8e94);
+  background: #00eaff;
   min-height: 85vh;
 }
 

@@ -56,12 +56,12 @@ export default class Header extends Component {
         </div>
         <nav className="nav-item">
           <LottieAnimation lotti={ Rocket } height={ 70 } width={ 70 } />
-          <ul>
+          <ul className="nav-item-menu">
             <li>Home</li>
             <li>Contatos</li>
             <li>Projetos</li>
           </ul>
-          <ul>
+          <ul className="nav-item-social">
             <li><AiFillLinkedin /></li>
             <li><AiFillGithub /></li>
           </ul>

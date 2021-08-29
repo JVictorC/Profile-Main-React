@@ -3,10 +3,10 @@ header
   height: 100vh
 
   .nav-item
-    width: 100px
+    width: 120px
     opacity: .9
     background: linear-gradient($header-primary, $header-secondary)
-    border-left: 5px solid #00545d
+    border-left: 10px solid $header-primary
     position: fixed
     z-index: 10000
     right: 0
@@ -14,8 +14,8 @@ header
     height: 100%
     @include display-flex-column($justify: space-around)
 
-    ul
-      height: 30%
+    &-menu
+      height: 50%
       display: flex
       @include display-flex-column
 
@@ -24,6 +24,19 @@ header
         @include display-flex-column
         @include links
 
+    &-social
+      color: $light-color
+      font-size: 2rem
+      @include display-flex-column
+
+      li
+        margin: 1rem
+        transition: .5s
+        cursor: pointer
+
+        &:hover
+          color: $header-primary
+          font-size: 3rem
     .menu
       color: $light-color
       font-size: 2rem
@@ -75,7 +88,6 @@ header
       @keyframes myAnimationLine
         100%
           border-right-color: transparent
-
 
   // .wave
   //   position: absolute
