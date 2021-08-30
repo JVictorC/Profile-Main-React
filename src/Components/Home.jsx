@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header/Header';
 import Skills from './HardSkills/Skills';
 import About from './About/About';
+import Project from './Projects/Projects';
 
 export default function Home() {
   function animeScrolls() {
@@ -23,6 +24,7 @@ export default function Home() {
       <Header />
       <Skills />
       <About />
+      <Project />
     </div>
   );
 }

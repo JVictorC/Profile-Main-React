@@ -1,5 +1,8 @@
 //Mixins
 @mixin reset()
+  html
+    scroll-behavior: smooth
+
   *
     padding: 0
     margin: 0
@@ -47,32 +50,25 @@
     font-size: 20px
     cursor: pointer
 
-// Estyles Buttons
-
-.btn
-  border: none
-  border-radius: 50px
-  font-size: 2rem
-  padding: 2rem 5rem
+@mixin Card()
+  border: 4px solid $secondary-color
+  height: 350px
+  width: 350px
   transition: .5s
+  border-radius: 10px
+  cursor: pointer
+  margin: 1rem
 
-  &-header
-    background: linear-gradient(90deg, $header-primary, $header-secondary)
-    color: $light-color
-    opacity: .7
-    cursor: pointer
-
-    &:hover
-      opacity: 1
-
-// PlaceHolders
-
+  &:hover
+    border: none
+    box-shadow: 0 0 10px rgba(0, 0, 0, .6)
+    transform: scale(1.1)
+    font-size: 1.3rem
 @mixin wave1
   animation: animete 30s linear infinite
   z-index: 1000
   opacity: 1
   animation-delay: 0
-
 
   @keyframes animete
     from
@@ -81,7 +77,7 @@
       background-position-x: 1000px
 
 @mixin wave2
-  animation: animete2 15s linear infinite
+  animation: animete2 20s linear infinite
   z-index: 999
   opacity: .5
   animation-delay: -5s
@@ -118,3 +114,33 @@ section
     @else if $i == 2
       .wave#{$i}
         @include wave2
+
+@mixin center-bg
+  background-size: cover
+  background-position: center
+
+
+%card-hover
+  .project-card-title, .project-card-cover, .project-card-description
+    opacity: 0
+
+  &:hover
+    .project-card-title, .project-card-cover, .project-card-description
+      opacity: 1
+
+// Estyles Buttons
+.btn
+  border: none
+  border-radius: 50px
+  font-size: 2rem
+  padding: 2rem 5rem
+  transition: .5s
+
+  &-header
+    background: linear-gradient(90deg, $header-primary, $header-secondary)
+    color: $light-color
+    opacity: .7
+    cursor: pointer
+
+    &:hover
+      opacity: 1

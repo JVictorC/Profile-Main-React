@@ -1,0 +1,94 @@
+
+.container-project
+  @include animation
+  height: 85vh
+  @include display-flex-column($justify: normal)
+  padding-top: 2rem
+
+  &-title
+    @include text-header($wight: 300, $font-size: 5rem)
+    color: $primary-color
+  &-main
+    @include display-flex-row($justify: space-around, $wrap: wrap)
+    height: 100%
+    width: 80%
+@for $i from 1 through 4
+  .container-project-card
+    @include Card
+    @include display-flex-column
+
+    &:nth-child(#{$i + n})
+      border-color: nth($colors-projects, $i)
+      color: nth($colors-projects, $i)
+      font-size: 1.1rem
+      @if $i != 1
+        .contrainer-project-image
+          font-size: 5rem
+
+.container-project-list
+  @include display-flex-row($justify: space-evenly)
+
+  width: 95%
+
+.project1
+  background: url(../Images/Projects/Front-End-Online.png)
+  width: 30%
+  height: 95%
+  position: relative
+  cursor: alias
+  transition: .5s
+  @extend %card-hover
+  border: 5px solid $trybe-color
+  color: $light-color
+  @include center-bg
+
+  &:hover
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../Images/Projects/Front-End-Online.png)
+    @include center-bg
+    transform: scale(1.1)
+    z-index: 1
+
+  .project-card
+    &-cover
+      text-align: center
+    &-title
+      font-size: 3rem
+      margin: 2rem
+    &-description
+      font-size: 1.5rem
+
+.other-projects
+  display: flex
+  flex-wrap: wrap
+  width: 70%
+
+@for $i from 2 through 5
+  $image: #{ '../Images/Projects/' + nth($images-list, $i) + '.png'}
+  .project#{$i}
+    background: url($image)
+    margin: 8px
+    width: 400px
+    height: 300px
+    position: relative
+    cursor: alias
+    transition: .5s
+    @extend %card-hover
+    border: 5px solid $trybe-color
+    color: $light-color
+    @include center-bg
+
+    &:hover
+      background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url($image)
+      @include center-bg
+      transform: scale(1.1)
+      z-index: 1
+
+    .project-card
+      &-cover
+        text-align: center
+
+      &-title
+        font-size: 2rem
+        margin: 2rem
+      &-description
+        font-size: 1.1rem
