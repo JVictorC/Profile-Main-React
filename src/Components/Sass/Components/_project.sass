@@ -1,7 +1,7 @@
 
 .container-project
+  background: linear-gradient($light-color, $secondary-bg)
   @include animation
-  height: 85vh
   @include display-flex-column($justify: normal)
   padding-top: 2rem
 
@@ -28,25 +28,19 @@
 .container-project-list
   @include display-flex-row($justify: space-evenly)
 
-  width: 95%
-
 .project1
   background: url(../Images/Projects/Front-End-Online.png)
-  width: 30%
-  height: 95%
+  width: 27%
+  height: 600px
   position: relative
   cursor: alias
   transition: .5s
   @extend %card-hover
-  border: 5px solid $trybe-color
   color: $light-color
   @include center-bg
 
   &:hover
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../Images/Projects/Front-End-Online.png)
-    @include center-bg
-    transform: scale(1.1)
-    z-index: 1
+    @include ImageProjectHover('../Images/Projects/Front-End-Online.png')
 
   .project-card
     &-cover
@@ -66,22 +60,19 @@
   $image: #{ '../Images/Projects/' + nth($images-list, $i) + '.png'}
   .project#{$i}
     background: url($image)
-    margin: 8px
+    margin: 15px
     width: 400px
     height: 300px
     position: relative
     cursor: alias
     transition: .5s
     @extend %card-hover
-    border: 5px solid $trybe-color
     color: $light-color
     @include center-bg
 
     &:hover
-      background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url($image)
-      @include center-bg
-      transform: scale(1.1)
-      z-index: 1
+      @include ImageProjectHover($image)
+
 
     .project-card
       &-cover

@@ -8,12 +8,14 @@
   width: 100%
   overflow: hidden
   background: $light-color
-  height: 100vh
+  min-height: 100vh
 
   &-main
     display: flex
     justify-content: center
     align-items: baseline
+    margin-bottom: 50px
+
 
   &-title
     @include text-header($wight: 300, $font-size: 5rem)
@@ -29,7 +31,6 @@
     position: absolute
     z-index: 1
     width: 1200px
-
 
 @for $i from 1 through 6
   .skills-container-list:nth-child(#{$i})

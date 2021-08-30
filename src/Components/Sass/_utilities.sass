@@ -119,6 +119,15 @@ section
   background-size: cover
   background-position: center
 
+@mixin ImageProjectHover($image: '')
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url($image)
+  @include center-bg
+  transform: scale(1.1)
+  z-index: 1
+  border: 4px solid $primary-color
+
+
+// PlaceHolder
 
 %card-hover
   .project-card-title, .project-card-cover, .project-card-description

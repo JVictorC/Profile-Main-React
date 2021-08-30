@@ -228,12 +228,13 @@ header .nav-item .menu {
   width: 100%;
   overflow: hidden;
   background: #FFF;
-  height: 100vh;
+  min-height: 100vh;
 }
 .skills-container-main {
   display: flex;
   justify-content: center;
   align-items: baseline;
+  margin-bottom: 50px;
 }
 .skills-container-title {
   color: #181920;
@@ -461,10 +462,10 @@ header .nav-item .menu {
 }
 
 .container-project {
+  background: linear-gradient(#FFF, #e5eaff);
   transform: translate3d(-700px, 50px, 0);
   opacity: 0;
   transition: 1s;
-  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -604,27 +605,26 @@ header .nav-item .menu {
   flex-wrap: nowrap;
   align-items: center;
   padding: 2rem;
-  width: 95%;
 }
 
 .project1 {
   background: url(../Images/Projects/Front-End-Online.png);
-  width: 30%;
-  height: 95%;
+  width: 27%;
+  height: 600px;
   position: relative;
   cursor: alias;
   transition: 0.5s;
-  border: 5px solid #11a36a;
   color: #FFF;
   background-size: cover;
   background-position: center;
 }
 .project1:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../Images/Projects/Front-End-Online.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../Images/Projects/Front-End-Online.png");
   background-size: cover;
   background-position: center;
   transform: scale(1.1);
   z-index: 1;
+  border: 4px solid #ff5200;
 }
 .project1 .project-card-cover {
   text-align: center;
@@ -645,13 +645,12 @@ header .nav-item .menu {
 
 .project2 {
   background: url(../Images/Projects/Agency.png);
-  margin: 8px;
+  margin: 15px;
   width: 400px;
   height: 300px;
   position: relative;
   cursor: alias;
   transition: 0.5s;
-  border: 5px solid #11a36a;
   color: #FFF;
   background-size: cover;
   background-position: center;
@@ -662,6 +661,7 @@ header .nav-item .menu {
   background-position: center;
   transform: scale(1.1);
   z-index: 1;
+  border: 4px solid #ff5200;
 }
 .project2 .project-card-cover {
   text-align: center;
@@ -676,13 +676,12 @@ header .nav-item .menu {
 
 .project3 {
   background: url(../Images/Projects/ShopCart.png);
-  margin: 8px;
+  margin: 15px;
   width: 400px;
   height: 300px;
   position: relative;
   cursor: alias;
   transition: 0.5s;
-  border: 5px solid #11a36a;
   color: #FFF;
   background-size: cover;
   background-position: center;
@@ -693,6 +692,7 @@ header .nav-item .menu {
   background-position: center;
   transform: scale(1.1);
   z-index: 1;
+  border: 4px solid #ff5200;
 }
 .project3 .project-card-cover {
   text-align: center;
@@ -707,13 +707,12 @@ header .nav-item .menu {
 
 .project4 {
   background: url(../Images/Projects/Zoo-Functions.png);
-  margin: 8px;
+  margin: 15px;
   width: 400px;
   height: 300px;
   position: relative;
   cursor: alias;
   transition: 0.5s;
-  border: 5px solid #11a36a;
   color: #FFF;
   background-size: cover;
   background-position: center;
@@ -724,6 +723,7 @@ header .nav-item .menu {
   background-position: center;
   transform: scale(1.1);
   z-index: 1;
+  border: 4px solid #ff5200;
 }
 .project4 .project-card-cover {
   text-align: center;
@@ -738,13 +738,12 @@ header .nav-item .menu {
 
 .project5 {
   background: url(../Images/Projects/Front-End-Online.png);
-  margin: 8px;
+  margin: 15px;
   width: 400px;
   height: 300px;
   position: relative;
   cursor: alias;
   transition: 0.5s;
-  border: 5px solid #11a36a;
   color: #FFF;
   background-size: cover;
   background-position: center;
@@ -755,6 +754,7 @@ header .nav-item .menu {
   background-position: center;
   transform: scale(1.1);
   z-index: 1;
+  border: 4px solid #ff5200;
 }
 .project5 .project-card-cover {
   text-align: center;

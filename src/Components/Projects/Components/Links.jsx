@@ -7,7 +7,7 @@ export default function Links() {
     <>
       <div className="container-project-card">
         <img src={ LogoTrybe } alt="" className="contrainer-project-image" />
-        <h2 className="trybe-title">Projects Trybe</h2>
+        <h2 className="trybe-title">Projetos Trybe</h2>
       </div>
       <div className="container-project-card">
         <FaReact className="contrainer-project-image" />
