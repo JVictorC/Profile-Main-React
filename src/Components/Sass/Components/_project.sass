@@ -27,6 +27,7 @@
 
 .container-project-list
   @include display-flex-row($justify: space-evenly)
+  margin: 5rem 0
 
 .project1
   background: url(../Images/Projects/Front-End-Online.png)
@@ -38,6 +39,7 @@
   @extend %card-hover
   color: $light-color
   @include center-bg
+  cursor: pointer
 
   &:hover
     @include ImageProjectHover('../Images/Projects/Front-End-Online.png')
@@ -46,10 +48,12 @@
     &-cover
       text-align: center
     &-title
-      font-size: 3rem
+      font-size: 2rem
       margin: 2rem
     &-description
+      padding: 1rem
       font-size: 1.5rem
+      text-align: center
 
 .other-projects
   display: flex
@@ -61,25 +65,30 @@
   .project#{$i}
     background: url($image)
     margin: 15px
-    width: 40%
     height: 17rem
+    width: 40%
     position: relative
-    cursor: aliasnpm 
+    cursor: aliasnpm
     transition: .5s
     @extend %card-hover
     color: $light-color
     @include center-bg
+    cursor: pointer
 
     &:hover
       @include ImageProjectHover($image)
-
+      height: 350px
+      transform: scale(1.3)
 
     .project-card
       &-cover
         text-align: center
 
       &-title
-        font-size: 2rem
+        font-size: 1.5rem
         margin: 2rem
+
       &-description
+        padding: 1rem
         font-size: 1.1rem
+        text-align: center

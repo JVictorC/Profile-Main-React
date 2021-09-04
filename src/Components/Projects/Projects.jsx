@@ -1,7 +1,8 @@
 import React from 'react';
 import Links from './Components/Links';
-import Jobs from './Components/Projects';
+import Project from './Components/Projects';
 import Wave from '../wave';
+import { projects, frontEndOnlone } from './Helper/data';
 
 export default function Projects() {
   return (
@@ -11,12 +12,22 @@ export default function Projects() {
         <Links />
       </div>
       <div className="container-project-list">
-        <Jobs classN="project1" titleSection="Projeto 1" />
+        <Project
+          classN="project1"
+          titleSection={ frontEndOnlone.title }
+          describe={ frontEndOnlone.describe }
+        />
         <div className="other-projects">
-          <Jobs classN="project2" titleSection="Projeto 2" />
-          <Jobs classN="project3" titleSection="Projeto 1" />
-          <Jobs classN="project4" titleSection="Projeto 1" />
-          <Jobs classN="project5" titleSection="Projeto 1" />
+          {
+            projects.map((project) => (
+              <Project
+                key={ project.id }
+                classN={ `project${project.id}` }
+                titleSection={ project.title }
+                describe={ project.describe }
+              />
+            ))
+          }
         </div>
       </div>
       <Wave component="footer" />

@@ -617,6 +617,7 @@ header .nav-item .menu {
   flex-wrap: nowrap;
   align-items: center;
   padding: 2rem;
+  margin: 5rem 0;
 }
 
 .project1 {
@@ -629,9 +630,10 @@ header .nav-item .menu {
   color: #FFF;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 .project1:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../Images/Projects/Front-End-Online.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../Images/Projects/Front-End-Online.png");
   background-size: cover;
   background-position: center;
   transform: scale(1.1);
@@ -642,11 +644,13 @@ header .nav-item .menu {
   text-align: center;
 }
 .project1 .project-card-title {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 2rem;
 }
 .project1 .project-card-description {
+  padding: 1rem;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .other-projects {
@@ -658,125 +662,145 @@ header .nav-item .menu {
 .project2 {
   background: url(../Images/Projects/Agency.png);
   margin: 15px;
-  width: 40%;
   height: 17rem;
+  width: 40%;
   position: relative;
   cursor: aliasnpm;
   transition: 0.5s;
   color: #FFF;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 .project2:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../Images/Projects/Agency.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../Images/Projects/Agency.png);
   background-size: cover;
   background-position: center;
   transform: scale(1.1);
   z-index: 1;
   border: 4px solid #ff5200;
+  height: 350px;
+  transform: scale(1.3);
 }
 .project2 .project-card-cover {
   text-align: center;
 }
 .project2 .project-card-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 2rem;
 }
 .project2 .project-card-description {
+  padding: 1rem;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 .project3 {
   background: url(../Images/Projects/ShopCart.png);
   margin: 15px;
-  width: 40%;
   height: 17rem;
+  width: 40%;
   position: relative;
   cursor: aliasnpm;
   transition: 0.5s;
   color: #FFF;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 .project3:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../Images/Projects/ShopCart.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../Images/Projects/ShopCart.png);
   background-size: cover;
   background-position: center;
   transform: scale(1.1);
   z-index: 1;
   border: 4px solid #ff5200;
+  height: 350px;
+  transform: scale(1.3);
 }
 .project3 .project-card-cover {
   text-align: center;
 }
 .project3 .project-card-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 2rem;
 }
 .project3 .project-card-description {
+  padding: 1rem;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 .project4 {
   background: url(../Images/Projects/Zoo-Functions.png);
   margin: 15px;
-  width: 40%;
   height: 17rem;
+  width: 40%;
   position: relative;
   cursor: aliasnpm;
   transition: 0.5s;
   color: #FFF;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 .project4:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../Images/Projects/Zoo-Functions.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../Images/Projects/Zoo-Functions.png);
   background-size: cover;
   background-position: center;
   transform: scale(1.1);
   z-index: 1;
   border: 4px solid #ff5200;
+  height: 350px;
+  transform: scale(1.3);
 }
 .project4 .project-card-cover {
   text-align: center;
 }
 .project4 .project-card-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 2rem;
 }
 .project4 .project-card-description {
+  padding: 1rem;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 .project5 {
   background: url(../Images/Projects/TrybeWallet.png);
   margin: 15px;
-  width: 40%;
   height: 17rem;
+  width: 40%;
   position: relative;
   cursor: aliasnpm;
   transition: 0.5s;
   color: #FFF;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 .project5:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../Images/Projects/TrybeWallet.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../Images/Projects/TrybeWallet.png);
   background-size: cover;
   background-position: center;
   transform: scale(1.1);
   z-index: 1;
   border: 4px solid #ff5200;
+  height: 350px;
+  transform: scale(1.3);
 }
 .project5 .project-card-cover {
   text-align: center;
 }
 .project5 .project-card-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 2rem;
 }
 .project5 .project-card-description {
+  padding: 1rem;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 footer {
