@@ -3,6 +3,7 @@ import Header from './Header/Header';
 import Skills from './HardSkills/Skills';
 import About from './About/About';
 import Project from './Projects/Projects';
+import Footer from './Footer';
 
 export default function Home() {
   function animeScrolls() {
@@ -25,6 +26,7 @@ export default function Home() {
       <Skills />
       <About />
       <Project />
+      <Footer />
     </div>
   );
 }

@@ -22,7 +22,7 @@ export default class Header extends Component {
   }
 
   componentDidUpdate() {
-    const EITHY_SECONDS = 8200;
+    const EITHY_SECONDS = 8000;
     setTimeout(this.changeHeader, EITHY_SECONDS);
   }
 
@@ -50,9 +50,8 @@ export default class Header extends Component {
               <h1 className="header-contant-main-name line">João Victor C da Silva</h1>
               <h2 className="header-contant-main-student">{header}</h2>
             </div>
-            <LottieAnimation lotti={ Person } height={ 600 } width={ 600 } />
+            <LottieAnimation lotti={ Person } height={ 500 } width={ 600 } />
           </div>
-          <Wave component="header" />
         </div>
         <nav className="nav-item">
           <LottieAnimation lotti={ Rocket } height={ 70 } width={ 70 } />
@@ -67,6 +66,7 @@ export default class Header extends Component {
           </ul>
           <GiHamburgerMenu className="menu" />
         </nav>
+        <Wave component="header" />
       </header>
     );
   }

@@ -1,6 +1,6 @@
 
 .about-container-bg
-  background: linear-gradient($primary-about, $secondary-color)
+  background: linear-gradient($primary-about, $secondary-bg)
   min-height: 85vh
   overflow: hidden
 
@@ -9,11 +9,12 @@
   @include animation($diretion: 700px)
 
   &-title
-    @include text-header($wight: 300, $font-size: 3rem)
-    color: $primary-color
+    @include text-header($weight: 400, $font-size: 3rem)
+    color: $light-color
+    margin-top: 1rem
   &-subtitle
-    @include text-header($wight: 200, $font-size: 2rem)
-    color: $dark-color
+    @include text-header($weight: 300, $font-size: 2rem)
+    color: $light-color
     padding-bottom: 2rem
   &-main
     padding: 2rem

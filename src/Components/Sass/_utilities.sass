@@ -28,12 +28,12 @@
   align-items: center
   justify-content: $justify
 
-@mixin text-header($wight: 500, $font-size: 3rem)
+@mixin text-header($weight: 500, $font-size: 3rem)
   color: $dark-color
   font-size: $font-size
   text-align: center
   padding: .3rem
-  font-weight: $wight
+  font-weight: $weight
 
 @mixin animation($diretion: -700px)
   transform: translate3d($diretion, 50px, 0)
@@ -64,6 +64,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, .6)
     transform: scale(1.1)
     font-size: 1.3rem
+
 @mixin wave1
   animation: animete 30s linear infinite
   z-index: 1000
@@ -74,10 +75,10 @@
     from
       background-position-x: 0
     to
-      background-position-x: 1000px
+      background-position-x: 1280px
 
 @mixin wave2
-  animation: animete2 20s linear infinite
+  animation: animete2 15s linear infinite
   z-index: 999
   opacity: .5
   animation-delay: -5s
@@ -86,7 +87,21 @@
     0%
       background-position-x: 0
     100%
-      background-position-x: -1000px
+      background-position-x: -1280px
+
+@mixin wave3
+  animation: animete2 20s linear infinite
+  z-index: 998
+  opacity: .2
+  animation-delay: -2s
+
+
+@mixin wave4
+  animation: animete 15s linear infinite
+  z-index: 997
+  opacity: .7
+  animation-delay: -5s
+
 
 section
   position: relative
@@ -102,9 +117,11 @@ section
     background-size: 1000px 100px
 
     &-header
-      background: url('../Images/wave.png')
+      background: url('../Images/WaveWhite.png')
     &-skills
-      background: url('../Images/WaveBlue.png')
+      background: url('../Images/WaveBlueLight.png')
+    &-footer
+      background: url('../Images/WaveBlack.png')
 
   @for $i from 1 through 4
     @if $i == 1
@@ -114,6 +131,12 @@ section
     @else if $i == 2
       .wave#{$i}
         @include wave2
+    @else if $i == 3
+      .wave#{$i}
+        @include wave3
+    @else if $i == 4
+      .wave#{$i}
+        @include wave4
 
 @mixin center-bg
   background-size: cover

@@ -1,6 +1,6 @@
 import React from 'react';
 import Links from './Components/Links';
-import Jobs from './Components/Jobs';
+import Jobs from './Components/Projects';
 import Wave from '../wave';
 
 export default function Projects() {
@@ -19,6 +19,7 @@ export default function Projects() {
           <Jobs classN="project5" titleSection="Projeto 1" />
         </div>
       </div>
+      <Wave component="footer" />
     </div>
   );
 }

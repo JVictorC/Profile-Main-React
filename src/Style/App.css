@@ -13,10 +13,13 @@ section .wave {
   background-size: 1000px 100px;
 }
 section .wave-header {
-  background: url("../Images/wave.png");
+  background: url("../Images/WaveWhite.png");
 }
 section .wave-skills {
-  background: url("../Images/WaveBlue.png");
+  background: url("../Images/WaveBlueLight.png");
+}
+section .wave-footer {
+  background: url("../Images/WaveBlack.png");
 }
 section .wave1 {
   animation: animete 30s linear infinite;
@@ -29,11 +32,11 @@ section .wave1 {
     background-position-x: 0;
   }
   to {
-    background-position-x: 1000px;
+    background-position-x: 1280px;
   }
 }
 section .wave2 {
-  animation: animete2 20s linear infinite;
+  animation: animete2 15s linear infinite;
   z-index: 999;
   opacity: 0.5;
   animation-delay: -5s;
@@ -43,8 +46,20 @@ section .wave2 {
     background-position-x: 0;
   }
   100% {
-    background-position-x: -1000px;
+    background-position-x: -1280px;
   }
+}
+section .wave3 {
+  animation: animete2 20s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+}
+section .wave4 {
+  animation: animete 15s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
 }
 
 .project5 .project-card-title, .project4 .project-card-title, .project3 .project-card-title, .project2 .project-card-title, .project1 .project-card-title, .project5 .project-card-cover, .project4 .project-card-cover, .project3 .project-card-cover, .project2 .project-card-cover, .project1 .project-card-cover, .project5 .project-card-description, .project4 .project-card-description, .project3 .project-card-description, .project2 .project-card-description, .project1 .project-card-description {
@@ -72,9 +87,15 @@ section .wave2 {
 }
 
 header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../Images/BackGround.jpg");
+  background-position: center;
+  background-size: cover;
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   animation: ShowHeader 1s;
+  min-height: 100vh;
 }
 @keyframes ShowHeader {
   0% {
@@ -87,7 +108,7 @@ header {
   }
 }
 header .nav-item {
-  width: 120px;
+  width: 110px;
   opacity: 0.9;
   background: linear-gradient(#00545d, #000729);
   border-left: 10px solid #00545d;
@@ -147,23 +168,13 @@ header .nav-item .menu {
   display: none;
 }
 
-.header-contant {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../Images/BackGround.jpg");
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
 .header-contant-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 5rem;
-  width: 80%;
+  width: 100%;
 }
 .header-contant-main-apresentation {
   width: 60%;
@@ -261,7 +272,7 @@ header .nav-item .menu {
   transition: 1s;
   position: absolute;
   z-index: 1;
-  width: 1200px;
+  width: 1100px;
 }
 
 .skills-container-list:nth-child(1) {
@@ -403,7 +414,7 @@ header .nav-item .menu {
 }
 
 .about-container-bg {
-  background: linear-gradient(#00eaff, #8b8e94);
+  background: linear-gradient(#3586ff, #e5eaff);
   min-height: 85vh;
   overflow: hidden;
 }
@@ -422,16 +433,17 @@ header .nav-item .menu {
   font-size: 3rem;
   text-align: center;
   padding: 0.3rem;
-  font-weight: 300;
-  color: #ff5200;
+  font-weight: 400;
+  color: #FFF;
+  margin-top: 1rem;
 }
 .about-container-subtitle {
   color: #181920;
   font-size: 2rem;
   text-align: center;
   padding: 0.3rem;
-  font-weight: 200;
-  color: #181920;
+  font-weight: 300;
+  color: #FFF;
   padding-bottom: 2rem;
 }
 .about-container-main {
@@ -646,10 +658,10 @@ header .nav-item .menu {
 .project2 {
   background: url(../Images/Projects/Agency.png);
   margin: 15px;
-  width: 400px;
-  height: 300px;
+  width: 40%;
+  height: 17rem;
   position: relative;
-  cursor: alias;
+  cursor: aliasnpm;
   transition: 0.5s;
   color: #FFF;
   background-size: cover;
@@ -677,10 +689,10 @@ header .nav-item .menu {
 .project3 {
   background: url(../Images/Projects/ShopCart.png);
   margin: 15px;
-  width: 400px;
-  height: 300px;
+  width: 40%;
+  height: 17rem;
   position: relative;
-  cursor: alias;
+  cursor: aliasnpm;
   transition: 0.5s;
   color: #FFF;
   background-size: cover;
@@ -708,10 +720,10 @@ header .nav-item .menu {
 .project4 {
   background: url(../Images/Projects/Zoo-Functions.png);
   margin: 15px;
-  width: 400px;
-  height: 300px;
+  width: 40%;
+  height: 17rem;
   position: relative;
-  cursor: alias;
+  cursor: aliasnpm;
   transition: 0.5s;
   color: #FFF;
   background-size: cover;
@@ -737,19 +749,19 @@ header .nav-item .menu {
 }
 
 .project5 {
-  background: url(../Images/Projects/Front-End-Online.png);
+  background: url(../Images/Projects/TrybeWallet.png);
   margin: 15px;
-  width: 400px;
-  height: 300px;
+  width: 40%;
+  height: 17rem;
   position: relative;
-  cursor: alias;
+  cursor: aliasnpm;
   transition: 0.5s;
   color: #FFF;
   background-size: cover;
   background-position: center;
 }
 .project5:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../Images/Projects/Front-End-Online.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../Images/Projects/TrybeWallet.png);
   background-size: cover;
   background-position: center;
   transform: scale(1.1);
@@ -765,6 +777,14 @@ header .nav-item .menu {
 }
 .project5 .project-card-description {
   font-size: 1.1rem;
+}
+
+footer {
+  background: black;
+  height: 25vh;
+}
+footer h1 {
+  color: white;
 }
 
 html {
