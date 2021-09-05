@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import LottieAnimation from '../animation/Lottie';
-import Rocket from '../animation/rocket.json';
 import Person from '../animation/Header.json';
 import Wave from '../wave/index';
+import Menu from '../menu/index';
 
 export default class Header extends Component {
   constructor(props) {
@@ -53,19 +51,7 @@ export default class Header extends Component {
             <LottieAnimation lotti={ Person } height={ 500 } width={ 600 } />
           </div>
         </div>
-        <nav className="nav-item">
-          <LottieAnimation lotti={ Rocket } height={ 70 } width={ 70 } />
-          <ul className="nav-item-menu">
-            <li>Home</li>
-            <li>Contatos</li>
-            <li>Projetos</li>
-          </ul>
-          <ul className="nav-item-social">
-            <li><AiFillLinkedin /></li>
-            <li><AiFillGithub /></li>
-          </ul>
-          <GiHamburgerMenu className="menu" />
-        </nav>
+        <Menu />
         <Wave component="header" />
       </header>
     );

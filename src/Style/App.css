@@ -107,66 +107,6 @@ header {
     opacity: 1;
   }
 }
-header .nav-item {
-  width: 110px;
-  opacity: 0.9;
-  background: linear-gradient(#00545d, #000729);
-  border-left: 10px solid #00545d;
-  position: fixed;
-  z-index: 10000;
-  right: 0;
-  top: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-header .nav-item-menu {
-  height: 50%;
-  display: flex;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-header .nav-item-menu li {
-  font-size: 1.3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  color: #FFF;
-  transition: 0.5s;
-  font-size: 1rem;
-  padding: 1rem auto;
-}
-header .nav-item-menu li:hover {
-  font-size: 20px;
-  cursor: pointer;
-}
-header .nav-item-social {
-  color: #FFF;
-  font-size: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-header .nav-item-social li {
-  margin: 1rem;
-  transition: 0.5s;
-  cursor: pointer;
-}
-header .nav-item-social li:hover {
-  color: #00545d;
-  font-size: 3rem;
-}
-header .nav-item .menu {
-  color: #FFF;
-  font-size: 2rem;
-  display: none;
-}
 
 .header-contant-main {
   display: flex;
@@ -808,6 +748,68 @@ footer {
 }
 footer h1 {
   color: white;
+}
+
+.nav-item {
+  width: 110px;
+  opacity: 0.9;
+  background: linear-gradient(#00545d, #000729);
+  border-left: 10px solid #00545d;
+  position: fixed;
+  z-index: 10000;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-item-menu {
+  height: 50%;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-item-menu li {
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #FFF;
+  transition: 0.5s;
+  font-size: 1rem;
+  padding: 1rem auto;
+}
+.nav-item-menu li:hover {
+  font-size: 20px;
+  cursor: pointer;
+}
+.nav-item-social {
+  color: #FFF;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-item-social li {
+  margin: 1rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.nav-item-social li:hover {
+  color: #00545d;
+  font-size: 3rem;
+}
+
+.menu {
+  color: #FFF;
+  font-size: 2rem;
+  display: none;
 }
 
 html {
