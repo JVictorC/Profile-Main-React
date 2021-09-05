@@ -2,7 +2,7 @@ import React from 'react';
 import Links from './Components/Links';
 import Project from './Components/Projects';
 import Wave from '../wave';
-import { projects, frontEndOnlone } from './Helper/data';
+import { projectsImages, frontEndOnloneImage } from '../../Services/Projects';
 
 export default function Projects() {
   return (
@@ -14,12 +14,12 @@ export default function Projects() {
       <div className="container-project-list">
         <Project
           classN="project1"
-          titleSection={ frontEndOnlone.title }
-          describe={ frontEndOnlone.describe }
+          titleSection={ frontEndOnloneImage.title }
+          describe={ frontEndOnloneImage.describe }
         />
         <div className="other-projects">
           {
-            projects.map((project) => (
+            projectsImages.map((project) => (
               <Project
                 key={ project.id }
                 classN={ `project${project.id}` }

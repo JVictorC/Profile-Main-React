@@ -1,4 +1,4 @@
-export const projects = [{
+export const projectsImages = [{
   id: 2,
   title: 'Agency',
   link: '',
@@ -35,7 +35,7 @@ export const projects = [{
 
 ];
 
-export const frontEndOnlone = {
+export const frontEndOnloneImage = {
   id: 1,
   title: 'Front-End-Online',
   link: '',
