@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import LottieAnimation from '../Animation/Lottie';
-import Rocket from '../Animation/rocket.json';
-import Person from '../Animation/Header.json';
+import LottieAnimation from '../animation/Lottie';
+import Rocket from '../animation/rocket.json';
+import Person from '../animation/Header.json';
 import Wave from '../wave/index';
 
 export default class Header extends Component {

@@ -2,8 +2,8 @@ import React from 'react';
 import { DiSass, DiCss3, DiJavascript1 } from 'react-icons/di';
 import { FaReact, FaHtml5, FaBootstrap } from 'react-icons/fa';
 import List from './Component/List';
-import LottieAnimation from '../Animation/Lottie';
-import animation from '../Animation/Skilss.json';
+import LottieAnimation from '../animation/Lottie';
+import animation from '../animation/Skilss.json';
 import Wave from '../wave/index';
 
 export default function Skills() {

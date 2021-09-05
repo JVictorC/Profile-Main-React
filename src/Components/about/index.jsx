@@ -1,6 +1,6 @@
 import React from 'react';
-import LottieAnimation from '../Animation/Lottie';
-import DogAnimation from '../Animation/DogAnimation.json';
+import LottieAnimation from '../animation/Lottie';
+import DogAnimation from '../animation/DogAnimation.json';
 import { } from 'react-icons/';
 import Wave from '../wave';
 

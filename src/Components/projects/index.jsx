@@ -2,7 +2,7 @@ import React from 'react';
 import Links from './Components/Links';
 import Project from './Components/Projects';
 import Wave from '../wave';
-import { projectsImages, frontEndOnloneImage } from '../../Services/Projects';
+import { projectsImages, frontEndOnloneImage } from '../../Services/projectsImages';
 
 export default function Projects() {
   return (

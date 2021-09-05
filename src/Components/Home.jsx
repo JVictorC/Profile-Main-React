@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './Header/Header';
-import Skills from './HardSkills/Skills';
-import About from './About/About';
-import Project from './Projects/Projects';
-import Footer from './Footer';
+import Header from './header';
+import Skills from './hardSkills';
+import About from './about';
+import Project from './projects';
+import Footer from './footer';
 
 export default function Home() {
   function animeScrolls() {
