@@ -454,9 +454,8 @@ header .nav-item .menu {
 }
 .about-container-main-image {
   width: 20%;
-  max-width: 400px;
+  max-width: 200px;
   height: 15%;
-  max-width: 400px;
   border: 5px solid #FFF;
   border-radius: 90px;
   border-radius: 55% 20%;
@@ -467,9 +466,9 @@ header .nav-item .menu {
 .about-container-main-presentation {
   font-size: 2rem;
   padding: 2rem;
-  color: #181920;
-  font-weight: 400;
-  line-height: 1.3;
+  color: #FFF;
+  font-weight: 300;
+  line-height: 1.5;
   text-align: center;
 }
 
