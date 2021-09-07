@@ -1,6 +1,7 @@
 const projects = [
   {
     title: 'Fundamentos',
+    company: 'Trybe',
     projectsSection: [
       {
         name: '1. Lessons-Learned',
@@ -51,6 +52,7 @@ const projects = [
   },
   {
     title: 'Front-End',
+    company: 'Trybe',
     projectsSection: [
       {
         name: '1. Movie-Card',
@@ -71,12 +73,14 @@ const projects = [
   },
   {
     title: 'Back-End',
+    company: 'Trybe',
     projectsSection: [
       {},
     ],
   },
   {
     title: 'Ciencia da Computação',
+    company: 'Trybe',
     projectsSection: [
       {},
     ],

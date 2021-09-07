@@ -1,19 +1,24 @@
 .nav-item
+  // width: 100%
   width: 110px
   opacity: .9
   background: linear-gradient($header-primary, $header-secondary)
   border-left: 10px solid $header-primary
+  // border-top: 10px solid $header-primary
   position: fixed
   z-index: 10000
   right: 0
   top: 0
+  // bottom: 0px
   height: 100%
   @include display-flex-column($justify: space-around)
+
 
   &-menu
     height: 50%
     display: flex
     @include display-flex-column
+    // display: none
 
     li
       font-size: 1.3rem
