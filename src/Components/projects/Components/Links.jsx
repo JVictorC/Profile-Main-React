@@ -2,10 +2,12 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { FaReact, FaSass, DiJavascript } from 'react-icons/all';
+import { connect } from 'react-redux';
 import { useHistory } from 'react-router';
 import LogoTrybe from '../../../Images/Trybe-Logo.png';
+import { setCategoryThunk } from '../../../redux/actions';
 
-export default function Links() {
+function Links({ selectProject }) {
   const history = useHistory();
 
   function selectSection(word) {
@@ -23,7 +25,7 @@ export default function Links() {
     } else {
       element = target.parentElement.querySelector('h2').innerText;
     }
-
+    selectProject(selectSection(element));
     history.push(`/project/${selectSection(element)}`);
   };
 
@@ -60,3 +62,9 @@ export default function Links() {
     </>
   );
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  selectProject: (payload) => dispatch(setCategoryThunk(payload)),
+});
+
+export default connect(null, mapDispatchToProps)(Links);

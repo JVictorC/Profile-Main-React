@@ -7,7 +7,7 @@ const projects = (state = INITIAL_STATE, action) => {
   const { type, payload } = action;
   switch (type) {
   case SELECT_CATEGORY_PROJECT:
-    return state;
+    return payload;
   default:
     return state;
   }

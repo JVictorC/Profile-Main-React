@@ -1,7 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Menu from '../Components/menu';
 
-export default function Projects({ match: { params: { project } } }) {
+function Projects({ match: { params: { project } } }) {
   return (
     <div className="teste">
       <Menu />
@@ -11,3 +12,5 @@ export default function Projects({ match: { params: { project } } }) {
     </div>
   );
 }
+
+export default connect()(Projects);
