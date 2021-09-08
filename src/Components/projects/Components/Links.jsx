@@ -19,12 +19,7 @@ function Links({ selectProject }) {
   }
 
   const hadlerClick = ({ target }) => {
-    let element;
-    if (target.className === 'container-project-card') {
-      element = target.querySelector('h2').innerText;
-    } else {
-      element = target.parentElement.querySelector('h2').innerText;
-    }
+    const element = target.parentElement.querySelector('h2').innerText;
     selectProject(selectSection(element));
     history.push(`/project/${selectSection(element)}`);
   };
@@ -33,31 +28,58 @@ function Links({ selectProject }) {
     <>
       <div
         className="container-project-card"
-        onClick={ hadlerClick }
       >
         <img src={ LogoTrybe } alt="" className="contrainer-project-image" />
         <h2 className="trybe-title">Projetos's Trybe</h2>
+        <button
+          className=""
+          type="button"
+          onClick={ hadlerClick }
+        >
+          Ver Projetos 😀
+        </button>
       </div>
       <div
         className="container-project-card"
-        onClick={ hadlerClick }
       >
         <FaReact className="contrainer-project-image" />
         <h2 className="outhers-title">Projetos em React</h2>
+        <button
+          className=""
+          type="button"
+          onClick={ hadlerClick }
+        >
+          Ver Projetos 😎
+
+        </button>
       </div>
       <div
         className="container-project-card"
-        onClick={ hadlerClick }
       >
         <FaSass className="contrainer-project-image" />
         <h2 className="outhers-title">Projetos em Sass</h2>
+        <button
+          className=""
+          type="button"
+          onClick={ hadlerClick }
+        >
+          Ver Projetos 🤩
+
+        </button>
       </div>
       <div
         className="container-project-card"
-        onClick={ hadlerClick }
       >
         <DiJavascript className="contrainer-project-image" />
         <h2 className="outhers-title">Projetos em JavaScript</h2>
+        <button
+          className=""
+          type="button"
+          onClick={ hadlerClick }
+        >
+          Ver Projetos 😍
+
+        </button>
       </div>
     </>
   );

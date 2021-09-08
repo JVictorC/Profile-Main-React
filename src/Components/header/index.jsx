@@ -41,7 +41,7 @@ export default class Header extends Component {
   render() {
     const { header } = this.state;
     return (
-      <header>
+      <header className="header-main">
         <div className="header-contant">
           <div className="header-contant-main">
             <div className="header-contant-main-apresentation">

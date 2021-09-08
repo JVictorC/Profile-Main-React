@@ -21,6 +21,23 @@
       border-color: nth($colors-projects, $i)
       color: nth($colors-projects, $i)
       font-size: 1.1rem
+
+      button
+        color: white
+        padding: 1rem 3rem
+        border-radius: 20px
+        font-size: 1.3rem
+        font-weight: 900
+        cursor: pointer
+        border: none
+        background: nth($colors-projects, $i)
+        transition: .5s
+
+        &:hover
+          color: nth($colors-projects, $i)
+          background: white
+          border: 5px solid nth($colors-projects, $i)
+
       @if $i != 1
         .contrainer-project-image
           font-size: 5rem
@@ -39,7 +56,6 @@
   @extend %card-hover
   color: $light-color
   @include center-bg
-  cursor: pointer
 
   &:hover
     @include ImageProjectHover('../Images/Projects/Front-End-Online.png')
