@@ -1,0 +1,16 @@
+@for $i from 1 through 7
+  $teclogia: nth($tecnologias, $i)
+
+  .#{$teclogia}
+    @include display-flex-row
+    border: 2px solid nth($tecnologias-colors, $i)
+    padding: .8rem
+    border-radius: 20px
+    color: nth($tecnologias-colors, $i)
+    transition: .5s
+    cursor: alias
+
+    &:hover
+      background: nth($tecnologias-colors, $i)
+      color: white
+      transform: scale(1.2)

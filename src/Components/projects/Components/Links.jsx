@@ -32,7 +32,7 @@ function Links({ selectProject }) {
         <img src={ LogoTrybe } alt="" className="contrainer-project-image" />
         <h2 className="trybe-title">Projetos's Trybe</h2>
         <button
-          className=""
+          className="btn btn-project"
           type="button"
           onClick={ hadlerClick }
         >
@@ -45,7 +45,7 @@ function Links({ selectProject }) {
         <FaReact className="contrainer-project-image" />
         <h2 className="outhers-title">Projetos em React</h2>
         <button
-          className=""
+          className="btn btn-project"
           type="button"
           onClick={ hadlerClick }
         >
@@ -59,7 +59,7 @@ function Links({ selectProject }) {
         <FaSass className="contrainer-project-image" />
         <h2 className="outhers-title">Projetos em Sass</h2>
         <button
-          className=""
+          className="btn btn-project"
           type="button"
           onClick={ hadlerClick }
         >
@@ -73,7 +73,7 @@ function Links({ selectProject }) {
         <DiJavascript className="contrainer-project-image" />
         <h2 className="outhers-title">Projetos em JavaScript</h2>
         <button
-          className=""
+          className="btn btn-project"
           type="button"
           onClick={ hadlerClick }
         >

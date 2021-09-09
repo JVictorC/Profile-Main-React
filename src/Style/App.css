@@ -6,86 +6,6 @@
   opacity: 1;
 }
 
-.btn {
-  border: none;
-  border-radius: 50px;
-  font-size: 2rem;
-  padding: 2rem 5rem;
-  transition: 0.5s;
-}
-.btn-header {
-  background: linear-gradient(90deg, #00545d, #000729);
-  color: #FFF;
-  opacity: 0.7;
-  cursor: pointer;
-}
-.btn-header:hover {
-  opacity: 1;
-}
-
-section {
-  position: relative;
-  width: 100%;
-  height: 100px;
-}
-section .wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: 1000px 100px;
-}
-section .wave-header {
-  background: url("../Images/WaveWhite.png");
-}
-section .wave-skills {
-  background: url("../Images/WaveBlueLight.png");
-}
-section .wave-footer {
-  background: url("../Images/WaveBlack.png");
-}
-section .wave1 {
-  animation: animete 30s linear infinite;
-  z-index: 1000;
-  opacity: 1;
-  animation-delay: 0;
-}
-@keyframes animete {
-  from {
-    background-position-x: 0;
-  }
-  to {
-    background-position-x: 1280px;
-  }
-}
-section .wave2 {
-  animation: animete2 15s linear infinite;
-  z-index: 999;
-  opacity: 0.5;
-  animation-delay: -5s;
-}
-@keyframes animete2 {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: -1280px;
-  }
-}
-section .wave3 {
-  animation: animete2 20s linear infinite;
-  z-index: 998;
-  opacity: 0.2;
-  animation-delay: -2s;
-}
-section .wave4 {
-  animation: animete 15s linear infinite;
-  z-index: 997;
-  opacity: 0.7;
-  animation-delay: -5s;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -483,18 +403,11 @@ li {
   color: #11a36a;
   font-size: 1.1rem;
 }
-.container-project-card:nth-child(1n) button {
-  color: white;
-  padding: 1rem 3rem;
-  border-radius: 20px;
-  font-size: 1.3rem;
-  font-weight: 900;
-  cursor: pointer;
-  border: none;
+.container-project-card:nth-child(1n) .btn-project {
   background: #11a36a;
   transition: 0.5s;
 }
-.container-project-card:nth-child(1n) button:hover {
+.container-project-card:nth-child(1n) .btn-project:hover {
   color: #11a36a;
   background: white;
   border: 5px solid #11a36a;
@@ -523,18 +436,11 @@ li {
   color: #03a9f4;
   font-size: 1.1rem;
 }
-.container-project-card:nth-child(2n) button {
-  color: white;
-  padding: 1rem 3rem;
-  border-radius: 20px;
-  font-size: 1.3rem;
-  font-weight: 900;
-  cursor: pointer;
-  border: none;
+.container-project-card:nth-child(2n) .btn-project {
   background: #03a9f4;
   transition: 0.5s;
 }
-.container-project-card:nth-child(2n) button:hover {
+.container-project-card:nth-child(2n) .btn-project:hover {
   color: #03a9f4;
   background: white;
   border: 5px solid #03a9f4;
@@ -566,18 +472,11 @@ li {
   color: #e91e63;
   font-size: 1.1rem;
 }
-.container-project-card:nth-child(3n) button {
-  color: white;
-  padding: 1rem 3rem;
-  border-radius: 20px;
-  font-size: 1.3rem;
-  font-weight: 900;
-  cursor: pointer;
-  border: none;
+.container-project-card:nth-child(3n) .btn-project {
   background: #e91e63;
   transition: 0.5s;
 }
-.container-project-card:nth-child(3n) button:hover {
+.container-project-card:nth-child(3n) .btn-project:hover {
   color: #e91e63;
   background: white;
   border: 5px solid #e91e63;
@@ -609,18 +508,11 @@ li {
   color: #fccb00;
   font-size: 1.1rem;
 }
-.container-project-card:nth-child(4n) button {
-  color: white;
-  padding: 1rem 3rem;
-  border-radius: 20px;
-  font-size: 1.3rem;
-  font-weight: 900;
-  cursor: pointer;
-  border: none;
+.container-project-card:nth-child(4n) .btn-project {
   background: #fccb00;
   transition: 0.5s;
 }
-.container-project-card:nth-child(4n) button:hover {
+.container-project-card:nth-child(4n) .btn-project:hover {
   color: #fccb00;
   background: white;
   border: 5px solid #fccb00;
@@ -888,6 +780,455 @@ footer h1 {
   color: #FFF;
   font-size: 2rem;
   display: none;
+}
+
+.projectTrybe-main-container {
+  min-height: 95vh;
+  font-family: "Montserrat";
+}
+
+.select {
+  border-bottom: 5px solid #11a36a;
+}
+
+.projectTrybe-nav {
+  width: 80%;
+  margin: 0 auto;
+}
+.projectTrybe-nav-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-around;
+}
+.projectTrybe-nav-list li {
+  font-size: 1.3rem;
+  color: #181920;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.projectTrybe-nav-list li:hover {
+  font-size: 1.5rem;
+}
+.projectTrybe-title {
+  text-align: center;
+  color: #11a36a;
+  font-weight: 400;
+  margin: 1.5rem 0;
+}
+.projectTrybe-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.projectTrybe-project {
+  width: 60%;
+  padding: 1rem;
+  border-bottom: 3px solid #11a36a;
+  margin: 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.projectTrybe-project:hover {
+  border: 3px solid #11a36a;
+  border-radius: 20px;
+  background-image: url("../Images/Trybe-Logo.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: 90%;
+}
+.projectTrybe-warning {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 2rem 0;
+  color: #11a36a;
+}
+
+.project-React-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.project-React-title {
+  font-weight: 400;
+  margin: 1.5rem 0;
+  color: #03a9f4;
+}
+.project-React-projects {
+  width: 80%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.project-React-project {
+  width: 100%;
+  border: 5px solid #03a9f4;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  margin: 1rem;
+}
+.project-React-project .project-name {
+  color: #03a9f4;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+.project-React-project .project-section {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: #8b8e94;
+}
+.project-React-project .project-tecs-title {
+  font-size: 1.8rem;
+  margin: 0.5rem;
+  color: #03a9f4;
+}
+.project-React-project .project-tecs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem;
+}
+.project-React-project .project-tecs .tecs {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+.project-Sass-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.project-Sass-title {
+  font-weight: 400;
+  margin: 1.5rem 0;
+  color: #e91e63;
+}
+.project-Sass-projects {
+  width: 80%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.project-Sass-project {
+  width: 100%;
+  border: 5px solid #e91e63;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  margin: 1rem;
+}
+.project-Sass-project .project-name {
+  color: #e91e63;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+.project-Sass-project .project-section {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: #8b8e94;
+}
+.project-Sass-project .project-tecs-title {
+  font-size: 1.8rem;
+  margin: 0.5rem;
+  color: #e91e63;
+}
+.project-Sass-project .project-tecs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem;
+}
+.project-Sass-project .project-tecs .tecs {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+.project-JavaScript-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.project-JavaScript-title {
+  font-weight: 400;
+  margin: 1.5rem 0;
+  color: #fccb00;
+}
+.project-JavaScript-projects {
+  width: 80%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.project-JavaScript-project {
+  width: 100%;
+  border: 5px solid #fccb00;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  margin: 1rem;
+}
+.project-JavaScript-project .project-name {
+  color: #fccb00;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+.project-JavaScript-project .project-section {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: #8b8e94;
+}
+.project-JavaScript-project .project-tecs-title {
+  font-size: 1.8rem;
+  margin: 0.5rem;
+  color: #fccb00;
+}
+.project-JavaScript-project .project-tecs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem;
+}
+.project-JavaScript-project .project-tecs .tecs {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+.btn {
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+section .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 1000px 100px;
+}
+section .wave-header {
+  background: url("../Images/WaveWhite.png");
+}
+section .wave-skills {
+  background: url("../Images/WaveBlueLight.png");
+}
+section .wave-footer {
+  background: url("../Images/WaveBlack.png");
+}
+section .wave1 {
+  animation: animete 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0;
+}
+@keyframes animete {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 1280px;
+  }
+}
+section .wave2 {
+  animation: animete2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+}
+@keyframes animete2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1280px;
+  }
+}
+section .wave3 {
+  animation: animete2 20s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+}
+section .wave4 {
+  animation: animete 15s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+}
+
+.REACT {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid #03a9f4;
+  padding: 0.8rem;
+  border-radius: 20px;
+  color: #03a9f4;
+  transition: 0.5s;
+  cursor: alias;
+}
+.REACT:hover {
+  background: #03a9f4;
+  color: white;
+  transform: scale(1.2);
+}
+
+.SASS {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid #e91e63;
+  padding: 0.8rem;
+  border-radius: 20px;
+  color: #e91e63;
+  transition: 0.5s;
+  cursor: alias;
+}
+.SASS:hover {
+  background: #e91e63;
+  color: white;
+  transform: scale(1.2);
+}
+
+.JAVASCRIPT {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid #fccb00;
+  padding: 0.8rem;
+  border-radius: 20px;
+  color: #fccb00;
+  transition: 0.5s;
+  cursor: alias;
+}
+.JAVASCRIPT:hover {
+  background: #fccb00;
+  color: white;
+  transform: scale(1.2);
+}
+
+.HTML {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid orange;
+  padding: 0.8rem;
+  border-radius: 20px;
+  color: orange;
+  transition: 0.5s;
+  cursor: alias;
+}
+.HTML:hover {
+  background: orange;
+  color: white;
+  transform: scale(1.2);
+}
+
+.CSS {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid #004dcf;
+  padding: 0.8rem;
+  border-radius: 20px;
+  color: #004dcf;
+  transition: 0.5s;
+  cursor: alias;
+}
+.CSS:hover {
+  background: #004dcf;
+  color: white;
+  transform: scale(1.2);
+}
+
+.REDUX {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid #03a9f4;
+  padding: 0.8rem;
+  border-radius: 20px;
+  color: #03a9f4;
+  transition: 0.5s;
+  cursor: alias;
+}
+.REDUX:hover {
+  background: #03a9f4;
+  color: white;
+  transform: scale(1.2);
+}
+
+.JEST {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid #981ee994;
+  padding: 0.8rem;
+  border-radius: 20px;
+  color: #981ee994;
+  transition: 0.5s;
+  cursor: alias;
+}
+.JEST:hover {
+  background: #981ee994;
+  color: white;
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=App.css.map */

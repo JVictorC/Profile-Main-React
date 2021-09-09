@@ -1,0 +1,36 @@
+// Style Waves
+
+section
+  position: relative
+  width: 100%
+  height: 100px
+
+  .wave
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-size: 1000px 100px
+
+    &-header
+      background: url('../Images/WaveWhite.png')
+    &-skills
+      background: url('../Images/WaveBlueLight.png')
+    &-footer
+      background: url('../Images/WaveBlack.png')
+
+  @for $i from 1 through 4
+    @if $i == 1
+      .wave#{$i}
+        @include wave1
+
+    @else if $i == 2
+      .wave#{$i}
+        @include wave2
+    @else if $i == 3
+      .wave#{$i}
+        @include wave3
+    @else if $i == 4
+      .wave#{$i}
+        @include wave4 

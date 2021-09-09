@@ -1,0 +1,49 @@
+@for $i from 1 through 3
+  $project: nth($projectsPage, $i)
+  .project-#{$project}
+    &-main
+      @include display-flex-column($justify: space-between)
+      min-height: 100vh
+
+    &-title
+      font-weight: 400
+      margin: 1.5rem 0
+      color: nth($projectsPage-colors, $i)
+
+    &-projects
+      width: 80%
+      min-height: 50vh 
+      @include display-flex-column
+
+    &-project
+      width: 100%
+      border: 5px solid nth($projectsPage-colors, $i)
+      border-radius: 20px
+      @include display-flex-column
+      padding: 1rem
+      margin: 1rem
+
+      .project
+        &-name
+          color: nth($projectsPage-colors, $i)
+          font-size: 2rem
+          margin: .5rem
+
+        &-section
+          font-size: 1.5rem
+          margin: 1rem
+          color: $text-color
+
+        &-tecs-title
+          font-size: 1.8rem
+          margin: .5rem
+          color: nth($projectsPage-colors, $i)
+
+        &-tecs
+          @include display-flex-row($justify: space-around, $wrap: wrap)
+          margin: 1rem
+          .tecs
+            margin: 1rem
+            font-size: 1.5rem
+
+      
