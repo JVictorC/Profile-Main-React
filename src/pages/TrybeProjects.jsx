@@ -4,12 +4,16 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Menu from '../Components/menu';
+import Wave from '../Components/wave';
 
 function ProjectsTrybe({ projects }) {
   const [sectionProjects, setSectionProjects] = useState([]);
   const [titleSection, setTitleSection] = useState('');
 
   function hadlerCLick({ target }) {
+    const select = document.querySelectorAll('.select');
+    select.forEach((currentValue) => currentValue.classList.remove('select'));
+    target.classList.add('select');
     const value = target.innerText;
     const filter = projects.filter(({ title }) => title === value)[0];
     setSectionProjects(filter.projectsSection);
@@ -18,8 +22,8 @@ function ProjectsTrybe({ projects }) {
 
   function navBar() {
     return (
-      <nav>
-        <ul>
+      <nav className="projectTrybe-nav">
+        <ul className="projectTrybe-nav-list">
           {
             projects.map((project) => (
               <li
@@ -38,47 +42,42 @@ function ProjectsTrybe({ projects }) {
   function renderProject() {
     if (sectionProjects.length === 1) {
       return (
-        <h1>Infelizmente Ainda Não Cheguei Nessa section</h1>
+        <h1 className="projectTrybe-warning">
+          Infelizmente Ainda Não Cheguei Nessa section 😞
+        </h1>
       );
     }
 
     return (
       sectionProjects.map((project) => (
-        <li key={ project.name }>
+        <li key={ project.name } className="projectTrybe-project">
           {project.name}
-          <ul>
-            <p>Tecnologias Utilizadas</p>
-            {
-              project.technologies.map((tec) => (
-                <li key={ tec }>
-                  {tec}
-                </li>
-              ))
-            }
-          </ul>
         </li>
       ))
     );
   }
 
   return (
-    <div className="teste">
-      <Menu />
-      <header>
-        <h1>
-          Projetos Trybe
-        </h1>
-        {
-          navBar()
-        }
-      </header>
-      <div>
-        <h1>{titleSection}</h1>
-        {
-          renderProject()
-        }
+    <>
+      <div className="projectTrybe-main-container">
+        <Menu />
+        <header className="projectTrybe-header">
+          <h1 className="projectTrybe-title">
+            Projetos Trybe
+          </h1>
+          {
+            navBar()
+          }
+        </header>
+        <div className="projectTrybe-projects">
+          <h1 className="projectTrybe-title">{titleSection}</h1>
+          {
+            renderProject()
+          }
+        </div>
       </div>
-    </div>
+      <Wave component="skills" />
+    </>
   );
 }
 

@@ -15,6 +15,8 @@
   li
     list-style: none
 
+
+
 @mixin display-flex-row($justify: space-between, $wrap: nowrap,)
   display: flex
   justify-content: $justify
@@ -101,6 +103,47 @@
   opacity: .7
   animation-delay: -5s
 
+@mixin center-bg
+  background-size: cover
+  background-position: center
+
+@mixin ImageProjectHover($image: '')
+  background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url($image)
+  @include center-bg
+  transform: scale(1.1)
+  z-index: 1
+  border: 4px solid $primary-color
+
+
+// PlaceHolder
+
+%card-hover
+  .project-card-title, .project-card-cover, .project-card-description
+    opacity: 0
+
+  &:hover
+    .project-card-title, .project-card-cover, .project-card-description
+      opacity: 1
+
+// Estyles Buttons
+
+.btn
+  border: none
+  border-radius: 50px
+  font-size: 2rem
+  padding: 2rem 5rem
+  transition: .5s
+
+  &-header
+    background: linear-gradient(90deg, $header-primary, $header-secondary)
+    color: $light-color
+    opacity: .7
+    cursor: pointer
+
+    &:hover
+      opacity: 1
+
+// Style Waves
 
 section
   position: relative
@@ -135,43 +178,4 @@ section
         @include wave3
     @else if $i == 4
       .wave#{$i}
-        @include wave4
-
-@mixin center-bg
-  background-size: cover
-  background-position: center
-
-@mixin ImageProjectHover($image: '')
-  background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url($image)
-  @include center-bg
-  transform: scale(1.1)
-  z-index: 1
-  border: 4px solid $primary-color
-
-
-// PlaceHolder
-
-%card-hover
-  .project-card-title, .project-card-cover, .project-card-description
-    opacity: 0
-
-  &:hover
-    .project-card-title, .project-card-cover, .project-card-description
-      opacity: 1
-
-// Estyles Buttons
-.btn
-  border: none
-  border-radius: 50px
-  font-size: 2rem
-  padding: 2rem 5rem
-  transition: .5s
-
-  &-header
-    background: linear-gradient(90deg, $header-primary, $header-secondary)
-    color: $light-color
-    opacity: .7
-    cursor: pointer
-
-    &:hover
-      opacity: 1
+        @include wave4 

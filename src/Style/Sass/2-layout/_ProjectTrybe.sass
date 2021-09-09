@@ -1,0 +1,54 @@
+.projectTrybe-main-container
+  min-height: 95vh
+  font-family: 'Montserrat'
+
+.select
+  border-bottom: 5px solid $trybe-color
+
+.projectTrybe
+  &-nav
+    width: 80%
+    margin: 0 auto
+  &-nav-list
+    @include display-flex-row
+    justify-content: space-around
+
+    li
+      font-size: 1.3rem
+      color: $dark-color
+      cursor: pointer
+      transition: .5s
+
+      &:hover
+        font-size: 1.5rem
+
+  &-title
+    text-align: center
+    color: $trybe-color
+
+  &-projects
+    @include display-flex-column($justify: space-around)
+
+  &-project
+    width: 60%
+    padding: 1rem
+    border-bottom: 3px solid $trybe-color
+    margin: 1rem
+    font-size: 1.3rem
+    cursor: pointer
+    transition: .5s
+
+    &:hover
+      border: 3px solid $trybe-color
+      border-radius: 20px
+      background-image: url('../Images/Trybe-Logo.png')
+      background-size: 50px
+      background-repeat: no-repeat
+      background-position: 90%
+
+    &-tec
+      @include display-flex-column
+
+  &-warning
+    margin: 1rem
+    color: $trybe-color

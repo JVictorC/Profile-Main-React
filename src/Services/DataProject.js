@@ -52,7 +52,7 @@ const projects = [
         link: 'https://jvictorc.github.io/Projetos/ProjetosTrybe/Fundamentos/7%C2%B0%20Shopping-cart/index.html',
       },
       {
-        name: '8. Project Jest',
+        name: 'Project Jest',
         section: 'Fundamentos',
         technologies: ['JAVASCRIPT', 'JEST'],
         link: 'https://github.com/JVictorC/Trybe-Projects/tree/master/Fundamentos',
