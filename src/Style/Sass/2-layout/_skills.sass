@@ -1,9 +1,12 @@
+@use '../1-bases/variables' as Var
+@use '../1-bases/mixins' as Mixin
+
 .skills-container
-  @include display-flex-column($justify: space-between)
+  @include Mixin.display-flex-column($justify: space-between)
   padding-top: 2rem
   width: 100%
   overflow: hidden
-  background: $light-color
+  background: Var.$light-color
   min-height: 100vh
 
   &-main
@@ -14,37 +17,37 @@
 
 
   &-title
-    @include text-header($weight: 300, $font-size: 5rem)
-    @include animation
-    color: $primary-color
+    @include Mixin.text-header($weight: 300, $font-size: 5rem)
+    @include Mixin.animation
+    color: Var.$primary-color
     cursor: alias
     width: 100%
     padding: 0 2rem
 
   &-ul
-    @include display-flex-row($justify: space-around, $wrap: wrap)
-    @include animation
+    @include Mixin.display-flex-row($justify: space-around, $wrap: wrap)
+    @include Mixin.animation
     position: absolute
     z-index: 1
     width: 1100px
 
 @for $i from 1 through 6
   .skills-container-list:nth-child(#{$i})
-    border: 5px solid nth($colors-skills, $i)
+    border: 5px solid nth(Var.$colors-skills, $i)
     box-shadow: 10px 10px 10px rgba(0, 0, 0, .6)
     margin: 2rem
     height: 250px
     width: 250px
     cursor: alias
-    background: linear-gradient(-30deg, nth($colors-skills-background, $i), white)
+    background: linear-gradient(-30deg, nth(Var.$colors-skills-background, $i), white)
 
     h3
       font-size: 2rem
-      color: nth($colors-skills, $i)
+      color: nth(Var.$colors-skills, $i)
 
     .icons
       font-size: 4rem
-      color: nth($colors-skills, $i)
+      color: nth(Var.$colors-skills, $i)
 
     li
       text-align: center

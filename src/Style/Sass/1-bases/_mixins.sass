@@ -1,3 +1,5 @@
+@use './variables'
+
 //Mixins
 @mixin reset()
   html
@@ -31,7 +33,7 @@
   justify-content: $justify
 
 @mixin text-header($weight: 500, $font-size: 3rem)
-  color: $dark-color
+  color: variables.$dark-color
   font-size: $font-size
   text-align: center
   padding: .3rem
@@ -43,7 +45,7 @@
   transition: 1s
 
 @mixin links
-  color: $light-color
+  color: variables.$light-color
   transition: .5s
   font-size: 1rem
   padding: 1rem auto
@@ -53,7 +55,7 @@
     cursor: pointer
 
 @mixin Card()
-  border: 4px solid $secondary-color
+  border: 4px solid variables.$secondary-color
   height: 350px
   width: 350px
   transition: .5s
@@ -112,15 +114,8 @@
   @include center-bg
   transform: scale(1.1)
   z-index: 1
-  border: 4px solid $primary-color
-
-
-// PlaceHolder
-
-%card-hover
-  .project-card-title, .project-card-cover, .project-card-description
-    opacity: 0
-
-  &:hover
-    .project-card-title, .project-card-cover, .project-card-description
-      opacity: 1
+  border: 4px solid variables.$primary-color
+  
+@mixin name
+  weight: $weight
+      

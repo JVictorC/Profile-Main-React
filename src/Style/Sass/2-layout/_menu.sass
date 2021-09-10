@@ -1,34 +1,38 @@
+@use '../1-bases/variables' as Var
+@use '../1-bases/mixins' as Mixin
+
+
 .nav-item
   // width: 100%
   width: 110px
   opacity: .9
-  background: linear-gradient($header-primary, $header-secondary)
-  border-left: 10px solid $header-primary
-  // border-top: 10px solid $header-primary
+  background: linear-gradient(Var.$header-primary, Var.$header-secondary)
+  border-left: 10px solid Var.$header-primary
+  // border-top: 10px solid Var.$header-primary
   position: fixed
   z-index: 10000
   right: 0
   top: 0
   // bottom: 0px
   height: 100%
-  @include display-flex-column($justify: space-around)
+  @include Mixin.display-flex-column($justify: space-around)
 
 
   &-menu
     height: 50%
     display: flex
-    @include display-flex-column
+    @include Mixin.display-flex-column
     // display: none
 
     li
       font-size: 1.3rem
-      @include display-flex-column
-      @include links
+      @include Mixin.display-flex-column
+      @include Mixin.links
 
   &-social
-    color: $light-color
+    color: Var.$light-color
     font-size: 2rem
-    @include display-flex-column
+    @include Mixin.display-flex-column
 
     li
       margin: 1rem
@@ -36,10 +40,10 @@
       cursor: pointer
 
       &:hover
-        color: $header-primary
+        color: Var.$header-primary
         font-size: 3rem
 
 .menu
-  color: $light-color
+  color: Var.$light-color
   font-size: 2rem
   display: none

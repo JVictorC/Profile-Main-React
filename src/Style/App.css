@@ -2,6 +2,7 @@
 .project5 .project-card-title, .project4 .project-card-title, .project3 .project-card-title, .project2 .project-card-title, .project1 .project-card-title, .project5 .project-card-cover, .project4 .project-card-cover, .project3 .project-card-cover, .project2 .project-card-cover, .project1 .project-card-cover, .project5 .project-card-description, .project4 .project-card-description, .project3 .project-card-description, .project2 .project-card-description, .project1 .project-card-description {
   opacity: 0;
 }
+
 .project5:hover .project-card-title, .project4:hover .project-card-title, .project3:hover .project-card-title, .project2:hover .project-card-title, .project1:hover .project-card-title, .project5:hover .project-card-cover, .project4:hover .project-card-cover, .project3:hover .project-card-cover, .project2:hover .project-card-cover, .project1:hover .project-card-cover, .project5:hover .project-card-description, .project4:hover .project-card-description, .project3:hover .project-card-description, .project2:hover .project-card-description, .project1:hover .project-card-description {
   opacity: 1;
 }

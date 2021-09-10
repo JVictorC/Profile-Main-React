@@ -1,20 +1,22 @@
+@use '../1-bases/variables' as Var
+@use '../1-bases/mixins' as Mixin
 
 .about-container-bg
-  background: linear-gradient($primary-about, $secondary-bg)
+  background: linear-gradient(Var.$primary-about, Var.$secondary-bg)
   min-height: 85vh
   overflow: hidden
 
 .about-container
-  @include display-flex-column
-  @include animation($diretion: 700px)
+  @include Mixin.display-flex-column
+  @include Mixin.animation($diretion: 700px)
 
   &-title
-    @include text-header($weight: 400, $font-size: 3rem)
-    color: $light-color
+    @include Mixin.text-header($weight: 400, $font-size: 3rem)
+    color: Var.$light-color
     margin-top: 1rem
   &-subtitle
-    @include text-header($weight: 300, $font-size: 2rem)
-    color: $light-color
+    @include Mixin.text-header($weight: 300, $font-size: 2rem)
+    color: Var.$light-color
     padding-bottom: 2rem
   &-main
     padding: 2rem
@@ -26,7 +28,7 @@
       width: 20%
       max-width: 200px
       height: 15%
-      border: 5px solid $light-color
+      border: 5px solid Var.$light-color
       border-radius: 90px
       border-radius: 55% 20%
 
@@ -37,7 +39,7 @@
     &-presentation
       font-size: 2rem
       padding: 2rem
-      color: $light-color
+      color: Var.$light-color
       font-weight: 300
       line-height: 1.5
       text-align: center

@@ -1,47 +1,50 @@
+@use '../1-bases/variables' as Var
+@use '../1-bases/mixins' as Mixin
 
 .container-projects-images
-  background: linear-gradient($light-color, $secondary-bg)
-  
+  background: linear-gradient(Var.$light-color, Var.$secondary-bg)
+
 .container-project
-  @include animation
-  @include display-flex-column($justify: normal)
+  @include Mixin.animation
+  @include Mixin.display-flex-column($justify: normal)
   padding-top: 2rem
   width: 100%
 
-
   &-title
-    @include text-header($weight: 300, $font-size: 5rem)
-    color: $primary-color
+    @include Mixin.text-header($weight: 300, $font-size: 5rem)
+    color: Var.$primary-color
+
   &-main
-    @include display-flex-row($justify: space-around, $wrap: wrap)
+    @include Mixin.display-flex-row($justify: space-around, $wrap: wrap)
     height: 100%
     width: 80%
+
 @for $i from 1 through 4
   .container-project-card
-    @include Card
-    @include display-flex-column
+    @include Mixin.Card
+    @include Mixin.display-flex-column
 
     &:nth-child(#{$i + n})
-      border-color: nth($colors-projects, $i)
-      color: nth($colors-projects, $i)
+      border-color: nth(Var.$colors-projects, $i)
+      color: nth(Var.$colors-projects, $i)
       font-size: 1.1rem
 
       .btn-project
-        background: nth($colors-projects, $i)
+        background: nth(Var.$colors-projects, $i)
         transition: .5s
 
         &:hover
-          color: nth($colors-projects, $i)
+          color: nth(Var.$colors-projects, $i)
           background: white
-          border: 5px solid nth($colors-projects, $i)
+          border: 5px solid nth(Var.$colors-projects, $i)
 
       @if $i != 1
         .contrainer-project-image
           font-size: 5rem
 
 .container-project-list
-  @include animation($diretion: 700px)
-  @include display-flex-row($justify: space-evenly)
+  @include Mixin.animation($diretion: 700px)
+  @include Mixin.display-flex-row($justify: space-evenly)
   margin: 5rem 0
 
 .project1
@@ -52,11 +55,11 @@
   cursor: alias
   transition: .5s
   @extend %card-hover
-  color: $light-color
-  @include center-bg
+  color: Var.$light-color
+  @include Mixin.center-bg
 
   &:hover
-    @include ImageProjectHover('../Images/Projects/Front-End-Online.png')
+    @include Mixin.ImageProjectHover('../Images/Projects/Front-End-Online.png')
 
   .project-card
     &-cover
@@ -75,7 +78,7 @@
   width: 70%
 
 @for $i from 2 through 5
-  $image: #{ '../Images/Projects/' + nth($images-list, $i) + '.png'}
+  $image: #{ '../Images/Projects/' + nth(Var.$images-list, $i) + '.png'}
   .project#{$i}
     background: url($image)
     margin: 15px
@@ -85,12 +88,12 @@
     cursor: aliasnpm
     transition: .5s
     @extend %card-hover
-    color: $light-color
-    @include center-bg
+    color: Var.$light-color
+    @include Mixin.center-bg
     cursor: pointer
 
     &:hover
-      @include ImageProjectHover($image)
+      @include Mixin.ImageProjectHover($image)
       height: 350px
       transform: scale(1.3)
 

@@ -1,5 +1,7 @@
-// Style Waves
+@use '../1-bases/variables' as Var
+@use '../1-bases/mixins' as Mixin
 
+// Style Waves
 section
   position: relative
   width: 100%
@@ -29,14 +31,14 @@ section
   @for $i from 1 through 4
     @if $i == 1
       .wave#{$i}
-        @include wave1
+        @include Mixin.wave1
 
     @else if $i == 2
       .wave#{$i}
-        @include wave2
+        @include Mixin.wave2
     @else if $i == 3
       .wave#{$i}
-        @include wave3
+        @include Mixin.wave3
     @else if $i == 4
       .wave#{$i}
-        @include wave4 
+        @include Mixin.wave4 
