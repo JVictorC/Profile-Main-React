@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Menu from '../Components/menu';
@@ -8,9 +8,17 @@ import icons from '../Services/icons';
 function Projects(props) {
   const { match: { params: { project } }, projects } = props;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const component = () => (
     projects.map((projec) => projec.map((value) => (
-      <li key={ value.name } className={ `project-${project}-project` }>
+      <li
+        key={ value.name }
+        className={ `project-${project}-project` }
+        data-anime="anime"
+      >
         <p className="project-name">{value.name}</p>
         <p className="project-section">{`Desenvolvido na Seção: ${value.section}`}</p>
         <p className="project-tecs-title">Tecnologias Usadas:</p>
@@ -27,6 +35,15 @@ function Projects(props) {
             ))
           }
         </ul>
+        <a
+          href={ value.link }
+          target="_blank"
+          rel="noreferrer"
+          className="project-link"
+        >
+          Ver Mais
+
+        </a>
       </li>
     )))
   );
@@ -52,7 +69,7 @@ function Projects(props) {
           renderProjects()
         }
       </ul>
-      <Wave component="skills" />
+      <Wave component={ project } />
     </div>
   );
 }

@@ -50,9 +50,15 @@ function ProjectsTrybe({ projects }) {
 
     return (
       sectionProjects.map((project) => (
-        <li key={ project.name } className="projectTrybe-project">
+        <a
+          href={ project.link }
+          target="_blank"
+          rel="noreferrer"
+          className="projectTrybe-project"
+          key={ project.name }
+        >
           {project.name}
-        </li>
+        </a>
       ))
     );
   }

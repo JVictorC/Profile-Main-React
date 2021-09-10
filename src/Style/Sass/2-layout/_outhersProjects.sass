@@ -12,8 +12,9 @@
 
     &-projects
       width: 80%
-      min-height: 50vh 
+      min-height: 50vh
       @include display-flex-column
+      margin: 3rem 0
 
     &-project
       width: 100%
@@ -22,6 +23,7 @@
       @include display-flex-column
       padding: 1rem
       margin: 1rem
+      @include animation
 
       .project
         &-name
@@ -45,5 +47,17 @@
           .tecs
             margin: 1rem
             font-size: 1.5rem
+        &-link
+          background: nth($projectsPage-colors, $i)
+          padding: 1rem 3rem
+          border-radius: 20px
+          color: $light-color
+          font-size: 1.5rem
+          font-weight: 500
+          border: 2px solid $light-color
+          transition: .5s
 
-      
+          &:hover
+            background: $light-color
+            color: nth($projectsPage-colors, $i)
+            border: 2px solid nth($projectsPage-colors, $i)

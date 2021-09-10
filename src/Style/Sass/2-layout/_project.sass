@@ -1,9 +1,13 @@
 
-.container-project
+.container-projects-images
   background: linear-gradient($light-color, $secondary-bg)
+  
+.container-project
   @include animation
   @include display-flex-column($justify: normal)
   padding-top: 2rem
+  width: 100%
+
 
   &-title
     @include text-header($weight: 300, $font-size: 5rem)
@@ -36,6 +40,7 @@
           font-size: 5rem
 
 .container-project-list
+  @include animation($diretion: 700px)
   @include display-flex-row($justify: space-evenly)
   margin: 5rem 0
 

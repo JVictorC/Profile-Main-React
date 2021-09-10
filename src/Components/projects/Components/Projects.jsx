@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Jobs(props) {
+export default function Project(props) {
   const { classN, titleSection, describe } = props;
   return (
     <div className={ `project-card ${classN}` }>

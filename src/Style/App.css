@@ -104,11 +104,6 @@ li {
   }
 }
 
-.animate {
-  opacity: 1 !important;
-  transform: translate3d(0, 0, 0) !important;
-}
-
 .skills-container {
   display: flex;
   flex-direction: column;
@@ -351,8 +346,11 @@ li {
   text-align: center;
 }
 
-.container-project {
+.container-projects-images {
   background: linear-gradient(#FFF, #e5eaff);
+}
+
+.container-project {
   transform: translate3d(-700px, 50px, 0);
   opacity: 0;
   transition: 1s;
@@ -361,6 +359,7 @@ li {
   align-items: center;
   justify-content: normal;
   padding-top: 2rem;
+  width: 100%;
 }
 .container-project-title {
   color: #181920;
@@ -522,6 +521,9 @@ li {
 }
 
 .container-project-list {
+  transform: translate3d(700px, 50px, 0);
+  opacity: 0;
+  transition: 1s;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: nowrap;
@@ -832,6 +834,7 @@ footer h1 {
   font-size: 1.3rem;
   cursor: pointer;
   transition: 0.5s;
+  color: #11a36a;
 }
 .projectTrybe-project:hover {
   border: 3px solid #11a36a;
@@ -867,6 +870,7 @@ footer h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  margin: 3rem 0;
 }
 .project-React-project {
   width: 100%;
@@ -878,6 +882,9 @@ footer h1 {
   justify-content: space-around;
   padding: 1rem;
   margin: 1rem;
+  transform: translate3d(-700px, 50px, 0);
+  opacity: 0;
+  transition: 1s;
 }
 .project-React-project .project-name {
   color: #03a9f4;
@@ -906,6 +913,21 @@ footer h1 {
   margin: 1rem;
   font-size: 1.5rem;
 }
+.project-React-project .project-link {
+  background: #03a9f4;
+  padding: 1rem 3rem;
+  border-radius: 20px;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: 2px solid #FFF;
+  transition: 0.5s;
+}
+.project-React-project .project-link:hover {
+  background: #FFF;
+  color: #03a9f4;
+  border: 2px solid #03a9f4;
+}
 
 .project-Sass-main {
   display: flex;
@@ -926,6 +948,7 @@ footer h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  margin: 3rem 0;
 }
 .project-Sass-project {
   width: 100%;
@@ -937,6 +960,9 @@ footer h1 {
   justify-content: space-around;
   padding: 1rem;
   margin: 1rem;
+  transform: translate3d(-700px, 50px, 0);
+  opacity: 0;
+  transition: 1s;
 }
 .project-Sass-project .project-name {
   color: #e91e63;
@@ -965,6 +991,21 @@ footer h1 {
   margin: 1rem;
   font-size: 1.5rem;
 }
+.project-Sass-project .project-link {
+  background: #e91e63;
+  padding: 1rem 3rem;
+  border-radius: 20px;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: 2px solid #FFF;
+  transition: 0.5s;
+}
+.project-Sass-project .project-link:hover {
+  background: #FFF;
+  color: #e91e63;
+  border: 2px solid #e91e63;
+}
 
 .project-JavaScript-main {
   display: flex;
@@ -985,6 +1026,7 @@ footer h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  margin: 3rem 0;
 }
 .project-JavaScript-project {
   width: 100%;
@@ -996,6 +1038,9 @@ footer h1 {
   justify-content: space-around;
   padding: 1rem;
   margin: 1rem;
+  transform: translate3d(-700px, 50px, 0);
+  opacity: 0;
+  transition: 1s;
 }
 .project-JavaScript-project .project-name {
   color: #fccb00;
@@ -1024,6 +1069,21 @@ footer h1 {
   margin: 1rem;
   font-size: 1.5rem;
 }
+.project-JavaScript-project .project-link {
+  background: #fccb00;
+  padding: 1rem 3rem;
+  border-radius: 20px;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: 2px solid #FFF;
+  transition: 0.5s;
+}
+.project-JavaScript-project .project-link:hover {
+  background: #FFF;
+  color: #fccb00;
+  border: 2px solid #fccb00;
+}
 
 .btn {
   color: white;
@@ -1049,13 +1109,22 @@ section .wave {
   background-size: 1000px 100px;
 }
 section .wave-header {
-  background: url("../Images/WaveWhite.png");
+  background: url("../Images/Waves/WaveWhite.png");
 }
 section .wave-skills {
-  background: url("../Images/WaveBlueLight.png");
+  background: url("../Images/Waves/WaveBlueLight.png");
 }
 section .wave-footer {
-  background: url("../Images/WaveBlack.png");
+  background: url("../Images/Waves/WaveBlack.png");
+}
+section .wave-Sass {
+  background: url("../Images/Waves/waveSass.png");
+}
+section .wave-React {
+  background: url("../Images/Waves/waveReact.png");
+}
+section .wave-JavaScript {
+  background: url("../Images/Waves/waveJavaScript.png");
 }
 section .wave1 {
   animation: animete 30s linear infinite;
@@ -1229,6 +1298,11 @@ section .wave4 {
   background: #981ee994;
   color: white;
   transform: scale(1.2);
+}
+
+.animate {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) !important;
 }
 
 /*# sourceMappingURL=App.css.map */
