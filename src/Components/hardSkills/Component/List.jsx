@@ -7,10 +7,10 @@ export default class List extends Component {
     const { icon, title } = this.props;
     return (
       <Tilt
-        className="skills-container-list"
+        className="Tilt skills-container-list"
         options={ { max: 50, reverse: false, scale: 1.2 } }
       >
-        <li>
+        <li className="Tilt-inner">
           {icon}
           <h3>{title}</h3>
         </li>

@@ -82,7 +82,7 @@ function ProjectsTrybe({ projects }) {
           }
         </div>
       </div>
-      <Wave component="skills" />
+      <Wave component="Trybe" />
     </>
   );
 }

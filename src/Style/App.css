@@ -1110,13 +1110,13 @@ section .wave {
   background-size: 1000px 100px;
 }
 section .wave-header {
-  background: url("../Images/Waves/WaveWhite.png");
+  background: url("../Images/Waves/waveWhite.png");
 }
 section .wave-skills {
-  background: url("../Images/Waves/WaveBlueLight.png");
+  background: url("../Images/Waves/waveBlueLight.png");
 }
 section .wave-footer {
-  background: url("../Images/Waves/WaveBlack.png");
+  background: url("../Images/Waves/waveBlack.png");
 }
 section .wave-Sass {
   background: url("../Images/Waves/waveSass.png");
@@ -1126,6 +1126,9 @@ section .wave-React {
 }
 section .wave-JavaScript {
   background: url("../Images/Waves/waveJavaScript.png");
+}
+section .wave-Trybe {
+  background: url("../Images/Waves/waveTrybe.png");
 }
 section .wave1 {
   animation: animete 30s linear infinite;
@@ -1304,6 +1307,11 @@ section .wave4 {
 .animate {
   opacity: 1 !important;
   transform: translate3d(0, 0, 0) !important;
+}
+
+
+.Tilt {
+  background-color: red;
 }
 
 /*# sourceMappingURL=App.css.map */
