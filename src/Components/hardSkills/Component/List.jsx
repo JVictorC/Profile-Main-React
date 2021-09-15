@@ -5,7 +5,7 @@ import Tilt from 'react-tilt';
 const List = ({ icon, title }) => (
   <Tilt
     className="Tilt skills-container-list"
-    options={ { max: 50, reverse: false, scale: 1.4 } }
+    options={ { max: 50, reverse: true, scale: 1.1 } }
   >
     <li className="skills-container-item">
       <div className="skills-container-circle">

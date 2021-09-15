@@ -12,7 +12,7 @@
     display: flex
     justify-content: center
     align-items: baseline
-    margin-bottom: 250px
+    min-height: 90vh
 
   &-title
     @include mixin.text-header($weight: 300, $font-size: 5rem)
@@ -32,7 +32,7 @@
 @for $i from 1 through 6
   .skills-container-list:nth-child(#{$i})
     transform-style: preserve-3d
-    border: 2px solid nth(var.$colors-skills, $i)
+    border-radius: 20px
     box-shadow: 10px 10px 10px rgba(0, 0, 0, .6)
     margin: 2rem
     height: 300px
@@ -41,6 +41,7 @@
     background: nth(var.$colors-skills-background, $i)
 
     .skills-container-circle
+      border: 3px solid nth(var.$colors-skills, $i)
       @include mixin.display-flex-column($justify: center)
       position: absolute
       z-index: -1

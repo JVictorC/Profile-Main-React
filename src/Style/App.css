@@ -49,7 +49,7 @@ li {
   width: 100%;
 }
 .header-contant-main-apresentation {
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,7 +112,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  margin-bottom: 250px;
+  min-height: 90vh;
 }
 .skills-container-title {
   color: #181920;
@@ -144,7 +144,7 @@ li {
 
 .skills-container-list:nth-child(1) {
   transform-style: preserve-3d;
-  border: 2px solid #e91e63;
+  border-radius: 20px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
   height: 300px;
@@ -153,6 +153,7 @@ li {
   background: #e91e6294;
 }
 .skills-container-list:nth-child(1) .skills-container-circle {
+  border: 3px solid #e91e63;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,7 +184,7 @@ li {
 
 .skills-container-list:nth-child(2) {
   transform-style: preserve-3d;
-  border: 2px solid #004dcf;
+  border-radius: 20px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
   height: 300px;
@@ -192,6 +193,7 @@ li {
   background: #004ccf94;
 }
 .skills-container-list:nth-child(2) .skills-container-circle {
+  border: 3px solid #004dcf;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,7 +224,7 @@ li {
 
 .skills-container-list:nth-child(3) {
   transform-style: preserve-3d;
-  border: 2px solid #fccb00;
+  border-radius: 20px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
   height: 300px;
@@ -231,6 +233,7 @@ li {
   background: #fcca0094;
 }
 .skills-container-list:nth-child(3) .skills-container-circle {
+  border: 3px solid #fccb00;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -261,7 +264,7 @@ li {
 
 .skills-container-list:nth-child(4) {
   transform-style: preserve-3d;
-  border: 2px solid #03a9f4;
+  border-radius: 20px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
   height: 300px;
@@ -270,6 +273,7 @@ li {
   background: #03a8f494;
 }
 .skills-container-list:nth-child(4) .skills-container-circle {
+  border: 3px solid #03a9f4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -300,7 +304,7 @@ li {
 
 .skills-container-list:nth-child(5) {
   transform-style: preserve-3d;
-  border: 2px solid orange;
+  border-radius: 20px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
   height: 300px;
@@ -309,6 +313,7 @@ li {
   background: #f4940394;
 }
 .skills-container-list:nth-child(5) .skills-container-circle {
+  border: 3px solid orange;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -339,7 +344,7 @@ li {
 
 .skills-container-list:nth-child(6) {
   transform-style: preserve-3d;
-  border: 2px solid purple;
+  border-radius: 20px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   margin: 2rem;
   height: 300px;
@@ -348,6 +353,7 @@ li {
   background: #981ee994;
 }
 .skills-container-list:nth-child(6) .skills-container-circle {
+  border: 3px solid purple;
   display: flex;
   flex-direction: column;
   align-items: center;
