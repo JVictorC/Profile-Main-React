@@ -1,13 +1,11 @@
-@use '../1-bases/variables' as var
-@use '../1-bases/mixins' as Mixin
-
-
+@use '../1-bases/_variables' as var
+@use '../1-bases/_mixins' as mixin
 
 .header-main
   background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('../Images/BackGround.jpg')
   background-position: center
   background-size: cover
-  @include Mixin.display-flex-column($justify: space-between)
+  @include mixin.display-flex-column($justify: space-between)
   animation: ShowHeader 1s
   min-height: 100vh
 
@@ -21,21 +19,21 @@
 
 .header-contant
   &-main
-    @include Mixin.display-flex-column($justify: space-between)
+    @include mixin.display-flex-column($justify: space-between)
     margin: 5rem
     width: 100%
 
     &-apresentation
       width: 60%
-      @include Mixin.display-flex-column
+      @include mixin.display-flex-column
 
     &-name
-      @include Mixin.text-header($weight: 500)
+      @include mixin.text-header($weight: 500)
       color: var.$light-color
       font-weight: 500
 
     &-student
-      @include Mixin.text-header(300)
+      @include mixin.text-header(300)
       color: var.$primary-color
       font-weight: 300
       border-right: white 5px solid

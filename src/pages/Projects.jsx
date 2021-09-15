@@ -41,8 +41,7 @@ function Projects(props) {
           rel="noreferrer"
           className="project-link"
         >
-          Ver Mais
-
+          Ver Projeto
         </a>
       </li>
     )))

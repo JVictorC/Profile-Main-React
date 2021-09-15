@@ -1,53 +1,64 @@
-@use '../1-bases/variables' as Var
-@use '../1-bases/mixins' as Mixin
-
+@use '../1-bases/_mixins' as mixin
+@use '../1-bases/_variables' as var
 .skills-container
-  @include Mixin.display-flex-column($justify: space-between)
+  @include mixin.display-flex-column($justify: space-between)
   padding-top: 2rem
   width: 100%
   overflow: hidden
-  background: Var.$light-color
+  background: var.$light-color
   min-height: 100vh
 
   &-main
     display: flex
     justify-content: center
     align-items: baseline
-    margin-bottom: 50px
-
+    margin-bottom: 250px
 
   &-title
-    @include Mixin.text-header($weight: 300, $font-size: 5rem)
-    @include Mixin.animation
-    color: Var.$primary-color
+    @include mixin.text-header($weight: 300, $font-size: 5rem)
+    @include mixin.animation
+    color: var.$primary-color
     cursor: alias
     width: 100%
     padding: 0 2rem
 
   &-ul
-    @include Mixin.display-flex-row($justify: space-around, $wrap: wrap)
-    @include Mixin.animation
+    @include mixin.display-flex-row($justify: space-around, $wrap: wrap)
+    @include mixin.animation
     position: absolute
     z-index: 1
     width: 1100px
 
 @for $i from 1 through 6
   .skills-container-list:nth-child(#{$i})
-    border: 5px solid nth(Var.$colors-skills, $i)
+    transform-style: preserve-3d
+    border: 2px solid nth(var.$colors-skills, $i)
     box-shadow: 10px 10px 10px rgba(0, 0, 0, .6)
     margin: 2rem
-    height: 250px
+    height: 300px
     width: 250px
     cursor: alias
-    background: linear-gradient(-30deg, nth(Var.$colors-skills-background, $i), white)
+    background: nth(var.$colors-skills-background, $i)
+
+    .skills-container-circle
+      @include mixin.display-flex-column($justify: center)
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      width: 200px
+      height: 200px
+      border-radius: 50%
+      background: white
+      transform: translate3d(-50%, -50%, 50px)
 
     h3
       font-size: 2rem
-      color: nth(Var.$colors-skills, $i)
+      color: nth(var.$colors-skills, $i)
 
     .icons
       font-size: 4rem
-      color: nth(Var.$colors-skills, $i)
+      color: nth(var.$colors-skills, $i)
 
     li
       text-align: center
