@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Menu from '../Components/menu';
 import Wave from '../Components/wave';
-import icons from '../Services/icons';
+import { icons } from '../Services/icons';
 
 function Projects(props) {
   const { match: { params: { project } }, projects } = props;

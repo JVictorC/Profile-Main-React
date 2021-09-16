@@ -1,18 +1,18 @@
 @use '../1-bases/_mixins' as mixin
 @use '../1-bases/_variables' as var
+
 .skills-container
   @include mixin.display-flex-column($justify: space-between)
   padding-top: 2rem
   width: 100%
   overflow: hidden
   background: var.$light-color
-  min-height: 100vh
 
   &-main
     display: flex
     justify-content: center
     align-items: baseline
-    min-height: 90vh
+    height: 130vh
 
   &-title
     @include mixin.text-header($weight: 300, $font-size: 5rem)
@@ -20,7 +20,6 @@
     color: var.$primary-color
     cursor: alias
     width: 100%
-    padding: 0 2rem
 
   &-ul
     @include mixin.display-flex-row($justify: space-around, $wrap: wrap)
@@ -29,7 +28,7 @@
     z-index: 1
     width: 1100px
 
-@for $i from 1 through 6
+@for $i from 1 through 9
   .skills-container-list:nth-child(#{$i})
     transform-style: preserve-3d
     border-radius: 20px
@@ -41,7 +40,6 @@
     background: nth(var.$colors-skills-background, $i)
 
     .skills-container-circle
-      border: 3px solid nth(var.$colors-skills, $i)
       @include mixin.display-flex-column($justify: center)
       position: absolute
       z-index: -1
@@ -49,12 +47,12 @@
       left: 50%
       width: 200px
       height: 200px
-      border-radius: 50%
-      background: white
+      border-radius: 10%
+      background: var.$light-color
       transform: translate3d(-50%, -50%, 50px)
 
     h3
-      font-size: 2rem
+      font-size: 1.5rem
       color: nth(var.$colors-skills, $i)
 
     .icons
