@@ -9,6 +9,9 @@
   animation: ShowHeader 1s
   min-height: 100vh
 
+  @include mixin.Mobile
+    min-height: 90vh
+
   @keyframes ShowHeader
     0%
       transform: translate3d(-500px, -500px, 0)
@@ -23,6 +26,9 @@
     margin: 5rem
     width: 100%
 
+    @include mixin.Mobile
+      width: 80%
+
     &-apresentation
       width: 100%
       @include mixin.display-flex-column
@@ -32,6 +38,9 @@
       color: var.$light-color
       font-weight: 500
 
+      @include mixin.Mobile
+        font-size: 2rem
+
     &-student
       @include mixin.text-header(300)
       color: var.$primary-color
@@ -40,6 +49,25 @@
       animation: myAnimationLine .5s infinite normal, disaberName 8s infinite normal steps(26)
       overflow: hidden
       white-space: nowrap
+
+      @include mixin.Mobile
+        font-size: 2rem
+        animation: myAnimationLine .5s infinite normal, disaberNameMobile 8s infinite normal steps(26)
+
+
+      @keyframes disaberNameMobile
+        0%
+          width: 0
+
+        50%
+          width: 27.8rem
+
+        75%
+          width: 27.8rem
+
+        100%
+          width: 0
+
 
       @keyframes disaberName
         0%

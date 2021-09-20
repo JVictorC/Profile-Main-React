@@ -1,5 +1,5 @@
 import React from 'react';
-import { projectsImages, frontEndOnloneImage } from '../../../Services/projectsImages';
+import { projectsImages, frontEndOnlineImage } from '../../../Services/projectsImages';
 import Project from './Projects';
 
 export default function Images() {
@@ -7,8 +7,9 @@ export default function Images() {
     <div className="container-project-list" data-anime="anime">
       <Project
         classN="project1"
-        titleSection={ frontEndOnloneImage.title }
-        describe={ frontEndOnloneImage.describe }
+        titleSection={ frontEndOnlineImage.title }
+        describe={ frontEndOnlineImage.describe }
+        link={ frontEndOnlineImage.link }
       />
       <div className="other-projects">
         {
@@ -18,6 +19,7 @@ export default function Images() {
               classN={ `project${project.id}` }
               titleSection={ project.title }
               describe={ project.describe }
+              link={ project.link }
             />
           ))
         }
