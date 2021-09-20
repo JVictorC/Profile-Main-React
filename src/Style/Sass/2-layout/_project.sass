@@ -4,6 +4,7 @@
 
 .container-projects-images
   background: linear-gradient(var.$light-color, var.$secondary-bg)
+  overflow: hidden
 
 .container-project
   @include mixin.animation
@@ -27,6 +28,7 @@
 
     &:nth-child(#{$i + n})
       border-color: nth(var.$colors-projects, $i)
+      text-align: center
       color: nth(var.$colors-projects, $i)
       font-size: 1.1rem
 
@@ -46,7 +48,9 @@
 .container-project-list
   @include mixin.animation($diretion: 700px)
   @include mixin.display-flex-row($justify: space-evenly)
-  margin: 5rem 0
+
+  @include mixin.Mobile
+    flex-flow: column wrap
 
 .project1
   background: url(../Images/Projects/Front-End-Online.png)
@@ -59,18 +63,26 @@
   color: var.$light-color
   @include mixin.center-bg
 
+  @include mixin.Mobile
+    width: 70%
+    height: 350px
+
   &:hover
     @include mixin.ImageProjectHover('../Images/Projects/Front-End-Online.png')
+
+    @include mixin.Mobile
+      height: 400px
+      margin: 3rem
 
   .project-card
     &-cover
       text-align: center
     &-title
-      font-size: 2rem
+      font-size: 1.5rem
       margin: 2rem
     &-description
       padding: 1rem
-      font-size: 1.5rem
+      font-size: 1rem
       margin: 1rem
       text-align: center
 
@@ -78,6 +90,13 @@
   display: flex
   flex-wrap: wrap
   width: 70%
+
+  @include mixin.Mobile
+    width: 100%
+    display: flex
+    flex-flow: column wrap
+    justify-content: center
+    align-items: center
 
 @for $i from 2 through 5
   $image: #{ '../Images/Projects/' + nth(var.$images-list, $i) + '.png'}
@@ -94,10 +113,13 @@
     @include mixin.center-bg
     @include mixin.display-flex-column
 
+    @include mixin.Mobile
+      width: 70%
+      height: 350px
+
     &:hover
       @include mixin.ImageProjectHover($image)
       height: 400px
-      transform: scale(1.3)
 
     .project-card
       &-cover

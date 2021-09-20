@@ -21,6 +21,7 @@
       opacity: 1
 
 .header-contant
+  width: 100%
   &-main
     @include mixin.display-flex-column($justify: space-between)
     margin: 5rem
@@ -28,10 +29,11 @@
 
     @include mixin.Mobile
       width: 80%
+      margin: 3rem auto
 
     &-apresentation
-      width: 100%
       @include mixin.display-flex-column
+      margin: auto
 
     &-name
       @include mixin.text-header($weight: 500)
@@ -54,20 +56,18 @@
         font-size: 2rem
         animation: myAnimationLine .5s infinite normal, disaberNameMobile 8s infinite normal steps(26)
 
-
       @keyframes disaberNameMobile
         0%
           width: 0
 
         50%
-          width: 27.8rem
+          width: 27.7rem
 
         75%
-          width: 27.8rem
+          width: 27.7rem
 
         100%
           width: 0
-
 
       @keyframes disaberName
         0%
