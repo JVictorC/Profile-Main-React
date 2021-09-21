@@ -1,24 +1,38 @@
-@use '../1-bases/variables' as Var
-@use '../1-bases/mixins' as Mixin
+@use '../1-bases/_variables' as var
+@use '../1-bases/_mixins' as mixin
+
+
+.projectTrybe-main
+  @include mixin.Mobile
+    margin-bottom: 90px
 
 .projectTrybe-main-container
-  min-height: 95vh
   font-family: 'Montserrat'
+  min-height: 90vh
+
+  @include mixin.Mobile
+    min-height: 80vh 
 
 .select
-  border-bottom: 5px solid Var.$trybe-color
+  border-bottom: 5px solid var.$trybe-color
 
 .projectTrybe
+
   &-nav
     width: 80%
     margin: 0 auto
+
+    @include mixin.Mobile
+      width: 100%
+
   &-nav-list
-    @include Mixin.display-flex-row
+    @include mixin.display-flex-row
     justify-content: space-around
+    flex-wrap: wrap
 
     li
       font-size: 1.3rem
-      color: Var.$dark-color
+      color: var.$dark-color
       cursor: pointer
       transition: .5s
 
@@ -27,35 +41,33 @@
 
   &-title
     text-align: center
-    color: Var.$trybe-color
+    color: var.$trybe-color
     font-weight: 400
     margin: 1.5rem 0
 
   &-projects
-    @include Mixin.display-flex-column($justify: space-around)
+    @include mixin.display-flex-column($justify: space-around)
 
   &-project
     width: 60%
     padding: 1rem
-    border-bottom: 3px solid Var.$trybe-color
+    border-bottom: 3px solid var.$trybe-color
     margin: 1rem
     font-size: 1.3rem
     cursor: pointer
     transition: .5s
-    color: Var.$trybe-color
+    color: var.$trybe-color
 
     &:hover
-      border: 3px solid Var.$trybe-color
+      border: 3px solid var.$trybe-color
       border-radius: 20px
       background-image: url('../Images/Trybe-Logo.png')
       background-size: 50px
       background-repeat: no-repeat
       background-position: 90%
 
-
-
   &-warning
     font-size: 2rem
     font-weight: 300
     margin: 2rem 0
-    color: Var.$trybe-color
+    color: var.$trybe-color

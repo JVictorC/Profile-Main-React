@@ -4,7 +4,6 @@
 .skills-container
   @include mixin.display-flex-column($justify: space-between)
   padding-top: 2rem
-  width: 100%
   overflow: hidden
   background: var.$light-color
 
@@ -12,7 +11,8 @@
     display: flex
     justify-content: center
     align-items: baseline
-    height: 100vh
+    height: 120vh
+    width: 80%
 
     @include mixin.Mobile
       height: auto
@@ -33,7 +33,10 @@
     margin-top: 5rem
     position: absolute
     z-index: 1
-    width: 100%
+    width: 80%
+
+    @include mixin.Mobile
+      width: 100%
 
 @for $i from 1 through 9
   .skills-container-list:nth-child(#{$i})

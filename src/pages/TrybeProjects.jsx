@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Menu from '../Components/menu';
@@ -19,6 +19,10 @@ function ProjectsTrybe({ projects }) {
     setSectionProjects(filter.projectsSection);
     setTitleSection(filter.title);
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   function navBar() {
     return (
@@ -64,7 +68,7 @@ function ProjectsTrybe({ projects }) {
   }
 
   return (
-    <>
+    <main className="projectTrybe-main">
       <div className="projectTrybe-main-container">
         <Menu />
         <header className="projectTrybe-header">
@@ -83,7 +87,7 @@ function ProjectsTrybe({ projects }) {
         </div>
       </div>
       <Wave component="Trybe" />
-    </>
+    </main>
   );
 }
 
