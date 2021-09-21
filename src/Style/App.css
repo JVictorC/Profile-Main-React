@@ -154,8 +154,7 @@ li {
 }
 @media (max-width: 900px) {
   .skills-container-main {
-    height: auto;
-    margin-bottom: 3rem;
+    min-height: auto;
   }
 }
 .skills-container-title {
@@ -1404,7 +1403,9 @@ a {
     border: none;
     top: 90%;
     display: flex;
-    flex-direction: row !important;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
     bottom: 0px;
     width: 100%;
     opacity: 1;
