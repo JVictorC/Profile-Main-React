@@ -1266,7 +1266,11 @@ li {
 .footer-container {
   background: black;
   color: #FFF;
-  margin-bottom: 80px;
+}
+@media (max-width: 900px) {
+  .footer-container {
+    margin-bottom: 80px;
+  }
 }
 .footer-container-main {
   padding: 1rem 0;

@@ -4,7 +4,9 @@
 .footer-container
   background: black
   color: var.$light-color
-  margin-bottom: 80px
+
+  @include mixin.Mobile
+    margin-bottom: 80px
 
   &-main
     padding: 1rem 0
@@ -15,7 +17,6 @@
     @include mixin.Mobile
       @include mixin.display-flex-column
       height: 50vh
-      
 
     @include mixin.Mobile
       width: 100%
@@ -72,5 +73,3 @@
 
       100%
         transform: scale(1)
-
-        
