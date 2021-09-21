@@ -80,7 +80,7 @@ li {
 }
 @media (max-width: 900px) {
   .header-contant-main-name {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 .header-contant-main-student {
@@ -98,7 +98,7 @@ li {
 }
 @media (max-width: 900px) {
   .header-contant-main-student {
-    font-size: 2rem;
+    font-size: 1.2rem;
     animation: myAnimationLine 0.5s infinite normal, disaberNameMobile 8s infinite normal steps(26);
   }
 }
@@ -107,10 +107,10 @@ li {
     width: 0;
   }
   50% {
-    width: 27.7rem;
+    width: 17rem;
   }
   75% {
-    width: 27.7rem;
+    width: 17rem;
   }
   100% {
     width: 0;

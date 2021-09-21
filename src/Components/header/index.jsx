@@ -48,7 +48,11 @@ export default class Header extends Component {
               <h1 className="header-contant-main-name line">João Victor C da Silva</h1>
               <h2 className="header-contant-main-student">{header}</h2>
             </div>
-            <LottieAnimation lotti={ Person } height={ 500 } width={ 400 } />
+            <LottieAnimation
+              lotti={ Person }
+              height={ 400 }
+              width={ 350 }
+            />
           </div>
         </div>
         <Menu />

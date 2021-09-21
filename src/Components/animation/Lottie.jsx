@@ -19,6 +19,7 @@ export default function LottieAnimation({ lotti, width, height }) {
         height={ height }
         width={ width }
         isClickToPauseDisabled
+        className="teste"
       />
     </div>
   );
