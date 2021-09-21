@@ -848,6 +848,11 @@ li {
   font-weight: 300;
   color: #ff5200;
 }
+@media (max-width: 900px) {
+  .container-project-title {
+    font-size: 3rem;
+  }
+}
 .container-project-main {
   display: flex;
   justify-content: space-around;
@@ -1031,7 +1036,7 @@ li {
 }
 @media (max-width: 900px) {
   .project1 {
-    width: 70%;
+    width: 90%;
     height: 350px;
   }
 }
@@ -1096,7 +1101,7 @@ li {
 }
 @media (max-width: 900px) {
   .project2 {
-    width: 70%;
+    width: 90%;
     height: 350px;
   }
 }
@@ -1141,7 +1146,7 @@ li {
 }
 @media (max-width: 900px) {
   .project3 {
-    width: 70%;
+    width: 90%;
     height: 350px;
   }
 }
@@ -1186,7 +1191,7 @@ li {
 }
 @media (max-width: 900px) {
   .project4 {
-    width: 70%;
+    width: 90%;
     height: 350px;
   }
 }
@@ -1231,7 +1236,7 @@ li {
 }
 @media (max-width: 900px) {
   .project5 {
-    width: 70%;
+    width: 90%;
     height: 350px;
   }
 }

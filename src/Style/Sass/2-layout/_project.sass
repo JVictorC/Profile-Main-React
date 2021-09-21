@@ -16,6 +16,9 @@
     @include mixin.text-header($weight: 300, $font-size: 5rem)
     color: var.$primary-color
 
+    @include mixin.Mobile
+      font-size: 3rem
+
   &-main
     @include mixin.display-flex-row($justify: space-around, $wrap: wrap)
     height: 100%
@@ -63,7 +66,7 @@
   @include mixin.center-bg
 
   @include mixin.Mobile
-    width: 70%
+    width: 90%
     height: 350px
 
   &:hover
@@ -113,7 +116,7 @@
     @include mixin.display-flex-column
 
     @include mixin.Mobile
-      width: 70%
+      width: 90%
       height: 350px
 
     &:hover
