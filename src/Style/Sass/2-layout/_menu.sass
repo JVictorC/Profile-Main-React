@@ -1,0 +1,88 @@
+@use '../1-bases/_variables' as var
+@use '../1-bases/_mixins' as mixin
+
+a
+  color: var.$light-color
+
+
+.nav-item-menu-togle
+  background: linear-gradient(var.$header-primary, var.$header-secondary)
+  width: 110px
+  background: linear-gradient(var.$header-primary, var.$header-secondary)
+  border-left: 10px solid var.$header-primary
+  position: fixed
+  z-index: 9999
+  height: 100%
+  @include mixin.display-flex-column($justify: space-around)
+  top: 0
+  animation: myToggle 1s
+  right: 0
+
+
+
+  @keyframes myToggle
+    0%
+      right: -100px
+
+
+.nav-item
+  width: 110px
+  opacity: .9
+  background: linear-gradient(var.$header-primary, var.$header-secondary)
+  border-left: 10px solid var.$header-primary
+  position: fixed
+  z-index: 10000
+  right: 0
+  top: 0
+  height: 100%
+  @include mixin.display-flex-column($justify: space-around)
+
+  @include mixin.Mobile
+    border: none
+    top: 90%
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin: auto
+    bottom: 0px
+    width: 100%
+    opacity: 1
+    height: 100px
+
+  &-menu
+    height: 50%
+    display: flex
+    @include mixin.display-flex-column
+
+    @include mixin.Mobile
+      display: none
+
+    li
+      font-size: 1.3rem
+      @include mixin.display-flex-column
+      @include mixin.links
+
+  &-social
+    color: var.$light-color
+    font-size: 2rem
+    @include mixin.display-flex-column
+
+    @include mixin.Mobile
+      flex-direction: row
+
+    li
+      margin: 1rem
+      transition: .5s
+      cursor: pointer
+
+      &:hover
+        color: var.$header-primary
+        font-size: 3rem
+
+.menu
+  color: var.$light-color
+  font-size: 2rem
+  display: none
+  @include mixin.Mobile
+    display: block
+    cursor: pointer

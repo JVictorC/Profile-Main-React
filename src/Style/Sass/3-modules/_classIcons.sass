@@ -1,0 +1,19 @@
+@use '../1-bases/variables' as Var
+@use '../1-bases/mixins' as Mixin
+  
+@for $i from 1 through 7
+  $teclogia: nth(Var.$tecnologias, $i)
+
+  .#{$teclogia}
+    @include Mixin.display-flex-row
+    border: 2px solid nth(Var.$tecnologias-colors, $i)
+    padding: .8rem
+    border-radius: 20px
+    color: nth(Var.$tecnologias-colors, $i)
+    transition: .5s
+    cursor: alias
+
+    &:hover
+      background: nth(Var.$tecnologias-colors, $i)
+      color: white
+      transform: scale(1.2)

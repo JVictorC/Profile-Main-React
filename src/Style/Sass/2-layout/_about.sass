@@ -1,0 +1,61 @@
+@use '../1-bases/_mixins' as mixin
+@use '../1-bases/_variables' as var
+
+
+.about-container-bg
+  background: linear-gradient(var.$primary-about, var.$secondary-bg)
+  min-height: 85vh
+  overflow: hidden
+  
+.about-container
+  @include mixin.display-flex-column
+  @include mixin.animation($diretion: 700px)
+
+  &-title
+    @include mixin.text-header($weight: 400, $font-size: 3rem)
+    color: var.$light-color
+    margin-top: 1rem
+
+  &-subtitle
+    @include mixin.text-header($weight: 300, $font-size: 2rem)
+    color: var.$light-color
+    padding-bottom: 2rem
+
+  &-main
+    padding: 2rem
+    display: flex
+    width: 80%
+    justify-content: space-around
+
+    @include mixin.Mobile
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 100%
+
+    &-image
+      width: 20%
+      max-width: 200px
+      height: 15%
+      border: 5px solid var.$light-color
+      border-radius: 90px
+      border-radius: 55% 20%
+
+
+      @include mixin.Mobile
+        width: 50%
+
+    &-about
+      @indclude display-flex-column
+     
+
+    &-presentation
+      font-size: 2rem
+      padding: 2rem
+      color: var.$light-color
+      font-weight: 300
+      line-height: 1.5
+      text-align: center
+
+      @include mixin.Mobile
+        font-size: 2rem

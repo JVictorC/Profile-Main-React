@@ -1,0 +1,75 @@
+@use '../1-bases/_variables' as var
+@use '../1-bases/_mixins' as mixin
+
+.footer-container
+  background: black
+  color: var.$light-color
+
+  @include mixin.Mobile
+    margin-bottom: 80px
+
+  &-main
+    padding: 1rem 0
+    height: 25vh
+    width: 80%
+    @include mixin.display-flex-row($justify: space-evenly)
+
+    @include mixin.Mobile
+      @include mixin.display-flex-column
+      height: 50vh
+
+    @include mixin.Mobile
+      width: 100%
+
+  &-name
+    color: white
+
+    @include mixin.Mobile
+      font-size: 1.2rem
+
+  &-copyRigth
+    @include mixin.display-flex-row()
+    font-size: 1.5rem
+    padding: 0
+
+  &-rocket
+    width: 100px
+
+    @include mixin.Mobile
+      width: 60px
+
+  &-contatos
+    padding: 1rem
+    @include mixin.display-flex-column
+
+  &-li
+    margin: 1rem 0
+    transition: .5s
+
+    a
+      color: white
+      font-size: 1.5rem
+
+      @include mixin.Mobile
+        font-size: 1.2rem
+
+    &:hover
+      transform: scale(1.2)
+
+  &-trybe
+    width: 80px
+    animation: myTrybeAnimation 3s infinite linear
+    cursor: pointer
+
+    @include mixin.Mobile
+      width: 50px
+
+    @keyframes myTrybeAnimation
+      0%
+        transform: scale(1)
+
+      50%
+        transform: scale(1.2)
+
+      100%
+        transform: scale(1)

@@ -1,0 +1,87 @@
+@use '../1-bases/_variables' as var
+@use '../1-bases/_mixins' as mixin
+
+.header-main
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('../Images/BackGround.jpg')
+  background-position: center
+  background-size: cover
+  @include mixin.display-flex-column($justify: space-between)
+  animation: ShowHeader 1s
+  min-height: 100vh
+
+  @include mixin.Mobile
+    min-height: 90vh
+
+  @keyframes ShowHeader
+    0%
+      transform: translate3d(-500px, -500px, 0)
+      opacity: 0
+    100%
+      transform: translate3d(0, 0, 0)
+      opacity: 1
+
+.header-contant
+  width: 100%
+  &-main
+    @include mixin.display-flex-column($justify: space-between)
+    margin: 5rem
+    width: 100%
+
+    @include mixin.Mobile
+      width: 80%
+      margin: 3rem auto
+
+    &-apresentation
+      @include mixin.display-flex-column
+      margin: auto
+
+    &-name
+      @include mixin.text-header($weight: 500)
+      color: var.$light-color
+      font-weight: 500
+
+      @include mixin.Mobile
+        font-size: 1.4rem
+
+    &-student
+      @include mixin.text-header(300)
+      color: var.$primary-color
+      font-weight: 300
+      border-right: white 5px solid
+      animation: myAnimationLine .5s infinite normal, disaberName 8s infinite normal steps(26)
+      overflow: hidden
+      white-space: nowrap
+
+      @include mixin.Mobile
+        font-size: 1.2rem
+        animation: myAnimationLine .5s infinite normal, disaberNameMobile 8s infinite normal steps(26)
+
+      @keyframes disaberNameMobile
+        0%
+          width: 0
+
+        50%
+          width: 17rem
+
+        75%
+          width: 17rem
+
+        100%
+          width: 0
+
+      @keyframes disaberName
+        0%
+          width: 0
+
+        50%
+          width: 41.5rem
+
+        75%
+          width: 41.5rem
+
+        100%
+          width: 0
+
+      @keyframes myAnimationLine
+        100%
+          border-right-color: transparent

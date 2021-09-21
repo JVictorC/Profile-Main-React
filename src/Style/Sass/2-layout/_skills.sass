@@ -1,0 +1,90 @@
+@use '../1-bases/_mixins' as mixin
+@use '../1-bases/_variables' as var
+
+.skills-container
+  @include mixin.display-flex-column($justify: space-between)
+  padding-top: 2rem
+  overflow: hidden
+  background: var.$light-color
+
+  &-main
+    display: flex
+    justify-content: center
+    align-items: baseline
+    height: 120vh
+    width: 80%
+
+    @include mixin.Mobile
+      min-height: auto
+
+
+
+  &-title
+    @include mixin.text-header($weight: 300, $font-size: 5rem)
+    @include mixin.animation
+    color: var.$primary-color
+    cursor: alias
+    width: 100%
+
+  &-ul
+    @include mixin.display-flex-row($justify: space-around, $wrap: wrap)
+    @include mixin.animation
+    margin-top: 5rem
+    position: absolute
+    z-index: 1
+    width: 80%
+
+    @include mixin.Mobile
+      width: 100%
+
+@for $i from 1 through 9
+  .skills-container-list:nth-child(#{$i})
+    transform-style: preserve-3d
+    border-radius: 20px
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .6)
+    margin: 1.3rem
+    height: 250px
+    width: 250px
+    cursor: alias
+    background: nth(var.$colors-skills-background, $i)
+
+    @include mixin.Mobile
+      height: 100px
+      width: 100px
+
+    .skills-container-circle
+      @include mixin.display-flex-column($justify: center)
+      position: absolute
+      z-index: -1
+      top: 50%
+      left: 50%
+      width: 200px
+      height: 200px
+      border-radius: 50%
+      background: var.$light-color
+      transform: translate3d(-50%, -50%, 50px)
+
+      @include mixin.Mobile
+        height: 80px
+        width: 80px
+
+    h3
+      font-size: 1.5rem
+      color: nth(var.$colors-skills, $i)
+
+      @include mixin.Mobile
+        display: none
+
+    .icons
+      font-size: 4rem
+      color: nth(var.$colors-skills, $i)
+
+
+      @include mixin.Mobile
+        font-size: 3rem
+
+
+    li
+      text-align: center
+      margin: auto
+      padding: 2rem

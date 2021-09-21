@@ -1,0 +1,138 @@
+@use '../1-bases/_mixins' as mixin
+@use '../1-bases/placeHolder'
+@use '../1-bases/_variables' as var
+
+.container-projects-images
+  background: linear-gradient(var.$light-color, var.$secondary-bg)
+  overflow: hidden
+
+.container-project
+  @include mixin.animation
+  @include mixin.display-flex-column
+  padding-top: 2rem
+  width: 100%
+
+  &-title
+    @include mixin.text-header($weight: 300, $font-size: 5rem)
+    color: var.$primary-color
+
+    @include mixin.Mobile
+      font-size: 3rem
+
+  &-main
+    @include mixin.display-flex-row($justify: space-around, $wrap: wrap)
+    height: 100%
+
+@for $i from 1 through 4
+  .container-project-card
+    @include mixin.Card
+    @include mixin.display-flex-column
+
+    &:nth-child(#{$i + n})
+      border-color: nth(var.$colors-projects, $i)
+      text-align: center
+      color: nth(var.$colors-projects, $i)
+      font-size: 1.1rem
+
+      .btn-project
+        background: nth(var.$colors-projects, $i)
+        transition: .5s
+
+        &:hover
+          color: nth(var.$colors-projects, $i)
+          background: white
+          border: 5px solid nth(var.$colors-projects, $i)
+
+      @if $i != 1
+        .contrainer-project-image
+          font-size: 5rem
+
+.container-project-list
+  @include mixin.animation($diretion: 700px)
+  @include mixin.display-flex-row($justify: space-evenly)
+
+  @include mixin.Mobile
+    flex-flow: column wrap
+
+.project1
+  background: url(../Images/Projects/Front-End-Online.png)
+  width: 27%
+  height: 600px
+  position: relative
+  cursor: alias
+  transition: .5s
+  @extend %card-hover
+  color: var.$light-color
+  @include mixin.center-bg
+
+  @include mixin.Mobile
+    width: 90%
+    height: 350px
+
+  &:hover
+    @include mixin.ImageProjectHover('../Images/Projects/Front-End-Online.png')
+
+    @include mixin.Mobile
+      height: 400px
+      margin: 3rem
+
+  .project-card
+    &-cover
+      text-align: center
+    &-title
+      font-size: 1.5rem
+      margin: 2rem
+    &-description
+      padding: 1rem
+      font-size: 1rem
+      margin: 1rem
+      text-align: center
+
+.other-projects
+  display: flex
+  flex-wrap: wrap
+  width: 70%
+
+  @include mixin.Mobile
+    width: 100%
+    display: flex
+    flex-flow: column wrap
+    justify-content: center
+    align-items: center
+
+@for $i from 2 through 5
+  $image: #{ '../Images/Projects/' + nth(var.$images-list, $i) + '.png'}
+  .project#{$i}
+    background: url($image)
+    margin: 1rem
+    height: 17rem
+    width: 40%
+    position: relative
+    cursor: alias
+    transition: .5s
+    @extend %card-hover
+    color: var.$light-color
+    @include mixin.center-bg
+    @include mixin.display-flex-column
+
+    @include mixin.Mobile
+      width: 90%
+      height: 350px
+
+    &:hover
+      @include mixin.ImageProjectHover($image)
+      height: 400px
+
+    .project-card
+      &-cover
+        text-align: center
+
+      &-title
+        font-size: 1.5rem
+        margin: 2rem
+
+      &-description
+        padding: 1rem
+        margin: .5rem
+        font-size: 1rem
+        text-align: center
