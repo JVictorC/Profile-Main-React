@@ -10,7 +10,11 @@
   @include mixin.animation
   @include mixin.display-flex-column
   padding-top: 2rem
-  width: 100%
+  margin: auto
+  width: 80%
+
+  @include mixin.Mobile
+    width: 100%
 
   &-title
     @include mixin.text-header($weight: 300, $font-size: 5rem)
@@ -33,6 +37,10 @@
       text-align: center
       color: nth(var.$colors-projects, $i)
       font-size: 1.1rem
+
+      @include mixin.Mobile
+        width: 70%
+        font-size: 1rem
 
       .btn-project
         background: nth(var.$colors-projects, $i)

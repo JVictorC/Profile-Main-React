@@ -838,7 +838,13 @@ li {
   align-items: center;
   justify-content: space-around;
   padding-top: 2rem;
-  width: 100%;
+  margin: auto;
+  width: 80%;
+}
+@media (max-width: 900px) {
+  .container-project {
+    width: 100%;
+  }
 }
 .container-project-title {
   color: #181920;
@@ -880,11 +886,22 @@ li {
   transform: scale(1.1);
   font-size: 1.3rem;
 }
+@media (max-width: 900px) {
+  .container-project-card:hover {
+    font-size: 1rem;
+  }
+}
 .container-project-card:nth-child(1n) {
   border-color: #11a36a;
   text-align: center;
   color: #11a36a;
   font-size: 1.1rem;
+}
+@media (max-width: 900px) {
+  .container-project-card:nth-child(1n) {
+    width: 70%;
+    font-size: 1rem;
+  }
 }
 .container-project-card:nth-child(1n) .btn-project {
   background: #11a36a;
@@ -914,11 +931,22 @@ li {
   transform: scale(1.1);
   font-size: 1.3rem;
 }
+@media (max-width: 900px) {
+  .container-project-card:hover {
+    font-size: 1rem;
+  }
+}
 .container-project-card:nth-child(2n) {
   border-color: #03a9f4;
   text-align: center;
   color: #03a9f4;
   font-size: 1.1rem;
+}
+@media (max-width: 900px) {
+  .container-project-card:nth-child(2n) {
+    width: 70%;
+    font-size: 1rem;
+  }
 }
 .container-project-card:nth-child(2n) .btn-project {
   background: #03a9f4;
@@ -951,11 +979,22 @@ li {
   transform: scale(1.1);
   font-size: 1.3rem;
 }
+@media (max-width: 900px) {
+  .container-project-card:hover {
+    font-size: 1rem;
+  }
+}
 .container-project-card:nth-child(3n) {
   border-color: #e91e63;
   text-align: center;
   color: #e91e63;
   font-size: 1.1rem;
+}
+@media (max-width: 900px) {
+  .container-project-card:nth-child(3n) {
+    width: 70%;
+    font-size: 1rem;
+  }
 }
 .container-project-card:nth-child(3n) .btn-project {
   background: #e91e63;
@@ -988,11 +1027,22 @@ li {
   transform: scale(1.1);
   font-size: 1.3rem;
 }
+@media (max-width: 900px) {
+  .container-project-card:hover {
+    font-size: 1rem;
+  }
+}
 .container-project-card:nth-child(4n) {
   border-color: #fccb00;
   text-align: center;
   color: #fccb00;
   font-size: 1.1rem;
+}
+@media (max-width: 900px) {
+  .container-project-card:nth-child(4n) {
+    width: 70%;
+    font-size: 1rem;
+  }
 }
 .container-project-card:nth-child(4n) .btn-project {
   background: #fccb00;
