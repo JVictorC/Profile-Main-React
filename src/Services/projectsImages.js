@@ -2,8 +2,8 @@ export const projectsImages = [{
   id: 2,
   title: 'Agency',
   link: 'https://github.com/JVictorC/Cursos/tree/main/Udemy/Sass/Projeto%20Agency/agency',
-  describe: `Neste Projeto eu Utilizei Sass criar todo o Designer da Pagina, 
-  esse projeto foi criar a partir do curso mistrato pelo Matheus Battisti, link: 
+  describe: `Neste Projeto eu Utilizei Sass para criar todo o Designer da Página, 
+  esse projeto foi criar a partir do curso ministrado pelo Matheus Battisti, link: 
   https://www.udemy.com/user
   /matheus-battisti/`,
 },
@@ -11,7 +11,7 @@ export const projectsImages = [{
   id: 3,
   title: 'Shop Cart',
   link: 'https://jvictorc.github.io/Projetos/ProjetosTrybe/Fundamentos/7%C2%B0%20Shopping-cart/index.html',
-  describe: `Sem duvida nenhuma um dos projetos que eu mais amo, pois nele utilizei 
+  describe: `Sem dúvida nenhuma um dos projetos que eu mais amo, pois, nele utilizei
   pela primeira vez as amadas requisições a API, por mais que a 
   Arquitetura dele seja simples é um dos projetos que mais tenho orgulho`,
 },
@@ -20,15 +20,15 @@ export const projectsImages = [{
   title: 'Zoo Functions',
   link: 'https://github.com/JVictorC/Trybe-Projects/tree/master/Fundamentos/6%C2%BA%20Zoo-functions',
   describe: `Acredito que se você perguntar para qualquer um da minha turma
-  eles irão concordar comigo que o Zoo Functions foi o mais dificil do Modulo de
-  Fundamentos, mas ver o 100% no final do Projeto e as
-   Funcionalidades desenvolvidas é incrivel`,
+  eles vão concordar comigo que o Zoo Functions foi o mais difícil do Módulo de
+  Fundamentos, mas ver os 100% no final do Projeto e as
+   Funcionalidades desenvolvidas é incrível.`,
 },
 {
   id: 5,
   title: 'trybe Wallet',
   link: 'https://trybe-wallet.web.app/',
-  describe: `Este Projeto eu Utilizei React, Sass e Redux, sem duvida foi um 
+  describe: `Este Projeto utilizei React, Sass e Redux, sem dúvida foi um 
   dos projetos mais bem estrutura que já trabalhei durante 
   o Modulo de Front-End Na trybe`,
 },
@@ -40,5 +40,5 @@ export const frontEndOnlineImage = {
   title: 'Front-End-Online',
   link: 'https://front-end-online-store.web.app/',
   describe: `Este Projeto Foi desenvolvido em Grupo, nele Utilizamos BootStrap,
-   React e a Metodologia Agil Scroll`,
+  React e a Metodologia Ágil Scroll`,
 };
