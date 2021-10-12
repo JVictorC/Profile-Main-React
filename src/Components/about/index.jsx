@@ -20,12 +20,11 @@ export default function Projects() {
           />
           <div className="about-container-main-about">
             <p className="about-container-main-presentation">
-              Sabe aquela sensação que se tem quando seu trabalho faz a diferença na vida
-              de outra pessoa?
-              Então… foi por essa sensação que comecei a estudar programação, eu estudo
-              programação, pois saber que meu trabalho pode ajudar alguém é incrível.
-              Nesse momento da minha vida estou indo atrás de uma oportunidade para fazer
-              essa diferença.
+              Sabe aquela sensação que se tem quando seu trabalho faz a diferença
+              na vida de outra pessoa? Então… foi por essa sensação que comecei a
+              estudar programação, eu estudo programação, pois saber que meu
+              trabalho pode ajudar alguém é incrível. Nesse momento da minha vida
+              estou indo atrás de uma oportunidade para realizar essa diferença.
             </p>
             <LottieAnimation lotti={ DogAnimation } height={ 300 } width={ 300 } />
           </div>
